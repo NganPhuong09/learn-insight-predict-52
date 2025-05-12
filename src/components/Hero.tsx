@@ -14,7 +14,7 @@ const Hero = () => {
               <span className="mr-1">✨</span> Nghiên cứu giáo dục trực tuyến
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight leading-tight">
-              Dự đoán sớm <span className="text-research-primary">độ hài lòng</span> của học viên
+              Dự đoán sớm <span className="text-research-primary">độ hài lòng</span> của học viên đối với 1 khóa học cụ thể
             </h1>
             <p className="text-lg text-gray-600 md:pr-10">
               Sử dụng học máy và khai phá dữ liệu từ hành vi học tập để dự đoán
