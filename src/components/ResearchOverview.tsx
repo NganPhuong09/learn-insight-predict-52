@@ -15,7 +15,7 @@ const ResearchOverview = () => {
     },
     {
       icon: <Database className="h-5 w-5 text-research-primary" />,
-      title: "Dữ liệu phong phú",
+      title: "Bộ dữ liệu",
       description: "Sử dụng dữ liệu từ MOOCCubeX với nhiều đặc trưng về hành vi học tập, tương tác và kết quả của học viên.",
       link: "/data-overview"
     },
