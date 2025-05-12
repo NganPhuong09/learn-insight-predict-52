@@ -10,10 +10,7 @@ const ResearchOverview = () => {
     {
       icon: <TrendingUp className="h-5 w-5 text-research-primary" />,
       title: "Tính cấp thiết",
-      description: "Với sự gia tăng đáng kể của các khóa học trực tuyến (MOOC), việc đo lường và phân tích mức độ hài lòng của học viên trở nên cấp thiết nhằm cải thiện chất lượng giáo dục và duy trì sự thu hút đối với người học. Nghiên cứu cho thấy rằng sự hài lòng không chỉ là yếu tố quyết định trong việc hoàn thành khóa học mà còn ảnh hưởng đến động lực học tập và trải nghiệm tổng thể của học viên." + 
-      " - Xu hướng giáo dục trực tuyến gia tăng: Sự phát triển nhanh chóng của các khóa học trực tuyến làm tăng nhu cầu hiểu rõ hơn về sự hài lòng của học viên. Dự đoán mức độ hài lòng sẽ không chỉ cải thiện chất lượng giảng dạy mà còn nâng cao trải nghiệm học tập cho người học." + 
-      " - Tính cạnh tranh trong giáo dục: Các nền tảng MOOC đang trong cuộc cạnh tranh khốc liệt để thu hút học viên. Việc hiểu rõ mức độ hài lòng giúp các tổ chức giáo dục điều chỉnh và tối ưu hóa chương trình học nhằm tăng cường sự thu hút và giữ chân học viên." + 
-      " - Quản lý chất lượng giáo dục: Mô hình dự đoán mức độ hài lòng có thể hỗ trợ các tổ chức trong việc theo dõi và đánh giá chất lượng khóa học, từ đó đưa ra các biện pháp cải thiện hiệu quả."
+      description: "Dự đoán sớm mức độ hài lòng của học viên giúp cải thiện chất lượng giảng dạy, giảm tỷ lệ bỏ học, tối ưu hóa tài nguyên và nâng cao uy tín của nền tảng. Thông qua phân tích dữ liệu và học máy, các tổ chức giáo dục có thể chủ động phát hiện vấn đề, điều chỉnh kịp thời để nâng cao trải nghiệm học tập và hiệu quả đào tạo."
     },
     {
       icon: <Database className="h-5 w-5 text-research-primary" />,
