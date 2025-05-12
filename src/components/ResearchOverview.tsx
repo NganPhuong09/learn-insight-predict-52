@@ -25,7 +25,7 @@ const ResearchOverview = () => {
     {
       icon: <BookOpen className="h-5 w-5 text-research-primary" />,
       title: "Tính mới",
-      description: "Không giống các nghiên cứu trước chỉ phân tích thông số khóa học ở mức tổng thể, đề tài này tập trung vào **mức độ tương tác cá nhân** của từng học viên (bình luận, làm bài, xem video) để **dự đoán mức độ hài lòng** bằng các **mô hình học máy hiện đại**, từ đó mở ra hướng tiếp cận **cá nhân hóa** và nâng cao hiệu quả phân tích trong giáo dục trực tuyến."
+      description: "Không giống các nghiên cứu trước chỉ phân tích thông số khóa học ở mức tổng thể, đề tài này tập trung vào mức độ tương tác cá nhân của từng học viên (bình luận, làm bài, xem video) để dự đoán mức độ hài lòng bằng các mô hình học máy hiện đại, từ đó mở ra hướng tiếp cận cá nhân hóa và nâng cao hiệu quả phân tích trong giáo dục trực tuyến."
     }
   ];
 
