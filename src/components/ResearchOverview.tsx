@@ -10,22 +10,26 @@ const ResearchOverview = () => {
     {
       icon: <TrendingUp className="h-5 w-5 text-research-primary" />,
       title: "Tính cấp thiết",
-      description: "Dự đoán sớm mức độ hài lòng của học viên giúp cải thiện chất lượng giảng dạy, giảm tỷ lệ bỏ học, tối ưu hóa tài nguyên và nâng cao uy tín của nền tảng. Thông qua phân tích dữ liệu và học máy, các tổ chức giáo dục có thể chủ động phát hiện vấn đề, điều chỉnh kịp thời để nâng cao trải nghiệm học tập và hiệu quả đào tạo."
+      description: "Dự đoán sớm mức độ hài lòng của học viên giúp cải thiện chất lượng giảng dạy, giảm tỷ lệ bỏ học, tối ưu hóa tài nguyên và nâng cao uy tín của nền tảng. Thông qua phân tích dữ liệu và học máy, các tổ chức giáo dục có thể chủ động phát hiện vấn đề, điều chỉnh kịp thời để nâng cao trải nghiệm học tập và hiệu quả đào tạo.",
+      link: ""
     },
     {
       icon: <Database className="h-5 w-5 text-research-primary" />,
       title: "Dữ liệu phong phú",
-      description: "Sử dụng dữ liệu từ MOOCCubeX với nhiều đặc trưng về hành vi học tập, tương tác và kết quả của học viên."
+      description: "Sử dụng dữ liệu từ MOOCCubeX với nhiều đặc trưng về hành vi học tập, tương tác và kết quả của học viên.",
+      link: "/data-overview"
     },
     {
       icon: <BarChart className="h-5 w-5 text-research-primary" />,
       title: "Mô hình dự đoán",
-      description: "Áp dụng các kỹ thuật học máy tiên tiến để dự đoán mức độ hài lòng theo 5 mức từ dữ liệu hành vi."
+      description: "Áp dụng các kỹ thuật học máy tiên tiến để dự đoán mức độ hài lòng theo 5 mức từ dữ liệu hành vi.",
+      link: "/model-overview"
     },
     {
       icon: <BookOpen className="h-5 w-5 text-research-primary" />,
       title: "Tính mới",
-      description: "Không giống các nghiên cứu trước chỉ phân tích thông số khóa học ở mức tổng thể, đề tài này tập trung vào mức độ tương tác cá nhân của từng học viên (bình luận, làm bài, xem video) để dự đoán mức độ hài lòng bằng các mô hình học máy hiện đại, từ đó mở ra hướng tiếp cận cá nhân hóa và nâng cao hiệu quả phân tích trong giáo dục trực tuyến."
+      description: "Không giống các nghiên cứu trước chỉ phân tích thông số khóa học ở mức tổng thể, đề tài này tập trung vào mức độ tương tác cá nhân của từng học viên (bình luận, làm bài, xem video) để dự đoán mức độ hài lòng bằng các mô hình học máy hiện đại, từ đó mở ra hướng tiếp cận cá nhân hóa và nâng cao hiệu quả phân tích trong giáo dục trực tuyến.",
+      link: ""
     }
   ];
 
@@ -42,7 +46,12 @@ const ResearchOverview = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {features.map((feature, index) => (
-            <Card key={index} className="opacity-0 animate-fade-in" style={{ animationDelay: `${index * 0.1 + 0.2}s` }}>
+            <Card 
+              key={index} 
+              className={`opacity-0 animate-fade-in ${feature.link ? "cursor-pointer hover:shadow-md transition-shadow" : ""}`} 
+              style={{ animationDelay: `${index * 0.1 + 0.2}s` }}
+              onClick={() => feature.link && window.location.assign(feature.link)}
+            >
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <div className="p-2 rounded-lg bg-research-light">
@@ -53,6 +62,13 @@ const ResearchOverview = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">{feature.description}</p>
+                {feature.link && (
+                  <div className="mt-4 flex justify-end">
+                    <Link to={feature.link} className="text-research-primary hover:underline flex items-center text-sm font-medium">
+                      Xem chi tiết <ArrowRight className="ml-1 h-4 w-4" />
+                    </Link>
+                  </div>
+                )}
               </CardContent>
             </Card>
           ))}
