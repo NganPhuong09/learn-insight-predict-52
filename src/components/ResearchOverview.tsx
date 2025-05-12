@@ -10,10 +10,10 @@ const ResearchOverview = () => {
     {
       icon: <TrendingUp className="h-5 w-5 text-research-primary" />,
       title: "Tính cấp thiết",
-      description: "Với sự gia tăng đáng kể của các khóa học trực tuyến (MOOC), việc đo lường và phân tích mức độ hài lòng của học viên trở nên cấp thiết nhằm cải thiện chất lượng giáo dục và duy trì sự thu hút đối với người học. Nghiên cứu cho thấy rằng sự hài lòng không chỉ là yếu tố quyết định trong việc hoàn thành khóa học mà còn ảnh hưởng đến động lực học tập và trải nghiệm tổng thể của học viên." +
-      "- Xu hướng giáo dục trực tuyến gia tăng: Sự phát triển nhanh chóng của các khóa học trực tuyến làm tăng nhu cầu hiểu rõ hơn về sự hài lòng của học viên. Dự đoán mức độ hài lòng sẽ không chỉ cải thiện chất lượng giảng dạy mà còn nâng cao trải nghiệm học tập cho người học." +
-      "- Tính cạnh tranh trong giáo dục: Các nền tảng MOOC đang trong cuộc cạnh tranh khốc liệt để thu hút học viên. Việc hiểu rõ mức độ hài lòng giúp các tổ chức giáo dục điều chỉnh và tối ưu hóa chương trình học nhằm tăng cường sự thu hút và giữ chân học viên." +
-      "- Quản lý chất lượng giáo dục: Mô hình dự đoán mức độ hài lòng có thể hỗ trợ các tổ chức trong việc theo dõi và đánh giá chất lượng khóa học, từ đó đưa ra các biện pháp cải thiện hiệu quả."
+      description: "Với sự gia tăng đáng kể của các khóa học trực tuyến (MOOC), việc đo lường và phân tích mức độ hài lòng của học viên trở nên cấp thiết nhằm cải thiện chất lượng giáo dục và duy trì sự thu hút đối với người học. Nghiên cứu cho thấy rằng sự hài lòng không chỉ là yếu tố quyết định trong việc hoàn thành khóa học mà còn ảnh hưởng đến động lực học tập và trải nghiệm tổng thể của học viên." + 
+      " - Xu hướng giáo dục trực tuyến gia tăng: Sự phát triển nhanh chóng của các khóa học trực tuyến làm tăng nhu cầu hiểu rõ hơn về sự hài lòng của học viên. Dự đoán mức độ hài lòng sẽ không chỉ cải thiện chất lượng giảng dạy mà còn nâng cao trải nghiệm học tập cho người học." + 
+      " - Tính cạnh tranh trong giáo dục: Các nền tảng MOOC đang trong cuộc cạnh tranh khốc liệt để thu hút học viên. Việc hiểu rõ mức độ hài lòng giúp các tổ chức giáo dục điều chỉnh và tối ưu hóa chương trình học nhằm tăng cường sự thu hút và giữ chân học viên." + 
+      " - Quản lý chất lượng giáo dục: Mô hình dự đoán mức độ hài lòng có thể hỗ trợ các tổ chức trong việc theo dõi và đánh giá chất lượng khóa học, từ đó đưa ra các biện pháp cải thiện hiệu quả."
     },
     {
       icon: <Database className="h-5 w-5 text-research-primary" />,
@@ -28,10 +28,10 @@ const ResearchOverview = () => {
     {
       icon: <BookOpen className="h-5 w-5 text-research-primary" />,
       title: "Tính mới",
-      description: "Nếu các nghiên cứu trước đó tập trung vào phân tích các thông số của khóa học để xác định mức độ hài lòng trên mặt bằng chung sinh viên, công trình của chúng tôi mang tính mới qua việc tập trung vào mức độ tương tác của từng học viên để xác định mức độ hài lòng đặc thù của học viên đó. Việc này được thực thi qua việc sử dụng các phương pháp học máy để dự đoán dựa trên các chỉ số cụ thể như bình luận, tần suất làm bài tập, và mức độ xem video bài giảng của học viên.
-      - Kết hợp nhiều yếu tố đầu vào: Việc sử dụng nhiều chỉ số như bình luận, mức độ thực hiện bài tập và xem video của học viên để tạo ra một mô hình dự đoán đa chiều là một đóng góp mới cho nghiên cứu về sự hài lòng trong giáo dục.
-      - Áp dụng mô hình học máy trong giáo dục: Đề tài sử dụng các phương pháp học máy hiện đại để phân tích dữ liệu và dự đoán mức độ hài lòng của học viên, điều này đánh dấu một bước tiến mới trong nghiên cứu giáo dục.
-      - Kết quả tập trung vào học viên: Với mục tiêu dự đoán mức độ hài lòng của từng học viên đối với một khóa học cụ thể, công trình mở ra hướng nghiên cứu mới mang tính cá nhân hóa cao."
+      description: "Nếu các nghiên cứu trước đó tập trung vào phân tích các thông số của khóa học để xác định mức độ hài lòng trên mặt bằng chung sinh viên, công trình của chúng tôi mang tính mới qua việc tập trung vào mức độ tương tác của từng học viên để xác định mức độ hài lòng đặc thù của học viên đó. Việc này được thực thi qua việc sử dụng các phương pháp học máy để dự đoán dựa trên các chỉ số cụ thể như bình luận, tần suất làm bài tập, và mức độ xem video bài giảng của học viên." + 
+      " - Kết hợp nhiều yếu tố đầu vào: Việc sử dụng nhiều chỉ số như bình luận, mức độ thực hiện bài tập và xem video của học viên để tạo ra một mô hình dự đoán đa chiều là một đóng góp mới cho nghiên cứu về sự hài lòng trong giáo dục." + 
+      " - Áp dụng mô hình học máy trong giáo dục: Đề tài sử dụng các phương pháp học máy hiện đại để phân tích dữ liệu và dự đoán mức độ hài lòng của học viên, điều này đánh dấu một bước tiến mới trong nghiên cứu giáo dục." + 
+      " - Kết quả tập trung vào học viên: Với mục tiêu dự đoán mức độ hài lòng của từng học viên đối với một khóa học cụ thể, công trình mở ra hướng nghiên cứu mới mang tính cá nhân hóa cao."
     }
   ];
 
