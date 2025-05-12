@@ -25,10 +25,7 @@ const ResearchOverview = () => {
     {
       icon: <BookOpen className="h-5 w-5 text-research-primary" />,
       title: "Tính mới",
-      description: "Nếu các nghiên cứu trước đó tập trung vào phân tích các thông số của khóa học để xác định mức độ hài lòng trên mặt bằng chung sinh viên, công trình của chúng tôi mang tính mới qua việc tập trung vào mức độ tương tác của từng học viên để xác định mức độ hài lòng đặc thù của học viên đó. Việc này được thực thi qua việc sử dụng các phương pháp học máy để dự đoán dựa trên các chỉ số cụ thể như bình luận, tần suất làm bài tập, và mức độ xem video bài giảng của học viên." + 
-      " - Kết hợp nhiều yếu tố đầu vào: Việc sử dụng nhiều chỉ số như bình luận, mức độ thực hiện bài tập và xem video của học viên để tạo ra một mô hình dự đoán đa chiều là một đóng góp mới cho nghiên cứu về sự hài lòng trong giáo dục." + 
-      " - Áp dụng mô hình học máy trong giáo dục: Đề tài sử dụng các phương pháp học máy hiện đại để phân tích dữ liệu và dự đoán mức độ hài lòng của học viên, điều này đánh dấu một bước tiến mới trong nghiên cứu giáo dục." + 
-      " - Kết quả tập trung vào học viên: Với mục tiêu dự đoán mức độ hài lòng của từng học viên đối với một khóa học cụ thể, công trình mở ra hướng nghiên cứu mới mang tính cá nhân hóa cao."
+      description: "Không giống các nghiên cứu trước chỉ phân tích thông số khóa học ở mức tổng thể, đề tài này tập trung vào **mức độ tương tác cá nhân** của từng học viên (bình luận, làm bài, xem video) để **dự đoán mức độ hài lòng** bằng các **mô hình học máy hiện đại**, từ đó mở ra hướng tiếp cận **cá nhân hóa** và nâng cao hiệu quả phân tích trong giáo dục trực tuyến."
     }
   ];
 
