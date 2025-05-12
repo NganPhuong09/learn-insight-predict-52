@@ -144,7 +144,33 @@ const DataPipeline = () => {
                 </li>
               </ul>
             </div>
-            
+            {/* Output - Phân loại mức độ hài lòng */}
+<div className="opacity-0 animate-fade-in animate-delay-600 bg-white rounded-lg shadow-md p-6">
+  <h3 className="text-xl font-semibold text-gray-900 mb-4">Output - Phân loại mức độ hài lòng</h3>
+  <ul className="space-y-3">
+    <li className="flex items-start gap-3">
+      <ArrowRight className="h-5 w-5 text-research-primary mt-0.5 flex-shrink-0" />
+      <span><span className="font-medium">Rất hài lòng:</span> Người dùng có mức độ hài lòng rất cao với khóa học, video, hoặc bài tập.</span>
+    </li>
+    <li className="flex items-start gap-3">
+      <ArrowRight className="h-5 w-5 text-research-primary mt-0.5 flex-shrink-0" />
+      <span><span className="font-medium">Hài lòng:</span> Người dùng cảm thấy hài lòng, nhưng có thể có một vài điểm chưa hoàn hảo.</span>
+    </li>
+    <li className="flex items-start gap-3">
+      <ArrowRight className="h-5 w-5 text-research-primary mt-0.5 flex-shrink-0" />
+      <span><span className="font-medium">Bình thường:</span> Người dùng cảm thấy bình thường, không có cảm giác đặc biệt tích cực hay tiêu cực.</span>
+    </li>
+    <li className="flex items-start gap-3">
+      <ArrowRight className="h-5 w-5 text-research-primary mt-0.5 flex-shrink-0" />
+      <span><span className="font-medium">Không hài lòng:</span> Người dùng cảm thấy không hài lòng, có thể có một số vấn đề cần cải thiện.</span>
+    </li>
+    <li className="flex items-start gap-3">
+      <ArrowRight className="h-5 w-5 text-research-primary mt-0.5 flex-shrink-0" />
+      <span><span className="font-medium">Rất không hài lòng:</span> Người dùng rất không hài lòng, có thể do nhiều vấn đề lớn gây ảnh hưởng đến trải nghiệm.</span>
+    </li>
+  </ul>
+</div>
+
             {/* Data Schema */}
             <div className="opacity-0 animate-fade-in animate-delay-400 bg-white rounded-lg shadow-md p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Cấu trúc dữ liệu</h3>
