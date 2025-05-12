@@ -212,25 +212,6 @@ const DataPipeline = () => {
               </div>
             </div>
           </div>
-          
-          {/* Feature Creation */}
-          <div className="mt-8 opacity-0 animate-fade-in animate-delay-500 bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Tạo biến VEI – EEI – CSI</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="p-4 bg-research-light rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-2">VEI (Video Engagement Index)</h4>
-                <p className="text-sm text-gray-700">Chỉ số tương tác với video, bao gồm thời lượng xem, tốc độ phát và các tương tác như tua đi, tua lại</p>
-              </div>
-              <div className="p-4 bg-research-light rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-2">EEI (Exercise Engagement Index)</h4>
-                <p className="text-sm text-gray-700">Chỉ số tương tác với bài tập, đánh giá mức độ hoàn thành, số lần thử và điểm số</p>
-              </div>
-              <div className="p-4 bg-research-light rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-2">CSI (Comment Sentiment Index)</h4>
-                <p className="text-sm text-gray-700">Chỉ số phân tích cảm xúc từ bình luận của học viên, đánh giá thái độ và mức độ tương tác</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
