@@ -247,41 +247,6 @@ const Dashboard = () => {
                   </CardContent>
                 </Card>
                 
-                {/* Two Column Charts */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                  <Card>
-                    <CardHeader>
-                      <CardTitle>Phân bố Video Engagement Index</CardTitle>
-                      <CardDescription>
-                        Mức độ tương tác của học viên với video bài giảng
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="h-60 flex items-center justify-center bg-gray-50 rounded-md">
-                        <div className="text-gray-500 text-center">
-                          <p>Biểu đồ VEI sẽ được hiển thị tại đây</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card>
-                    <CardHeader>
-                      <CardTitle>Phân bố Exercise Engagement Index</CardTitle>
-                      <CardDescription>
-                        Mức độ tương tác của học viên với bài tập
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="h-60 flex items-center justify-center bg-gray-50 rounded-md">
-                        <div className="text-gray-500 text-center">
-                          <p>Biểu đồ EEI sẽ được hiển thị tại đây</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </TabsContent>
               
               <TabsContent value="students" className="space-y-6">
                 {/* Thông tin cá nhân & nền tảng học tập */}
