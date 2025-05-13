@@ -1,5 +1,6 @@
 
 import React from "react";
+import Navbar from "@/components/Navbar";
 import { BookOpen, Layers, Users, Video, FileText, BrainCircuit, BarChart2, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
