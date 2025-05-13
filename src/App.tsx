@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
 import DataOverview from "./pages/DataOverview";
+import DataQuality from "./pages/DataQuality";
 import NotFound from "./pages/NotFound";
 import React from "react"; // Add explicit React import
 
@@ -25,6 +26,8 @@ const App = () => {
             <Route path="/" element={<Index />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/data-overview" element={<DataOverview />} />
+            <Route path="/data-quality" element={<DataQuality />} />
+            <Route path="/data-cleaning" element={<DataQuality />} />  {/* Redirect old path to new page */}
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
