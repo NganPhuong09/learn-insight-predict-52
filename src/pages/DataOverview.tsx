@@ -1,5 +1,8 @@
+
 import React from "react";
-import { BookOpen, Layers, Users, Video, FileText, BrainCircuit } from "lucide-react";
+import { BookOpen, Layers, Users, Video, FileText, BrainCircuit, BarChart2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const DataOverview = () => {
   return (
@@ -87,7 +90,7 @@ const DataOverview = () => {
         </ul>
       </div>
 
-            {/* Xem dashboard */}
+      {/* Xem dashboard */}
       <div className="pt-4 flex flex-col sm:flex-row sm:justify-between gap-4 border-t border-gray-200">
         <p className="text-gray-600">
           Bạn có thể xem trực quan hóa chi tiết về dữ liệu học viên và khóa học trong dashboard.
