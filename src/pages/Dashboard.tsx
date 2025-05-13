@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -246,7 +247,7 @@ const Dashboard = () => {
                     </div>
                   </CardContent>
                 </Card>
-                
+              </TabsContent>
               
               <TabsContent value="students" className="space-y-6">
                 {/* Thông tin cá nhân & nền tảng học tập */}
