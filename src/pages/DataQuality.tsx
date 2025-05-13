@@ -1,12 +1,12 @@
 import React from "react";
-import { Database, FileCheck, Clock } from "lucide-react";
+import { Database, FileCheck, Clock, Check, Shield, Link } from "lucide-react";
 import { 
   Accordion, 
   AccordionContent, 
   AccordionItem, 
   AccordionTrigger 
 } from "@/components/ui/accordion";
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const DataQuality = () => {
@@ -31,6 +31,7 @@ const DataQuality = () => {
         </h3>
         
         <Accordion type="single" collapsible className="w-full">
+          {/* Hard Dimensions */}
           <AccordionItem value="hard-dimensions">
             <AccordionTrigger className="text-lg font-semibold">
               Hard Dimensions
@@ -166,6 +167,56 @@ const DataQuality = () => {
               </div>
             </AccordionContent>
           </AccordionItem>
+          
+          {/* Soft Dimensions - NEW SECTION */}
+          <AccordionItem value="soft-dimensions">
+            <AccordionTrigger className="text-lg font-semibold">
+              Soft Dimensions
+            </AccordionTrigger>
+            <AccordionContent className="space-y-4">
+              <div className="bg-gray-50 p-5 rounded-xl border border-gray-200">
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Nghiên cứu về phương pháp đo lường Accuracy gián tiếp khi không có ground truth:
+                  Trong lĩnh vực DQ, ta có:
+                </p>
+                
+                <div className="space-y-4">
+                  {/* Accuracy */}
+                  <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <Check className="w-5 h-5 mt-1 text-green-500 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-semibold text-base">Accuracy (Độ chính xác)</h4>
+                      <p className="text-gray-700">
+                        Dữ liệu phải phản ánh đúng thực tế, không có lỗi, sai sót hoặc thông tin sai lệch.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  {/* Reliability */}
+                  <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <Shield className="w-5 h-5 mt-1 text-blue-500 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-semibold text-base">Reliability (Độ Tin Cậy)</h4>
+                      <p className="text-gray-700">
+                        Đo lường mức độ đúng đắn và ổn định của dữ liệu, đảm bảo rằng dữ liệu phản ánh đúng thực tế.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  {/* Relevance */}
+                  <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <Link className="w-5 h-5 mt-1 text-purple-500 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-semibold text-base">Relevance (Độ Liên Quan)</h4>
+                      <p className="text-gray-700">
+                        Đánh giá mức độ dữ liệu phù hợp với mục tiêu phân tích hoặc dự đoán.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </AccordionContent>
+          </AccordionItem>
         </Accordion>
       </div>
 
@@ -176,16 +227,16 @@ const DataQuality = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
           <Button asChild variant="outline">
-            <Link to="/data-overview" className="flex items-center gap-1.5">
+            <RouterLink to="/data-overview" className="flex items-center gap-1.5">
               <FileCheck className="w-4 h-4" />
               <span>Tổng quan dữ liệu</span>
-            </Link>
+            </RouterLink>
           </Button>
           <Button asChild>
-            <Link to="/dashboard" className="flex items-center gap-1.5">
+            <RouterLink to="/dashboard" className="flex items-center gap-1.5">
               <Clock className="w-4 h-4" />
               <span>Dashboard phân tích</span>
-            </Link>
+            </RouterLink>
           </Button>
         </div>
       </div>
