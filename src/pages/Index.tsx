@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import BSIFormula from '@/components/BSIFormula';
 import ResearchOverview from '@/components/ResearchOverview';
 import DataPipeline from '@/components/DataPipeline';
 import Footer from '@/components/Footer';
@@ -17,6 +18,7 @@ const Index = () => {
       <Navbar />
       <main className="flex-grow">
         <Hero />
+        <BSIFormula />
         <ResearchOverview />
         <DataPipeline />
       </main>
