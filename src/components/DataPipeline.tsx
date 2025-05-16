@@ -26,7 +26,7 @@ const DataPipeline = () => {
                   <div className="w-20 h-20 rounded-full bg-research-primary text-white flex items-center justify-center text-xl font-bold mb-4">
                     1
                   </div>
-                  <h3 className="font-semibold text-gray-900">Thu thập dữ liệu</h3>
+                  <h3 className="font-semibold text-sm text-gray-900">Thu thập dữ liệu</h3>
                 </div>
               </div>
               
@@ -36,7 +36,7 @@ const DataPipeline = () => {
                   <div className="w-20 h-20 rounded-full bg-research-primary text-white flex items-center justify-center text-xl font-bold mb-4">
                     2
                   </div>
-                  <h3 className="font-semibold text-gray-900">Phân tích dữ liệu</h3>
+                  <h3 className="font-semibold text-sm text-gray-900">Phân tích dữ liệu</h3>
                 </div>
               </div>
               
@@ -46,7 +46,7 @@ const DataPipeline = () => {
                   <div className="w-20 h-20 rounded-full bg-research-primary text-white flex items-center justify-center text-xl font-bold mb-4">
                     3
                   </div>
-                  <h3 className="font-semibold text-gray-900">Đo lường chất lượng</h3>
+                  <h3 className="font-semibold text-sm text-gray-900">Đo lường chất lượng</h3>
                 </div>
               </div>
               
@@ -56,7 +56,7 @@ const DataPipeline = () => {
                   <div className="w-20 h-20 rounded-full bg-research-primary text-white flex items-center justify-center text-xl font-bold mb-4">
                     4
                   </div>
-                  <h3 className="font-semibold text-gray-900">Làm sạch dữ liệu</h3>
+                  <h3 className="font-semibold text-sm text-gray-900">Làm sạch dữ liệu</h3>
                 </div>
               </div>
 
@@ -67,7 +67,7 @@ const DataPipeline = () => {
                   <div className="w-20 h-20 rounded-full bg-research-primary text-white flex items-center justify-center text-xl font-bold mb-4">
                     5
                   </div>
-                  <h3 className="font-semibold text-gray-900">Mô hình BSI</h3>
+                  <h3 className="font-semibold text-sm text-gray-900">Mô hình BSI</h3>
                 </div>
               </div>
             </div>
