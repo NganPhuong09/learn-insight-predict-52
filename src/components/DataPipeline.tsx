@@ -36,7 +36,7 @@ const DataPipeline = () => {
                   <div className="w-20 h-20 rounded-full bg-research-primary text-white flex items-center justify-center text-xl font-bold mb-4">
                     2
                   </div>
-                  <h3 className="font-semibold text-gray-900">Làm sạch dữ liệu</h3>
+                  <h3 className="font-semibold text-gray-900">Phân tích dữ liệu</h3>
                 </div>
               </div>
               
@@ -46,11 +46,47 @@ const DataPipeline = () => {
                   <div className="w-20 h-20 rounded-full bg-research-primary text-white flex items-center justify-center text-xl font-bold mb-4">
                     3
                   </div>
-                  <h3 className="font-semibold text-gray-900">Tạo biến</h3>
+                  <h3 className="font-semibold text-gray-900">Đo lường chất lượng</h3>
                 </div>
               </div>
               
               {/* Step 4 */}
+              <div className="relative z-10 opacity-0 animate-fade-in" style={{ animationDelay: '0.8s' }}>
+                <div className="flex flex-col items-center">
+                  <div className="w-20 h-20 rounded-full bg-research-primary text-white flex items-center justify-center text-xl font-bold mb-4">
+                    4
+                  </div>
+                  <h3 className="font-semibold text-gray-900">Làm sạch dữ liệu</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+              {/* Step 5 */}
+              <div className="relative z-10 opacity-0 animate-fade-in" style={{ animationDelay: '0.8s' }}>
+                <div className="flex flex-col items-center">
+                  <div className="w-20 h-20 rounded-full bg-research-primary text-white flex items-center justify-center text-xl font-bold mb-4">
+                    4
+                  </div>
+                  <h3 className="font-semibold text-gray-900">Tạo sinh dữ liệu</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+              {/* Step 6 */}
+              <div className="relative z-10 opacity-0 animate-fade-in" style={{ animationDelay: '0.8s' }}>
+                <div className="flex flex-col items-center">
+                  <div className="w-20 h-20 rounded-full bg-research-primary text-white flex items-center justify-center text-xl font-bold mb-4">
+                    4
+                  </div>
+                  <h3 className="font-semibold text-gray-900">Làm sạch dữ liệu</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+              {/* Step 7 */}
               <div className="relative z-10 opacity-0 animate-fade-in" style={{ animationDelay: '0.8s' }}>
                 <div className="flex flex-col items-center">
                   <div className="w-20 h-20 rounded-full bg-research-primary text-white flex items-center justify-center text-xl font-bold mb-4">
@@ -61,7 +97,7 @@ const DataPipeline = () => {
               </div>
             </div>
           </div>
-
+  
           {/* Mobile Timeline */}
           <div className="md:hidden space-y-10 relative">
             {/* Vertical line */}
