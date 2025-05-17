@@ -209,7 +209,7 @@ const satisfactionLevels = [
             </h1>
             <p className="text-lg text-gray-600 md:pr-10">
               Sử dụng học máy và khai phá dữ liệu từ hành vi học tập để dự đoán
-              mức độ hài lòng, nâng cao trải nghiệm và ch���t lượng khóa học trực tuyến.
+              mức độ hài lòng, nâng cao trải nghiệm và chất lượng khóa học trực tuyến.
             </p>
             <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 pt-2">
               <Button asChild size="lg" className="bg-research-primary hover:bg-research-primary/90">
