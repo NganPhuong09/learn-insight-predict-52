@@ -19,99 +19,99 @@ const satisfactionLevels = [
 
   
   // Khóa học mẫu cho từng mức độ hài lòng
-    // Khóa học mẫu cho từng mức độ hài lòng
   const mockCourses = {
-    "Rất hài lòng": [
-      { 
-        id: 1, 
-        name: "Lập Trình Web Nâng Cao", 
-        bsi: 0.87,
-        vei: 0.89, // Video Engagement Index
-        eei: 0.92, // Exercise Engagement Index
-        csi: 0.85, // Comment Sentiment Index
-      },
-      { 
-        id: 2, 
-        name: "Machine Learning cơ bản", 
-        bsi: 0.84,
-        vei: 0.83, 
-        eei: 0.82, 
-        csi: 0.88, 
-      },
-    ],
-    "Hài lòng": [
-      { 
-        id: 3, 
-        name: "Python cho người mới bắt đầu", 
-        bsi: 0.72,
-        vei: 0.75, 
-        eei: 0.78, 
-        csi: 0.64, 
-      },
-      { 
-        id: 4, 
-        name: "Thuật toán cơ bản", 
-        bsi: 0.65,
-        vei: 0.82, 
-        eei: 0.61, 
-        csi: 0.70, 
-      },
-    ],
-    "Bình thường": [
-      { 
-        id: 5, 
-        name: "Cơ sở dữ liệu", 
-        bsi: 0.55,
-        vei: 0.59, 
-        eei: 0.42, 
-        csi: 0.49, 
-      },
-      { 
-        id: 6, 
-        name: "Front-end cơ bản", 
-        bsi: 0.51,
-        vei: 0.48, 
-        eei: 0.52, 
-        csi: 0.46, 
-      },
-    ],
-    "Không hài lòng": [
-      { 
-        id: 7, 
-        name: "Đồ họa máy tính", 
-        bsi: 0.32,
-        vei: 0.25, 
-        eei: 0.39, 
-        csi: 0.29, 
-      },
-      { 
-        id: 8, 
-        name: "IoT cơ bản", 
-        bsi: 0.28,
-        vei: 0.31, 
-        eei: 0.26, 
-        csi: 0.25, 
-      },
-    ],
-    "Rất không hài lòng": [
-      { 
-        id: 9, 
-        name: "Kiến trúc máy tính", 
-        bsi: 0.12,
-        vei: 0.08, 
-        eei: 0.15, 
-        csi: 0.11, 
-      },
-      { 
-        id: 10, 
-        name: "Công nghệ phần mềm", 
-        bsi: 0.16,
-        vei: 0.18, 
-        eei: 0.14, 
-        csi: 0.17, 
-      },
-    ],
-  };
+  "Rất hài lòng": [
+    { 
+      id: 1, 
+      name: "Lập Trình Web Nâng Cao", 
+      bsi: 0.87,
+      vei: 0.88,
+      eei: 0.91,
+      csi: 0.85,
+    },
+    { 
+      id: 2, 
+      name: "Machine Learning cơ bản", 
+      bsi: 0.83,
+      vei: 0.81,
+      eei: 0.85,
+      csi: 0.84,
+    },
+  ],
+  "Hài lòng": [
+    { 
+      id: 3, 
+      name: "Python cho người mới bắt đầu", 
+      bsi: 0.73,
+      vei: 0.70,
+      eei: 0.68,
+      csi: 0.72,
+    },
+    { 
+      id: 4, 
+      name: "Thuật toán cơ bản", 
+      bsi: 0.66,
+      vei: 0.62,
+      eei: 0.65,
+      csi: 0.67,
+    },
+  ],
+  "Bình thường": [
+    { 
+      id: 5, 
+      name: "Cơ sở dữ liệu", 
+      bsi: 0.56,
+      vei: 0.54,
+      eei: 0.53,
+      csi: 0.52,
+    },
+    { 
+      id: 6, 
+      name: "Front-end cơ bản", 
+      bsi: 0.51,
+      vei: 0.50,
+      eei: 0.55,
+      csi: 0.51,
+    },
+  ],
+  "Không hài lòng": [
+    { 
+      id: 7, 
+      name: "Đồ họa máy tính", 
+      bsi: 0.45,
+      vei: 0.44,
+      eei: 0.46,
+      csi: 0.41,
+    },
+    { 
+      id: 8, 
+      name: "IoT cơ bản", 
+      bsi: 0.43,
+      vei: 0.42,
+      eei: 0.45,
+      csi: 0.40,
+    },
+  ],
+  "Rất không hài lòng": [
+    { 
+      id: 9, 
+      name: "Kiến trúc máy tính", 
+      bsi: 0.18,
+      vei: 0.20,
+      eei: 0.22,
+      csi: 0.19,
+    },
+    { 
+      id: 10, 
+      name: "Công nghệ phần mềm", 
+      bsi: 0.25,
+      vei: 0.27,
+      eei: 0.24,
+      csi: 0.26,
+    },
+  ],
+};
+
 
   // Các mô tả và tiêu chí đánh giá cho từng mức độ
  const criteriaByLevel = {
