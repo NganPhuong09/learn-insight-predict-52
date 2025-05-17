@@ -113,14 +113,14 @@ const ResearchOverview = () => {
                 <div className="min-w-[24px] flex justify-center">
                   <div className="w-6 h-6 rounded-full bg-research-primary flex items-center justify-center text-white font-bold text-sm">5</div>
                 </div>
-                <p className="text-gray-700">Đo lường và kiểm soát chất lượng dữ liệu, bao gồm: Hard dimensions (đầy đủ, chính xác, nhất quán), Soft dimensions (tính phù hợp, mức độ cập nhật); nếu phát hiện dữ liệu lỗi thời thì tự động đào tạo lại mô hình</p>
+                <p className="text-gray-700">Đo lường và kiểm soát chất lượng dữ liệu, nếu phát hiện lỗi thời thì tự động đào tạo lại mô hình</p>
               </div>
         
               <div className="flex gap-3">
                 <div className="min-w-[24px] flex justify-center">
                   <div className="w-6 h-6 rounded-full bg-research-primary flex items-center justify-center text-white font-bold text-sm">6</div>
                 </div>
-                <p className="text-gray-700">Theo dõi và đánh giá hiệu quả mô hình theo thời gian, đảm bảo mô hình phản ánh đúng sự thay đổi trong hành vi học tập và nhu cầu của học viên</p>
+                <p className="text-gray-700">Theo dõi và đánh giá hiệu quả mô hình theo thời gian</p>
               </div>
         
               <div className="flex gap-3">
