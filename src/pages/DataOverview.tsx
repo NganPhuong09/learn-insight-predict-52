@@ -29,23 +29,26 @@ const DataOverview = () => {
           </div>
 
           {/* Đặc điểm nổi bật */}
-          <div className="space-y-2">
-            <h3 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
-              <Layers className="w-5 h-5 text-blue-500" />
-              Đặc điểm nổi bật
-            </h3>
-            <ul className="list-disc list-inside text-gray-700 space-y-1 pl-4">
-              <li>
-                <strong>Phạm vi rộng:</strong> Thu thập từ nhiều nguồn tài nguyên giáo dục và hành vi học tập của sinh viên.
-              </li>
-              <li>
-                <strong>Quy mô lớn:</strong> Hơn 296 triệu bản ghi – vượt trội so với các bộ dữ liệu giáo dục mở khác.
-              </li>
-              <li>
-                <strong>Tổ chức theo khái niệm:</strong> Dữ liệu được cấu trúc theo khái niệm giúp dễ trình bày và mô hình hóa.
-              </li>
-            </ul>
+          <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <div className="space-y-2">
+              <h3 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
+                <Layers className="w-5 h-5 text-blue-500" />
+                Đặc điểm nổi bật
+              </h3>
+              <ul className="list-disc list-inside text-gray-700 space-y-1 pl-4">
+                <li>
+                  <strong>Phạm vi rộng:</strong> Thu thập từ nhiều nguồn tài nguyên giáo dục và hành vi học tập của sinh viên.
+                </li>
+                <li>
+                  <strong>Quy mô lớn:</strong> Hơn 296 triệu bản ghi – vượt trội so với các bộ dữ liệu giáo dục mở khác.
+                </li>
+                <li>
+                  <strong>Tổ chức theo khái niệm:</strong> Dữ liệu được cấu trúc theo khái niệm giúp dễ trình bày và mô hình hóa.
+                </li>
+              </ul>
+            </div>
           </div>
+
 
           {/* Cấu trúc dữ liệu */}
           <div className="space-y-2">
