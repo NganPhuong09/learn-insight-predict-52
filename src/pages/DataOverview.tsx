@@ -15,7 +15,16 @@ const DataOverview = () => {
           {/* Giới thiệu tổng quan */}
           <div className="bg-gray-50 p-5 rounded-xl border border-gray-200">
             <p className="text-gray-700 leading-relaxed">
-              <strong>MOOCCubeX</strong> là kho dữ liệu quy mô lớn được phát triển bởi Nhóm Kỹ thuật Tri thức – Đại học Thanh Hoa, với sự hỗ trợ từ nền tảng MOOC lớn nhất Trung Quốc – XuetangX. Bộ dữ liệu này phục vụ nghiên cứu <em>học tập thích ứng</em> trong môi trường học trực tuyến quy mô lớn (MOOC).
+              <strong>MOOCCubeX</strong> là kho dữ liệu quy mô lớn được phát triển bởi Nhóm Kỹ thuật Tri thức – Đại học Thanh Hoa, với sự hỗ trợ từ nền tảng MOOC lớn nhất Trung Quốc – XuetangX. Bộ dữ liệu này phục vụ nghiên cứu <em>học tập thích ứng</em> trong môi trường học trực tuyến quy mô lớn (MOOC).  
+              Bạn có thể truy cập dataset tại {" "}
+              <a 
+                href="https://github.com/THU-KEG/MOOCCubeX" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-blue-600 hover:underline"
+              >
+                GitHub - MOOCCubeX
+              </a>.
             </p>
           </div>
 
