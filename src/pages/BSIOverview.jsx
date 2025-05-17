@@ -47,37 +47,42 @@ const BSIOverview = () => {
           </div>
           
           {/* Công thức chung */}
-          <div>
-            <h3 className="text-xl font-semibold flex items-center gap-2 text-gray-800">
+          <div className="border border-gray-200 rounded-xl bg-gray-50 p-5">
+            <h3 className="text-xl font-semibold flex items-center gap-2 text-gray-800 mb-2">
               <Gauge className="w-5 h-5 text-blue-500" />
               Công thức tổng quát
             </h3>
-            <p className="mt-2 text-gray-700">
-              <strong>BSI = w₁ × VEI + w₂ × EEI + w₃ × CSI</strong>
-            </p>
-            <p className="mt-1 text-sm text-gray-600 italic">
-              Trong đó: w₁, w₂, w₃ là trọng số tương ứng của các chỉ số VEI, EEI và CSI.
-            </p>
-            <ul className="list-disc list-inside mt-2 text-gray-700 space-y-1">
-              <li><strong>VEI</strong>: Video Engagement Index – mức độ tương tác với video</li>
-              <li><strong>EEI</strong>: Exercise Engagement Index – mức độ tương tác với bài tập</li>
-              <li><strong>CSI</strong>: Comment Sentiment Index – chỉ số cảm xúc trong bình luận</li>
+            <div className="bg-white p-4 rounded-lg border text-center shadow-sm">
+              <p className="text-lg font-semibold mb-2">
+                BSI = w₁ × VEI + w₂ × EEI + w₃ × CSI
+              </p>
+              <p className="text-sm text-gray-600 italic">
+                Trong đó: w₁, w₂, w₃ là trọng số tương ứng của các chỉ số VEI, EEI và CSI.
+              </p>
+            </div>
+            <ul className="list-disc list-inside mt-3 text-gray-700 space-y-1">
+              <li><strong>VEI:</strong> Video Engagement Index – mức độ tương tác với video</li>
+              <li><strong>EEI:</strong> Exercise Engagement Index – mức độ tương tác với bài tập</li>
+              <li><strong>CSI:</strong> Comment Sentiment Index – chỉ số cảm xúc trong bình luận</li>
             </ul>
           </div>
+        
           {/* VEI */}
-          <div>
-            <h3 className="text-xl font-semibold flex items-center gap-2 text-gray-800">
+          <div className="border border-gray-200 rounded-xl bg-purple-50 p-5">
+            <h3 className="text-xl font-semibold flex items-center gap-2 text-gray-800 mb-2">
               <Video className="w-5 h-5 text-purple-500" />
               VEI – Video Engagement Index
             </h3>
-            <p className="text-gray-700 mt-2">Đo mức độ tương tác của người học với video.</p>
-            <p className="mt-2 text-gray-700">
-              <strong>VEI = α₁ × PTR + α₂ × SBTR + α₃ × (1 – SFTR) + α₄ × WR + α₅ × CR</strong>
-            </p>
-            <p className="mt-1 text-sm text-gray-600 italic">
-              Trong đó: α₁ đến α₅ là trọng số của các thành phần trong chỉ số VEI.
-            </p>
-            <ul className="list-disc list-inside text-gray-700 mt-1">
+            <p className="text-gray-700 mb-2">Đo mức độ tương tác của người học với video.</p>
+            <div className="bg-white p-4 rounded-lg border text-center shadow-sm mb-3">
+              <p className="text-lg font-semibold">
+                VEI = α₁ × PTR + α₂ × SBTR + α₃ × (1 – SFTR) + α₄ × WR + α₅ × CR
+              </p>
+              <p className="text-sm text-gray-600 italic mt-1">
+                Trong đó: α₁ đến α₅ là trọng số của các thành phần trong chỉ số VEI.
+              </p>
+            </div>
+            <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
               <li>PTR: Pause time ratio</li>
               <li>SBTR: Rewind time ratio</li>
               <li>SFTR: Fast forward time ratio</li>
@@ -85,17 +90,22 @@ const BSIOverview = () => {
               <li>CR: Completion ratio</li>
             </ul>
           </div>
-
+        
           {/* EEI */}
-          <div>
-            <h3 className="text-xl font-semibold flex items-center gap-2 text-gray-800">
+          <div className="border border-gray-200 rounded-xl bg-teal-50 p-5">
+            <h3 className="text-xl font-semibold flex items-center gap-2 text-gray-800 mb-2">
               <ClipboardCheck className="w-5 h-5 text-teal-500" />
               EEI – Exercise Engagement Index
             </h3>
-            <p className="text-gray-700 mt-2">Đo mức độ tương tác với bài tập.</p>
-            <p className="mt-2 text-gray-700">
-              <strong>EEI = α₁ × score_ratio + α₂ × correct_first_try + α₃ × correct_ratio + α₄ × engagement_score + α₅ × consistency_score</strong>
-            </p>
+            <p className="text-gray-700 mb-2">Đo mức độ tương tác với bài tập.</p>
+            <div className="bg-white p-4 rounded-lg border text-center shadow-sm mb-3">
+              <p className="text-lg font-semibold">
+                EEI = α₁ × score_ratio + α₂ × correct_first_try + α₃ × correct_ratio + α₄ × engagement_score + α₅ × consistency_score
+              </p>
+              <p className="text-sm text-gray-600 italic mt-1">
+                Trong đó: α₁ đến α₅ là trọng số của từng yếu tố đánh giá hiệu quả học tập.
+              </p>
+            </div>
             <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
               <li><strong>Score Ratio:</strong> Điểm số đạt được / điểm tối đa</li>
               <li><strong>Correct First Try:</strong> Làm đúng ngay lần đầu</li>
@@ -103,27 +113,25 @@ const BSIOverview = () => {
               <li><strong>Engagement Score:</strong> Số bài có điểm / tổng số bài</li>
               <li><strong>Consistency Score:</strong> Số bài đúng liên tiếp / số bài đã làm</li>
             </ul>
-            
-            <p className="mt-1 text-sm text-gray-600 italic">
-              Trong đó: α₁ đến α₅ là trọng số của từng yếu tố đánh giá hiệu quả học tập.
-            </p>
           </div>
-
+        
           {/* CSI */}
-          <div>
-            <h3 className="text-xl font-semibold flex items-center gap-2 text-gray-800">
+          <div className="border border-gray-200 rounded-xl bg-pink-50 p-5">
+            <h3 className="text-xl font-semibold flex items-center gap-2 text-gray-800 mb-2">
               <MessageCircle className="w-5 h-5 text-pink-500" />
               CSI – Comment Sentiment Index
             </h3>
-            <p className="text-gray-700 mt-2">Đánh giá cảm xúc trong bình luận của sinh viên.</p>
-            <p className="mt-2 text-gray-700">
-              <strong>CSI = sentiment_score × length_score</strong>
-            </p>
+            <p className="text-gray-700 mb-2">Đánh giá cảm xúc trong bình luận của sinh viên.</p>
+            <div className="bg-white p-4 rounded-lg border text-center shadow-sm mb-3">
+              <p className="text-lg font-semibold">
+                CSI = sentiment_score × length_score
+              </p>
+            </div>
             <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
               <li><strong>Sentiment Score:</strong> -1 (tiêu cực), 0 (trung tính), 1 (tích cực)</li>
               <li><strong>Length Bonus:</strong> Dài hơn → trọng số lớn hơn</li>
             </ul>
-
+        
             <div className="mt-3">
               <h4 className="font-semibold text-gray-800 mb-1">Mức điểm theo độ dài bình luận:</h4>
               <ul className="list-disc list-inside text-gray-700 ml-4">
