@@ -110,26 +110,27 @@ const DataOverview = () => {
           </div>
           
           {/* Framework dữ liệu */}
-          <div className="space-y-2">
-            <h3 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
-              <Layers className="w-5 h-5 text-orange-500" />
-              Framework của bộ dữ liệu
-            </h3>
-            <p className="text-gray-700 leading-relaxed">
-              Dữ liệu MOOCCubeX được xây dựng dựa trên 2 phần chính:
-            </p>
-            <ul className="list-disc list-inside text-gray-700 pl-4">
-              <li><strong>Thông tin khóa học (Course Resource)</strong></li>
-              <li><strong>Hành vi người học (Student Behaviour)</strong></li>
-            </ul>
-          </div>
+          <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <div className="space-y-2">
+              <h3 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
+                <Layers className="w-5 h-5 text-orange-500" />
+                Framework của bộ dữ liệu
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                Dữ liệu MOOCCubeX được xây dựng dựa trên 2 phần chính:
+              </p>
+              <ul className="list-disc list-inside text-gray-700 pl-4">
+                <li><strong>Thông tin khóa học (Course Resource)</strong></li>
+                <li><strong>Hành vi người học (Student Behaviour)</strong></li>
+              </ul>
+            </div>
 
           <img 
             src="https://raw.githubusercontent.com/THU-KEG/MOOCCubeX/main/docs/img/framework.png" 
             alt="Framework của bộ dữ liệu MOOCCubeX" 
             className="rounded-xl shadow-md w-full max-w-3xl mx-auto"
           />
-
+          </div>
           {/* Xem dashboard */}
           <div className="pt-4 flex flex-col sm:flex-row sm:justify-between gap-4 border-t border-gray-200">
             <p className="text-gray-600">
