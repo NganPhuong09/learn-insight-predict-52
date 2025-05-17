@@ -217,10 +217,10 @@ const Hero = () => {
               <h5 className="font-medium mb-1">Tiêu chuẩn phân loại</h5>
               <ul className="text-xs space-y-1 text-gray-600">
                 <li>• Rất hài lòng: tất cả chỉ số ≥ 0.8</li>
-                <li>• Hài lòng: 0.6 ≤ chỉ số < 0.8</li>
-                <li>• Bình thường: 0.5 ≤ chỉ số < 0.6</li>
-                <li>• Không hài lòng: 0.4 ≤ chỉ số < 0.5</li>
-                <li>• Rất không hài lòng: chỉ số < 0.4</li>
+                <li>• Hài lòng: 0.6 ≤ chỉ số &lt; 0.8</li>
+                <li>• Bình thường: 0.5 ≤ chỉ số &lt; 0.6</li>
+                <li>• Không hài lòng: 0.4 ≤ chỉ số &lt; 0.5</li>
+                <li>• Rất không hài lòng: chỉ số &lt; 0.4</li>
               </ul>
             </div>
           </div>
