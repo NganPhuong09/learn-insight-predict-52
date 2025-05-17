@@ -85,25 +85,56 @@ const ResearchOverview = () => {
                 <div className="min-w-[24px] flex justify-center">
                   <div className="w-6 h-6 rounded-full bg-research-primary flex items-center justify-center text-white font-bold text-sm">1</div>
                 </div>
-                <p className="text-gray-700">Xác định sớm mức độ hài lòng của học viên để cải thiện trải nghiệm kịp thời</p>
+                <p className="text-gray-700">Dự đoán sớm mức độ hài lòng của học viên để có thể can thiệp kịp thời trong quá trình học, thay vì chờ đến khi kết thúc khóa học mới phản ứng</p>
               </div>
+        
               <div className="flex gap-3">
                 <div className="min-w-[24px] flex justify-center">
                   <div className="w-6 h-6 rounded-full bg-research-primary flex items-center justify-center text-white font-bold text-sm">2</div>
                 </div>
-                <p className="text-gray-700">Phân tích các yếu tố ảnh hưởng đến sự hài lòng trong học tập trực tuyến</p>
+                <p className="text-gray-700">Phân tích các yếu tố ảnh hưởng đến sự hài lòng, bao gồm hành vi học tập, mức độ tương tác, thời gian làm bài và tiến độ học</p>
               </div>
+        
               <div className="flex gap-3">
                 <div className="min-w-[24px] flex justify-center">
                   <div className="w-6 h-6 rounded-full bg-research-primary flex items-center justify-center text-white font-bold text-sm">3</div>
                 </div>
-                <p className="text-gray-700">Xây dựng mô hình dự đoán tự động dựa trên dữ liệu hành vi học tập</p>
+                <p className="text-gray-700">Xây dựng mô hình dự đoán tự động dựa trên dữ liệu hành vi học viên nhằm đưa ra cảnh báo sớm và hỗ trợ quyết định</p>
               </div>
+        
               <div className="flex gap-3">
                 <div className="min-w-[24px] flex justify-center">
                   <div className="w-6 h-6 rounded-full bg-research-primary flex items-center justify-center text-white font-bold text-sm">4</div>
                 </div>
-                <p className="text-gray-700">Đề xuất các biện pháp cải thiện khóa học dựa trên kết quả dự đoán</p>
+                <p className="text-gray-700">Đề xuất các biện pháp cải thiện khóa học như cá nhân hóa nội dung, tăng cường hỗ trợ học viên và điều chỉnh phương pháp giảng dạy</p>
+              </div>
+        
+              <div className="flex gap-3">
+                <div className="min-w-[24px] flex justify-center">
+                  <div className="w-6 h-6 rounded-full bg-research-primary flex items-center justify-center text-white font-bold text-sm">5</div>
+                </div>
+                <p className="text-gray-700">Đo lường và kiểm soát chất lượng dữ liệu, bao gồm: Hard dimensions (đầy đủ, chính xác, nhất quán), Soft dimensions (tính phù hợp, mức độ cập nhật); nếu phát hiện dữ liệu lỗi thời thì tự động đào tạo lại mô hình</p>
+              </div>
+        
+              <div className="flex gap-3">
+                <div className="min-w-[24px] flex justify-center">
+                  <div className="w-6 h-6 rounded-full bg-research-primary flex items-center justify-center text-white font-bold text-sm">6</div>
+                </div>
+                <p className="text-gray-700">Theo dõi và đánh giá hiệu quả mô hình theo thời gian, đảm bảo mô hình phản ánh đúng sự thay đổi trong hành vi học tập và nhu cầu của học viên</p>
+              </div>
+        
+              <div className="flex gap-3">
+                <div className="min-w-[24px] flex justify-center">
+                  <div className="w-6 h-6 rounded-full bg-research-primary flex items-center justify-center text-white font-bold text-sm">7</div>
+                </div>
+                <p className="text-gray-700">Tối ưu hóa tài nguyên giảng dạy thông qua dự báo, giúp giảng viên và quản lý chủ động phân bổ thời gian, nhân lực hỗ trợ học viên</p>
+              </div>
+        
+              <div className="flex gap-3">
+                <div className="min-w-[24px] flex justify-center">
+                  <div className="w-6 h-6 rounded-full bg-research-primary flex items-center justify-center text-white font-bold text-sm">8</div>
+                </div>
+                <p className="text-gray-700">Tăng cường khả năng ra quyết định dựa trên dữ liệu (data-driven) trong quản lý giáo dục và phát triển khóa học</p>
               </div>
             </CardContent>
             <CardFooter>
