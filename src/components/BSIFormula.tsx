@@ -18,51 +18,59 @@ const BSIFormula = () => {
               BSI là chỉ số dự đoán mức độ hài lòng của sinh viên đối với từng khóa học cụ thể, 
               dựa trên hành vi học tập ban đầu.
             </p>
-            
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold flex items-center gap-2 text-gray-800 mb-3">
-                <Gauge className="w-5 h-5 text-research-primary" />
-                Công thức tổng quát
-              </h3>
-              <div className="bg-white p-4 rounded-lg border border-gray-100 text-center">
-                <p className="text-lg font-medium mb-2">
-                  BSI = w₁ × VEI + w₂ × EEI + w₃ × CSI
-                </p>
-                <p className="text-sm text-gray-600 italic">
-                  Trong đó: w₁, w₂, w₃ là trọng số tương ứng của các chỉ số VEI, EEI và CSI.
-                </p>
+
+            <div className="bg-neutral-50 p-6 rounded-xl border border-gray-200 shadow-sm mb-8">
+              <div className="mb-6">
+                <h3 className="text-xl font-semibold flex items-center gap-2 text-gray-800 mb-3">
+                  <Gauge className="w-5 h-5 text-research-primary" />
+                  Công thức tổng quát
+                </h3>
+                <div className="bg-white p-4 rounded-lg border border-gray-100 text-center">
+                  <p className="text-lg font-medium mb-2">
+                    BSI = w₁ × VEI + w₂ × EEI + w₃ × CSI
+                  </p>
+                  <p className="text-sm text-gray-600 italic">
+                    Trong đó: w₁, w₂, w₃ là trọng số tương ứng của các chỉ số VEI, EEI và CSI.
+                  </p>
+                </div>
               </div>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-              <div className="bg-white p-4 rounded-lg border border-gray-100">
-                <h4 className="font-semibold flex items-center gap-2 text-gray-800 mb-2">
-                  <Video className="w-4 h-4 text-purple-500" />
-                  VEI
-                </h4>
-                <p className="text-sm text-gray-600">
-                  Video Engagement Index – đo mức độ tương tác của học viên với các nội dung video
-                </p>
+
+            <div className="bg-neutral-50 p-6 rounded-xl border border-gray-200 shadow-sm mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div className="bg-white p-4 rounded-lg border border-gray-100">
+                  <h4 className="font-semibold flex items-center gap-2 text-gray-800 mb-2">
+                    <Video className="w-4 h-4 text-purple-500" />
+                    VEI
+                  </h4>
+                  <p className="text-sm text-gray-600">
+                    Video Engagement Index – đo mức độ tương tác của học viên với các nội dung video
+                  </p>
+                </div>
               </div>
-              
-              <div className="bg-white p-4 rounded-lg border border-gray-100">
-                <h4 className="font-semibold flex items-center gap-2 text-gray-800 mb-2">
-                  <ClipboardCheck className="w-4 h-4 text-teal-500" />
-                  EEI
-                </h4>
-                <p className="text-sm text-gray-600">
-                  Exercise Engagement Index – đo mức độ tương tác với bài tập và kết quả thực hiện
-                </p>
+
+              <div className="bg-neutral-50 p-6 rounded-xl border border-gray-200 shadow-sm mb-8">
+                <div className="bg-white p-4 rounded-lg border border-gray-100">
+                  <h4 className="font-semibold flex items-center gap-2 text-gray-800 mb-2">
+                    <ClipboardCheck className="w-4 h-4 text-teal-500" />
+                    EEI
+                  </h4>
+                  <p className="text-sm text-gray-600">
+                    Exercise Engagement Index – đo mức độ tương tác với bài tập và kết quả thực hiện
+                  </p>
+                </div>
               </div>
-              
-              <div className="bg-white p-4 rounded-lg border border-gray-100">
-                <h4 className="font-semibold flex items-center gap-2 text-gray-800 mb-2">
-                  <MessageCircle className="w-4 h-4 text-pink-500" />
-                  CSI
-                </h4>
-                <p className="text-sm text-gray-600">
-                  Comment Sentiment Index – phân tích cảm xúc trong bình luận của học viên
-                </p>
+
+              <div className="bg-neutral-50 p-6 rounded-xl border border-gray-200 shadow-sm mb-8">
+                <div className="bg-white p-4 rounded-lg border border-gray-100">
+                  <h4 className="font-semibold flex items-center gap-2 text-gray-800 mb-2">
+                    <MessageCircle className="w-4 h-4 text-pink-500" />
+                    CSI
+                  </h4>
+                  <p className="text-sm text-gray-600">
+                    Comment Sentiment Index – phân tích cảm xúc trong bình luận của học viên
+                  </p>
+                </div>
               </div>
             </div>
             
