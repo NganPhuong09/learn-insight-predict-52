@@ -51,58 +51,62 @@ const DataOverview = () => {
 
 
           {/* Cấu trúc dữ liệu */}
-          <div className="space-y-2">
-            <h3 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
-              <FileText className="w-5 h-5 text-green-500" />
-              Cấu trúc dữ liệu
-            </h3>
-            <div className="grid grid-cols-2 gap-4 text-gray-700">
-              <div className="flex items-start gap-3">
-                <BookOpen className="w-5 h-5 mt-1 text-indigo-500" />
-                <p>
-                  <strong>4.216 khóa học:</strong> Bao gồm tiêu đề, mô tả, tài nguyên liên quan.
-                </p>
-              </div>
-              <div className="flex items-start gap-3">
-                <Video className="w-5 h-5 mt-1 text-rose-500" />
-                <p>
-                  <strong>230.263 video:</strong> Dữ liệu bài giảng gồm tiêu đề và phụ đề.
-                </p>
-              </div>
-              <div className="flex items-start gap-3">
-                <FileText className="w-5 h-5 mt-1 text-yellow-500" />
-                <p>
-                  <strong>358.265 bài tập:</strong> Thông tin bài tập và câu hỏi.
-                </p>
-              </div>
-              <div className="flex items-start gap-3">
-                <BrainCircuit className="w-5 h-5 mt-1 text-purple-500" />
-                <p>
-                  <strong>637.572 khái niệm:</strong> Từ nội dung khóa học – giúp tổ chức kiến thức.
-                </p>
-              </div>
-              <div className="flex items-start gap-3 col-span-2">
-                <Users className="w-5 h-5 mt-1 text-cyan-500" />
-                <p>
-                  <strong>296 triệu bản ghi hành vi từ 3.330.294 sinh viên:</strong> Bao gồm xem video, làm bài tập, thảo luận.
-                </p>
+          <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <div className="space-y-2">
+              <h3 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
+                <FileText className="w-5 h-5 text-green-500" />
+                Cấu trúc dữ liệu
+              </h3>
+              <div className="grid grid-cols-2 gap-4 text-gray-700">
+                <div className="flex items-start gap-3">
+                  <BookOpen className="w-5 h-5 mt-1 text-indigo-500" />
+                  <p>
+                    <strong>4.216 khóa học:</strong> Bao gồm tiêu đề, mô tả, tài nguyên liên quan.
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Video className="w-5 h-5 mt-1 text-rose-500" />
+                  <p>
+                    <strong>230.263 video:</strong> Dữ liệu bài giảng gồm tiêu đề và phụ đề.
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <FileText className="w-5 h-5 mt-1 text-yellow-500" />
+                  <p>
+                    <strong>358.265 bài tập:</strong> Thông tin bài tập và câu hỏi.
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <BrainCircuit className="w-5 h-5 mt-1 text-purple-500" />
+                  <p>
+                    <strong>637.572 khái niệm:</strong> Từ nội dung khóa học – giúp tổ chức kiến thức.
+                  </p>
+                </div>
+                <div className="flex items-start gap-3 col-span-2">
+                  <Users className="w-5 h-5 mt-1 text-cyan-500" />
+                  <p>
+                    <strong>296 triệu bản ghi hành vi từ 3.330.294 sinh viên:</strong> Bao gồm xem video, làm bài tập, thảo luận.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Chất lượng dữ liệu */}
-          <div className="space-y-2">
-            <h3 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
-              <Database className="w-5 h-5 text-amber-500" />
-              <Link to="/data-quality" className="hover:underline hover:text-blue-600 transition-colors">
-                Chất lượng dữ liệu
-              </Link>
-            </h3>
-            <p className="text-gray-700 leading-relaxed pl-4">
-              Chất lượng dữ liệu đóng vai trò quan trọng trong hiệu quả của các mô hình dự đoán. 
-              Để biết thêm chi tiết về cách đánh giá chất lượng dữ liệu MOOCCubeX, vui lòng 
-              <Link to="/data-quality" className="text-blue-600 hover:underline ml-1">xem tại đây</Link>.
-            </p>
+          <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <div className="space-y-2">
+              <h3 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
+                <Database className="w-5 h-5 text-amber-500" />
+                <Link to="/data-quality" className="hover:underline hover:text-blue-600 transition-colors">
+                  Chất lượng dữ liệu
+                </Link>
+              </h3>
+              <p className="text-gray-700 leading-relaxed pl-4">
+                Chất lượng dữ liệu đóng vai trò quan trọng trong hiệu quả của các mô hình dự đoán. 
+                Để biết thêm chi tiết về cách đánh giá chất lượng dữ liệu MOOCCubeX, vui lòng 
+                <Link to="/data-quality" className="text-blue-600 hover:underline ml-1">xem tại đây</Link>.
+              </p>
+            </div>
           </div>
           
           {/* Framework dữ liệu */}
