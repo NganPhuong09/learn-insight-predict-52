@@ -127,15 +127,9 @@ const ResearchOverview = () => {
                 <div className="min-w-[24px] flex justify-center">
                   <div className="w-6 h-6 rounded-full bg-research-primary flex items-center justify-center text-white font-bold text-sm">7</div>
                 </div>
-                <p className="text-gray-700">Tối ưu hóa tài nguyên giảng dạy thông qua dự báo, giúp giảng viên và quản lý chủ động phân bổ thời gian, nhân lực hỗ trợ học viên</p>
+                <p className="text-gray-700">Tối ưu phân bổ tài nguyên giảng dạy nhờ dự báo sớm</p>
               </div>
-        
-              <div className="flex gap-3">
-                <div className="min-w-[24px] flex justify-center">
-                  <div className="w-6 h-6 rounded-full bg-research-primary flex items-center justify-center text-white font-bold text-sm">8</div>
-                </div>
-                <p className="text-gray-700">Tăng cường khả năng ra quyết định dựa trên dữ liệu (data-driven) trong quản lý giáo dục và phát triển khóa học</p>
-              </div>
+      
             </CardContent>
             <CardFooter>
               <Button asChild className="bg-research-primary hover:bg-research-primary/90">
