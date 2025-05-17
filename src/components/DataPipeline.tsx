@@ -67,7 +67,7 @@ const DataPipeline = () => {
                   <div className="w-20 h-20 rounded-full bg-research-primary text-white flex items-center justify-center text-xl font-bold mb-4">
                     5
                   </div>
-                  <h3 className="font-semibold text-xl text-gray-900">Mô hình BSI</h3>
+                  <h3 className="font-semibold text-xl text-gray-900">Áp dụng thuật toán</h3>
                 </div>
               </div>
             </div>
