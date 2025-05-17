@@ -25,8 +25,11 @@ const BSIFormula = () => {
                 Công thức tổng quát
               </h3>
               <div className="bg-white p-4 rounded-lg border border-gray-100 text-center">
-                <p className="text-lg font-medium">
+                <p className="text-lg font-medium mb-2">
                   BSI = w₁ × VEI + w₂ × EEI + w₃ × CSI
+                </p>
+                <p className="text-sm text-gray-600 italic">
+                  Trong đó: w₁, w₂, w₃ là trọng số tương ứng của các chỉ số VEI, EEI và CSI.
                 </p>
               </div>
             </div>

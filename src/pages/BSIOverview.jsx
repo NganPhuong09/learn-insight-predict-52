@@ -1,3 +1,4 @@
+
 import React from "react";
 import Navbar from "@/components/Navbar";
 import { Gauge, Video, ClipboardCheck, MessageCircle } from "lucide-react";
@@ -27,6 +28,9 @@ const BSIOverview = () => {
             </h3>
             <p className="mt-2 text-gray-700">
               <strong>BSI = w₁ × VEI + w₂ × EEI + w₃ × CSI</strong>
+            </p>
+            <p className="mt-1 text-sm text-gray-600 italic">
+              Trong đó: w₁, w₂, w₃ là trọng số tương ứng của các chỉ số VEI, EEI và CSI.
             </p>
             <ul className="list-disc list-inside mt-2 text-gray-700 space-y-1">
               <li><strong>VEI</strong>: Video Engagement Index – mức độ tương tác với video</li>
@@ -77,8 +81,10 @@ const BSIOverview = () => {
               <li><strong>Average Speed:</strong> Tốc độ xem trung bình</li>
             </ul>
             <p className="mt-2 text-gray-700">
-              <strong>VEI = α₁ × PTR + α₂ × SBTR + α₃ × (1 – SFTR) + α₄ × WR + α₅ × CR</strong><br />
-              Với các thành phần là:
+              <strong>VEI = α₁ × PTR + α₂ × SBTR + α₃ × (1 – SFTR) + α₄ × WR + α₅ × CR</strong>
+            </p>
+            <p className="mt-1 text-sm text-gray-600 italic">
+              Trong đó: α₁ đến α₅ là trọng số của các thành phần trong chỉ số VEI.
             </p>
             <ul className="list-disc list-inside text-gray-700 mt-1">
               <li>PTR: Pause time ratio</li>
@@ -105,6 +111,9 @@ const BSIOverview = () => {
             </ul>
             <p className="mt-2 text-gray-700">
               <strong>EEI = α₁ × score_ratio + α₂ × correct_first_try + α₃ × correct_ratio + α₄ × engagement_score + α₅ × consistency_score</strong>
+            </p>
+            <p className="mt-1 text-sm text-gray-600 italic">
+              Trong đó: α₁ đến α₅ là trọng số của từng yếu tố đánh giá hiệu quả học tập.
             </p>
           </div>
 
