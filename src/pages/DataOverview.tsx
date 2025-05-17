@@ -117,6 +117,12 @@ const DataOverview = () => {
             </ul>
           </div>
 
+          <img 
+            src="https://raw.githubusercontent.com/THU-KEG/MOOCCubeX/main/docs/img/framework.png" 
+            alt="Framework của bộ dữ liệu MOOCCubeX" 
+            className="rounded-xl shadow-md w-full max-w-3xl mx-auto"
+          />
+
           {/* Xem dashboard */}
           <div className="pt-4 flex flex-col sm:flex-row sm:justify-between gap-4 border-t border-gray-200">
             <p className="text-gray-600">
