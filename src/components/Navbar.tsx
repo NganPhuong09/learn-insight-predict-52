@@ -39,17 +39,6 @@ const Navbar = () => {
                 <Link to="/data-cleaning" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Chất lượng dữ liệu</Link>
               </div>
             </div>
-            <div className="relative group">
-              <button className="text-gray-700 hover:text-research-primary transition-colors flex items-center">
-                <BookOpen className="mr-1 h-4 w-4" />
-                <span>Mô hình</span>
-                <ChevronDown className="ml-1 h-3 w-3" />
-              </button>
-              <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden transform scale-0 group-hover:scale-100 origin-top transition-transform duration-150 ease-in-out z-10">
-                <Link to="/model-overview" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Tổng quan mô hình</Link>
-                <Link to="/model-results" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Kết quả</Link>
-              </div>
-            </div>
           </nav>
           
           {/* Mobile Menu Button */}
