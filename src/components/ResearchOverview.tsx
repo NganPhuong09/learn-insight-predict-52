@@ -10,7 +10,7 @@ const ResearchOverview = () => {
     {
       icon: <TrendingUp className="h-5 w-5 text-research-primary" />,
       title: "Tính cấp thiết",
-      description: "Dự đoán sớm mức độ hài lòng của học viên giúp cải thiện chất lượng giảng dạy, giảm tỷ lệ bỏ học, tối ưu hóa tài nguyên và nâng cao uy tín của nền tảng. Thông qua phân tích dữ liệu và học máy, các tổ chức giáo dục có thể chủ động phát hiện vấn đề, điều chỉnh kịp thời để nâng cao trải nghiệm học tập và hiệu quả đào tạo.",
+      description: "Dự đoán sớm mức độ hài lòng của học viên giúp cải thiện chất lượng giảng dạy, giảm tỷ lệ bỏ học, tối ưu hóa tài nguyên và nâng cao uy tín của nền tảng. Việc dự đoán được thực hiện ngay trong quá trình học, thay vì chờ đến khi khóa học kết thúc, cho phép các tổ chức giáo dục kịp thời phát hiện vấn đề và can thiệp sớm để nâng cao trải nghiệm học tập và hiệu quả đào tạo.",
       link: ""
     },
     {
