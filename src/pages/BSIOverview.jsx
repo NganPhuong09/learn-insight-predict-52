@@ -17,26 +17,6 @@ const BSIOverview = () => {
           <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 text-gray-700 leading-relaxed">
             BSI là chỉ số dự đoán mức độ hài lòng của sinh viên đối với từng khóa học cụ thể, dựa trên hành vi học tập ban đầu như: xem video, làm bài tập và để lại bình luận.
             <br />
-            Chỉ số được tính trên thang điểm từ 0 đến 1:
-          </div>
-
-          {/* Công thức chung */}
-          <div>
-            <h3 className="text-xl font-semibold flex items-center gap-2 text-gray-800">
-              <Gauge className="w-5 h-5 text-blue-500" />
-              Công thức tổng quát
-            </h3>
-            <p className="mt-2 text-gray-700">
-              <strong>BSI = w₁ × VEI + w₂ × EEI + w₃ × CSI</strong>
-            </p>
-            <p className="mt-1 text-sm text-gray-600 italic">
-              Trong đó: w₁, w₂, w₃ là trọng số tương ứng của các chỉ số VEI, EEI và CSI.
-            </p>
-            <ul className="list-disc list-inside mt-2 text-gray-700 space-y-1">
-              <li><strong>VEI</strong>: Video Engagement Index – mức độ tương tác với video</li>
-              <li><strong>EEI</strong>: Exercise Engagement Index – mức độ tương tác với bài tập</li>
-              <li><strong>CSI</strong>: Comment Sentiment Index – chỉ số cảm xúc trong bình luận</li>
-            </ul>
           </div>
 
           {/* Phân loại theo điểm */}
@@ -65,7 +45,25 @@ const BSIOverview = () => {
               </div>
             </div>
           </div>
-
+          
+          {/* Công thức chung */}
+          <div>
+            <h3 className="text-xl font-semibold flex items-center gap-2 text-gray-800">
+              <Gauge className="w-5 h-5 text-blue-500" />
+              Công thức tổng quát
+            </h3>
+            <p className="mt-2 text-gray-700">
+              <strong>BSI = w₁ × VEI + w₂ × EEI + w₃ × CSI</strong>
+            </p>
+            <p className="mt-1 text-sm text-gray-600 italic">
+              Trong đó: w₁, w₂, w₃ là trọng số tương ứng của các chỉ số VEI, EEI và CSI.
+            </p>
+            <ul className="list-disc list-inside mt-2 text-gray-700 space-y-1">
+              <li><strong>VEI</strong>: Video Engagement Index – mức độ tương tác với video</li>
+              <li><strong>EEI</strong>: Exercise Engagement Index – mức độ tương tác với bài tập</li>
+              <li><strong>CSI</strong>: Comment Sentiment Index – chỉ số cảm xúc trong bình luận</li>
+            </ul>
+          </div>
           {/* VEI */}
           <div>
             <h3 className="text-xl font-semibold flex items-center gap-2 text-gray-800">
@@ -73,13 +71,6 @@ const BSIOverview = () => {
               VEI – Video Engagement Index
             </h3>
             <p className="text-gray-700 mt-2">Đo mức độ tương tác của người học với video.</p>
-            <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
-              <li><strong>Watch Ratio:</strong> Thời gian xem ở tốc độ gốc / độ dài video</li>
-              <li><strong>Completion Ratio:</strong> Thời gian xem thực tế / độ dài video</li>
-              <li><strong>Rewind Ratio:</strong> Tỷ lệ tua lại video – thể hiện quan tâm / cần hiểu thêm</li>
-              <li><strong>Fast Forward Ratio:</strong> Tỷ lệ tua tới – có thể bỏ qua phần không hứng thú</li>
-              <li><strong>Average Speed:</strong> Tốc độ xem trung bình</li>
-            </ul>
             <p className="mt-2 text-gray-700">
               <strong>VEI = α₁ × PTR + α₂ × SBTR + α₃ × (1 – SFTR) + α₄ × WR + α₅ × CR</strong>
             </p>
@@ -102,6 +93,9 @@ const BSIOverview = () => {
               EEI – Exercise Engagement Index
             </h3>
             <p className="text-gray-700 mt-2">Đo mức độ tương tác với bài tập.</p>
+            <p className="mt-2 text-gray-700">
+              <strong>EEI = α₁ × score_ratio + α₂ × correct_first_try + α₃ × correct_ratio + α₄ × engagement_score + α₅ × consistency_score</strong>
+            </p>
             <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
               <li><strong>Score Ratio:</strong> Điểm số đạt được / điểm tối đa</li>
               <li><strong>Correct First Try:</strong> Làm đúng ngay lần đầu</li>
@@ -109,9 +103,7 @@ const BSIOverview = () => {
               <li><strong>Engagement Score:</strong> Số bài có điểm / tổng số bài</li>
               <li><strong>Consistency Score:</strong> Số bài đúng liên tiếp / số bài đã làm</li>
             </ul>
-            <p className="mt-2 text-gray-700">
-              <strong>EEI = α₁ × score_ratio + α₂ × correct_first_try + α₃ × correct_ratio + α₄ × engagement_score + α₅ × consistency_score</strong>
-            </p>
+            
             <p className="mt-1 text-sm text-gray-600 italic">
               Trong đó: α₁ đến α₅ là trọng số của từng yếu tố đánh giá hiệu quả học tập.
             </p>
@@ -124,13 +116,14 @@ const BSIOverview = () => {
               CSI – Comment Sentiment Index
             </h3>
             <p className="text-gray-700 mt-2">Đánh giá cảm xúc trong bình luận của sinh viên.</p>
+            <p className="mt-2 text-gray-700">
+              <strong>CSI = sentiment_score × length_score</strong>
+            </p>
             <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
               <li><strong>Sentiment Score:</strong> -1 (tiêu cực), 0 (trung tính), 1 (tích cực)</li>
               <li><strong>Length Bonus:</strong> Dài hơn → trọng số lớn hơn</li>
             </ul>
-            <p className="mt-2 text-gray-700">
-              <strong>CSI = sentiment_score × length_score</strong>
-            </p>
+
             <div className="mt-3">
               <h4 className="font-semibold text-gray-800 mb-1">Mức điểm theo độ dài bình luận:</h4>
               <ul className="list-disc list-inside text-gray-700 ml-4">
