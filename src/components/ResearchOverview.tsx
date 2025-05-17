@@ -85,28 +85,28 @@ const ResearchOverview = () => {
                 <div className="min-w-[24px] flex justify-center">
                   <div className="w-6 h-6 rounded-full bg-research-primary flex items-center justify-center text-white font-bold text-sm">1</div>
                 </div>
-                <p className="text-gray-700">Dự đoán sớm mức độ hài lòng của học viên để có thể can thiệp kịp thời trong quá trình học, thay vì chờ đến khi kết thúc khóa học mới phản ứng</p>
+                <p className="text-gray-700">Xác định sớm mức độ hài lòng của học viên để cải thiện trải nghiệm kịp thời</p>
               </div>
         
               <div className="flex gap-3">
                 <div className="min-w-[24px] flex justify-center">
                   <div className="w-6 h-6 rounded-full bg-research-primary flex items-center justify-center text-white font-bold text-sm">2</div>
                 </div>
-                <p className="text-gray-700">Phân tích các yếu tố ảnh hưởng đến sự hài lòng, bao gồm hành vi học tập, mức độ tương tác, thời gian làm bài và tiến độ học</p>
+                <p className="text-gray-700">Phân tích các yếu tố ảnh hưởng đến sự hài lòng trong học tập trực tuyến</p>
               </div>
         
               <div className="flex gap-3">
                 <div className="min-w-[24px] flex justify-center">
                   <div className="w-6 h-6 rounded-full bg-research-primary flex items-center justify-center text-white font-bold text-sm">3</div>
                 </div>
-                <p className="text-gray-700">Xây dựng mô hình dự đoán tự động dựa trên dữ liệu hành vi học viên nhằm đưa ra cảnh báo sớm và hỗ trợ quyết định</p>
+                <p className="text-gray-700">Xây dựng mô hình dự đoán tự động dựa trên dữ liệu hành vi học tập</p>
               </div>
         
               <div className="flex gap-3">
                 <div className="min-w-[24px] flex justify-center">
                   <div className="w-6 h-6 rounded-full bg-research-primary flex items-center justify-center text-white font-bold text-sm">4</div>
                 </div>
-                <p className="text-gray-700">Đề xuất các biện pháp cải thiện khóa học như cá nhân hóa nội dung, tăng cường hỗ trợ học viên và điều chỉnh phương pháp giảng dạy</p>
+                <p className="text-gray-700">Đề xuất các biện pháp cải thiện khóa học dựa trên kết quả dự đoán</p>
               </div>
         
               <div className="flex gap-3">
