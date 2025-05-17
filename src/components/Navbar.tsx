@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, BarChart2, Home, Database, BookOpen, ChevronDown } from 'lucide-react';
+import { Menu, X, BarChart2, Home, Database, ChevronDown } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -78,58 +78,25 @@ const Navbar = () => {
               </Link>
               
               {/* Mobile Dropdown - Data */}
-<div className="space-y-2">
-  <div className="text-gray-900 font-medium flex items-center px-2 py-1">
-    <Database className="mr-2 h-5 w-5" />
-    <span>Dữ liệu</span>
-  </div>
-  <div className="pl-9 space-y-1">
-    <Link 
-      to="/data-overview" 
-      className="block text-gray-700 hover:text-research-primary transition-colors px-2 py-1 rounded-md hover:bg-gray-50"
-      onClick={() => setIsMenuOpen(false)}
-    >
-      Tổng quan dữ liệu
-    </Link>
-    <Link 
-      to="/data-cleaning" 
-      className="block text-gray-700 hover:text-research-primary transition-colors px-2 py-1 rounded-md hover:bg-gray-50"
-      onClick={() => setIsMenuOpen(false)}
-    >
-      Chất lượng dữ liệu
-    </Link>
-    {/* 
-    <Link 
-      to="/feature-creation" 
-      className="block text-gray-700 hover:text-research-primary transition-colors px-2 py-1 rounded-md hover:bg-gray-50"
-      onClick={() => setIsMenuOpen(false)}
-    >
-      Tạo biến
-    </Link>
-    */}
-  </div>
-</div>
-
-              {/* Mobile Dropdown - Models */}
               <div className="space-y-2">
                 <div className="text-gray-900 font-medium flex items-center px-2 py-1">
-                  <BookOpen className="mr-2 h-5 w-5" />
-                  <span>Mô hình</span>
+                  <Database className="mr-2 h-5 w-5" />
+                  <span>Dữ liệu</span>
                 </div>
                 <div className="pl-9 space-y-1">
                   <Link 
-                    to="/model-overview" 
+                    to="/data-overview" 
                     className="block text-gray-700 hover:text-research-primary transition-colors px-2 py-1 rounded-md hover:bg-gray-50"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Tổng quan mô hình
+                    Tổng quan dữ liệu
                   </Link>
                   <Link 
-                    to="/model-results" 
+                    to="/data-cleaning" 
                     className="block text-gray-700 hover:text-research-primary transition-colors px-2 py-1 rounded-md hover:bg-gray-50"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Kết quả
+                    Chất lượng dữ liệu
                   </Link>
                 </div>
               </div>

@@ -8,8 +8,8 @@ import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
 import DataOverview from "./pages/DataOverview";
 import DataQuality from "./pages/DataQuality";
-import NotFound from "./pages/NotFound";
 import BSIOverview from "./pages/BSIOverview";
+import NotFound from "./pages/NotFound";
 import React from "react"; // Add explicit React import
 
 // Create a new QueryClient instance inside the component
@@ -29,7 +29,7 @@ const App = () => {
             <Route path="/data-overview" element={<DataOverview />} />
             <Route path="/data-quality" element={<DataQuality />} />
             <Route path="/data-cleaning" element={<DataQuality />} />  {/* Redirect old path to new page */}
-            <Route path="/bsi-overview" element={<BSIOverview />} />  {/* Add route for BSI Overview page */}
+            <Route path="/bsi-overview" element={<BSIOverview />} />  {/* Giữ lại trang BSI Overview */}
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
