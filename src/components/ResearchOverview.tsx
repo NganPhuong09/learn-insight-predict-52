@@ -101,31 +101,25 @@ const ResearchOverview = () => {
                 </div>
                 <p className="text-gray-700">Xây dựng mô hình dự đoán tự động dựa trên dữ liệu hành vi học tập</p>
               </div>
+
         
               <div className="flex gap-3">
                 <div className="min-w-[24px] flex justify-center">
                   <div className="w-6 h-6 rounded-full bg-research-primary flex items-center justify-center text-white font-bold text-sm">4</div>
-                </div>
-                <p className="text-gray-700">Đề xuất các biện pháp cải thiện khóa học dựa trên kết quả dự đoán</p>
-              </div>
-        
-              <div className="flex gap-3">
-                <div className="min-w-[24px] flex justify-center">
-                  <div className="w-6 h-6 rounded-full bg-research-primary flex items-center justify-center text-white font-bold text-sm">5</div>
                 </div>
                 <p className="text-gray-700">Đo lường và kiểm soát chất lượng dữ liệu, nếu phát hiện lỗi thời thì tự động đào tạo lại mô hình</p>
               </div>
         
               <div className="flex gap-3">
                 <div className="min-w-[24px] flex justify-center">
-                  <div className="w-6 h-6 rounded-full bg-research-primary flex items-center justify-center text-white font-bold text-sm">6</div>
+                  <div className="w-6 h-6 rounded-full bg-research-primary flex items-center justify-center text-white font-bold text-sm">5</div>
                 </div>
                 <p className="text-gray-700">Theo dõi và đánh giá hiệu quả mô hình theo thời gian</p>
               </div>
         
               <div className="flex gap-3">
                 <div className="min-w-[24px] flex justify-center">
-                  <div className="w-6 h-6 rounded-full bg-research-primary flex items-center justify-center text-white font-bold text-sm">7</div>
+                  <div className="w-6 h-6 rounded-full bg-research-primary flex items-center justify-center text-white font-bold text-sm">6</div>
                 </div>
                 <p className="text-gray-700">Tối ưu phân bổ tài nguyên giảng dạy nhờ dự báo sớm</p>
               </div>
