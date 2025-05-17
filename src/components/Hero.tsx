@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { ArrowRight, BarChart2, Video, ClipboardCheck, MessageCircle, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -10,15 +9,17 @@ const Hero = () => {
   const [selectedLevel, setSelectedLevel] = useState(null);
   
   // Các mức độ hài lòng và tiêu chí đánh giá
-  const satisfactionLevels = [
-    { name: 'Rất hài lòng', percent: 65, color: 'bg-green-500', threshold: 0.80 },
-    { name: 'Hài lòng', percent: 20, color: 'bg-blue-500', threshold: 0.60 },
-    { name: 'Bình thường', percent: 10, color: 'bg-yellow-500', threshold: 0.40 },
-    { name: 'Không hài lòng', percent: 3, color: 'bg-orange-500', threshold: 0.20 },
-    { name: 'Rất không hài lòng', percent: 2, color: 'bg-red-500', threshold: 0.00 },
-  ];
+const satisfactionLevels = [
+  { name: 'Rất hài lòng', percent: 65, color: 'bg-green-500', threshold: 0.80 },
+  { name: 'Hài lòng', percent: 20, color: 'bg-blue-500', threshold: 0.60 },
+  { name: 'Bình thường', percent: 10, color: 'bg-yellow-500', threshold: 0.50 },
+  { name: 'Không hài lòng', percent: 3, color: 'bg-orange-500', threshold: 0.40 },
+  { name: 'Rất không hài lòng', percent: 2, color: 'bg-red-500', threshold: 0.00 },
+];
+
   
   // Khóa học mẫu cho từng mức độ hài lòng
+    // Khóa học mẫu cho từng mức độ hài lòng
   const mockCourses = {
     "Rất hài lòng": [
       { 
@@ -60,9 +61,9 @@ const Hero = () => {
       { 
         id: 5, 
         name: "Cơ sở dữ liệu", 
-        bsi: 0.56,
+        bsi: 0.55,
         vei: 0.59, 
-        eei: 0.62, 
+        eei: 0.42, 
         csi: 0.49, 
       },
       { 
@@ -113,48 +114,54 @@ const Hero = () => {
   };
 
   // Các mô tả và tiêu chí đánh giá cho từng mức độ
-  const criteriaByLevel = {
-    "Rất hài lòng": {
-      description: "Các khóa học có mức độ hài lòng rất cao, với các chỉ số BSI từ 0.80 - 1.00.",
-      criteria: [
-        "VEI ≥ 0.80: Học viên xem video đầy đủ, tương tác tích cực với nội dung",
-        "EEI ≥ 0.80: Hoàn thành hầu hết bài tập với điểm số cao",
-        "CSI ≥ 0.80: Bình luận tích cực và chi tiết"
-      ]
-    },
-    "Hài lòng": {
-      description: "Các khóa học có mức độ hài lòng cao, với các chỉ số BSI từ 0.60 - 0.80.",
-      criteria: [
-        "VEI ≥ 0.60: Học viên xem hầu hết video",
-        "EEI ≥ 0.60: Hoàn thành phần lớn bài tập",
-        "CSI ≥ 0.60: Bình luận tích cực"
-      ]
-    },
-    "Bình thường": {
-      description: "Các khóa học có mức độ hài lòng trung bình, với các chỉ số BSI từ 0.40 - 0.60.",
-      criteria: [
-        "VEI ≥ 0.40: Học viên xem khoảng một nửa video",
-        "EEI ≥ 0.40: Hoàn thành một phần bài tập",
-        "CSI ≥ 0.40: Bình luận trung tính"
-      ]
-    },
-    "Không hài lòng": {
-      description: "Các khóa học có mức độ hài lòng thấp, với các chỉ số BSI từ 0.20 - 0.40.",
-      criteria: [
-        "VEI < 0.40: Học viên xem ít video",
-        "EEI < 0.40: Ít hoàn thành bài tập",
-        "CSI < 0.40: Bình luận tiêu cực"
-      ]
-    },
-    "Rất không hài lòng": {
-      description: "Các khóa học có mức độ hài lòng rất thấp, với các chỉ số BSI từ 0.00 - 0.20.",
-      criteria: [
-        "VEI < 0.20: Học viên hầu như không xem video",
-        "EEI < 0.20: Hầu như không làm bài tập",
-        "CSI < 0.20: Bình luận rất tiêu cực hoặc không có"
-      ]
-    }
-  };
+ const criteriaByLevel = {
+  "Rất hài lòng": {
+    description: "Các khóa học có mức độ hài lòng rất cao, với BSI ≥ 0.80.",
+    criteria: [
+      "BSI ≥ 0.80: Tổng chỉ số hài lòng rất cao",
+      "VEI ≥ 0.80: Học viên xem video đầy đủ và tương tác tích cực",
+      "EEI ≥ 0.80: Hoàn thành hầu hết bài tập với kết quả tốt",
+      "CSI ≥ 0.80: Bình luận tích cực, chi tiết và mang tính xây dựng"
+    ]
+  },
+  "Hài lòng": {
+    description: "Các khóa học có mức độ hài lòng cao, với 0.60 ≤ BSI < 0.80.",
+    criteria: [
+      "0.60 ≤ BSI < 0.80: Tổng chỉ số hài lòng cao",
+      "0.60 ≤ VEI < 0.80: Học viên xem phần lớn nội dung video",
+      "0.60 ≤ EEI < 0.80: Hoàn thành phần lớn bài tập",
+      "0.60 ≤ CSI < 0.80: Bình luận tích cực, hỗ trợ"
+    ]
+  },
+  "Bình thường": {
+    description: "Các khóa học có mức độ hài lòng trung bình, với 0.50 ≤ BSI < 0.60.",
+    criteria: [
+      "0.50 ≤ BSI < 0.60: Tổng chỉ số hài lòng trung bình",
+      "0.50 ≤ VEI < 0.60: Học viên xem khoảng một nửa số video",
+      "0.50 ≤ EEI < 0.60: Làm bài tập ở mức trung bình",
+      "0.50 ≤ CSI < 0.60: Bình luận trung lập hoặc chưa rõ xu hướng"
+    ]
+  },
+  "Không hài lòng": {
+    description: "Các khóa học có mức độ hài lòng thấp, với 0.40 ≤ BSI < 0.50.",
+    criteria: [
+      "0.40 ≤ BSI < 0.50: Tổng chỉ số hài lòng thấp",
+      "0.40 ≤ VEI < 0.50: Học viên xem ít video",
+      "0.40 ≤ EEI < 0.50: Bài tập ít được hoàn thành",
+      "0.40 ≤ CSI < 0.50: Bình luận tiêu cực nhẹ"
+    ]
+  },
+  "Rất không hài lòng": {
+    description: "Các khóa học có mức độ hài lòng rất thấp, với BSI ≤ 0.30.",
+    criteria: [
+      "BSI ≤ 0.30: Tổng chỉ số hài lòng rất thấp",
+      "VEI ≤ 0.30: Học viên hầu như không xem video",
+      "EEI ≤ 0.30: Hầu như không làm bài tập",
+      "CSI ≤ 0.30: Bình luận tiêu cực hoặc không có phản hồi"
+    ]
+  }
+};
+
 
   // Định nghĩa style cho các mức độ hài lòng
   const satisfactionStyles = {
@@ -202,7 +209,7 @@ const Hero = () => {
             </h1>
             <p className="text-lg text-gray-600 md:pr-10">
               Sử dụng học máy và khai phá dữ liệu từ hành vi học tập để dự đoán
-              mức độ hài lòng, nâng cao trải nghiệm và chất lượng khóa học trực tuyến.
+              mức độ hài lòng, nâng cao trải nghiệm và ch���t lượng khóa học trực tuyến.
             </p>
             <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 pt-2">
               <Button asChild size="lg" className="bg-research-primary hover:bg-research-primary/90">
@@ -217,8 +224,8 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="opacity-0 animate-fade-in animate-delay-200 lg:flex justify-end">
-            <div className="relative">
+          <div className="opacity-0 animate-fade-in animate-delay-200 lg:flex justify-center">
+            <div className="relative w-full max-w-4xl">
               <div className="absolute inset-0 bg-research-primary/5 rounded-2xl transform rotate-3"></div>
               <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden">
                 <div className="bg-research-primary/10 px-5 py-3 flex items-center border-b border-gray-200">
