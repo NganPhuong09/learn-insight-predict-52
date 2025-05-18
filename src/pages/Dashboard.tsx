@@ -1403,42 +1403,42 @@ const Dashboard = () => {
               <TabsList className="grid w-full md:w-auto grid-cols-2 md:grid-cols-4 gap-2">
                 <TabsTrigger value="overview">Tổng quan</TabsTrigger>
                 <TabsTrigger value="courses" className="flex items-center justify-between gap-2">
-                  Khóa học
-                  {activeTab === "courses" && (
-                    <div className="flex items-center space-x-2">
-                      <Select value={selectedCourse} onValueChange={setSelectedCourse}>
-                        <SelectTrigger className="w-[180px] h-8 text-xs">
-                          <SelectValue placeholder="Chọn khóa học" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {courseList.map((course) => (
-                            <SelectItem key={course.id} value={course.id}>
-                              {course.name}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                      
-                      {selectedCourse !== "all" && (
-                        <Select value={selectedWeek} onValueChange={setSelectedWeek}>
-                          <SelectTrigger className="w-[150px] h-8 text-xs">
-                            <SelectValue placeholder="Chọn tuần" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            {weekList.map((week) => (
-                              <SelectItem key={week.id} value={week.id}>
-                                {week.name}
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                      )}
-                    </div>
-                  )}
-                </TabsTrigger>
+                  Khóa học</TabsTrigger>
                 <TabsTrigger value="model">Mô hình</TabsTrigger>
-                <TabsTrigger value="predictions">Dự đoán</TabsTrigger>
               </TabsList>
+
+              {/* 👇 Di chuyển dropdown chọn khóa học + tuần xuống đây */}
+  {activeTab === "courses" && (
+    <div className="flex flex-wrap items-center gap-4 mt-4 px-2">
+      <Select value={selectedCourse} onValueChange={setSelectedCourse}>
+        <SelectTrigger className="w-[180px] h-8 text-xs">
+          <SelectValue placeholder="Chọn khóa học" />
+        </SelectTrigger>
+        <SelectContent>
+          {courseList.map((course) => (
+            <SelectItem key={course.id} value={course.id}>
+              {course.name}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+
+      {selectedCourse !== "all" && (
+        <Select value={selectedWeek} onValueChange={setSelectedWeek}>
+          <SelectTrigger className="w-[150px] h-8 text-xs">
+            <SelectValue placeholder="Chọn tuần" />
+          </SelectTrigger>
+          <SelectContent>
+            {weekList.map((week) => (
+              <SelectItem key={week.id} value={week.id}>
+                {week.name}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      )}
+    </div>
+  )}
               
               <TabsContent value="overview" className="space-y-6">
                 {/* Stats Cards */}
