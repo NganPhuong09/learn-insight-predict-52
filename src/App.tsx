@@ -9,7 +9,7 @@ import Dashboard from "./pages/Dashboard";
 import DataOverview from "./pages/DataOverview";
 import DataQuality from "./pages/DataQuality";
 import BSIOverview from "./pages/BSIOverview";
-import ModelEvaluation from "./pages/ModelEvaluation";
+import ModelEvaluation from "./components/ModelEvaluation";
 import NotFound from "./pages/NotFound";
 import React from "react"; // Add explicit React import
 
