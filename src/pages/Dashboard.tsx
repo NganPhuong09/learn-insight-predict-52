@@ -1405,7 +1405,6 @@ const Dashboard = () => {
     <TabsTrigger value="courses">Khóa học</TabsTrigger>
     <TabsTrigger value="model">Mô hình</TabsTrigger>
   </TabsList>
-</Tabs>
 
 
 
