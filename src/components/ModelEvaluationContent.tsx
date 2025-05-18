@@ -1,6 +1,4 @@
-
 import React, { useState } from "react";
-import Navbar from "@/components/Navbar";
 import { Table, TableBody, TableCaption, TableCell, TableFooter, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -137,7 +135,6 @@ const ModelEvaluation = () => {
   
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
       <main className="flex-grow container mx-auto px-4 py-6">
         <div className="p-6 space-y-6 bg-white rounded-2xl shadow-md">
           <h2 className="text-3xl font-bold text-gray-800">Đánh giá mô hình</h2>
