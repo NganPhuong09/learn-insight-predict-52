@@ -10,6 +10,7 @@ import DataOverview from "./pages/DataOverview";
 import DataQuality from "./pages/DataQuality";
 import BSIOverview from "./pages/BSIOverview";
 import NotFound from "./pages/NotFound";
+import ModelEvaluation from "./pages/ModelEvaluation";
 import React from "react"; // Add explicit React import
 
 // Create a new QueryClient instance inside the component
