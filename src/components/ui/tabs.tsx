@@ -51,4 +51,20 @@ const TabsContent = React.forwardRef<
 ))
 TabsContent.displayName = TabsPrimitive.Content.displayName
 
-export { Tabs, TabsList, TabsTrigger, TabsContent }
+// Add a new FilterContainer component to make it easier to organize filters
+const FilterContainer = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn(
+      "flex flex-wrap items-center gap-4 mb-4 p-2 bg-background rounded-md border",
+      className
+    )}
+    {...props}
+  />
+))
+FilterContainer.displayName = "FilterContainer"
+
+export { Tabs, TabsList, TabsTrigger, TabsContent, FilterContainer }
