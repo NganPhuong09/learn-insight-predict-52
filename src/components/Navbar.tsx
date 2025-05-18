@@ -39,10 +39,6 @@ const Navbar = () => {
                 <Link to="/data-quality" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Chất lượng dữ liệu</Link>
               </div>
             </div>
-            <Link to="/model-evaluation" className="text-gray-700 hover:text-research-primary transition-colors flex items-center">
-              <TableCellsSplit className="mr-1 h-4 w-4" />
-              <span>Mô hình</span>
-            </Link>
           </nav>
           
           {/* Mobile Menu Button */}
