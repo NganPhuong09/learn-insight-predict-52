@@ -9,6 +9,7 @@ import Dashboard from "./pages/Dashboard";
 import DataOverview from "./pages/DataOverview";
 import DataQuality from "./pages/DataQuality";
 import BSIOverview from "./pages/BSIOverview";
+import ModelEvaluation from "./pages/ModelEvaluation";
 import NotFound from "./pages/NotFound";
 import React from "react"; // Add explicit React import
 
@@ -30,6 +31,7 @@ const App = () => {
             <Route path="/data-quality" element={<DataQuality />} />
             <Route path="/data-cleaning" element={<DataQuality />} />  {/* Redirect old path to new page */}
             <Route path="/bsi-overview" element={<BSIOverview />} />  {/* Giữ lại trang BSI Overview */}
+            <Route path="/model-evaluation" element={<ModelEvaluation />} /> {/* New Model Evaluation route */}
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
