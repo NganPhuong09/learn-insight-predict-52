@@ -2020,12 +2020,6 @@ const Dashboard = () => {
               
               <TabsContent value="model">
   <Card>
-    <CardHeader>
-      <CardTitle>Mô hình BSI</CardTitle>
-      <CardDescription>
-        Phân tích hiệu suất và độ chính xác của mô hình dự đoán
-      </CardDescription>
-    </CardHeader>
     <CardContent>
       <ModelEvaluationContent /> {/* 👈 sử dụng component */}
     </CardContent>
