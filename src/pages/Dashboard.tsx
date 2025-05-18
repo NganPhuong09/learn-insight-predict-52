@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import ModelEvaluationTab from "@/components/ModelEvaluationTab";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AreaChart, BarChart2, PieChart, LineChart, Users, BookOpen, Calendar } from "lucide-react";
@@ -2019,19 +2018,20 @@ const Dashboard = () => {
               </TabsContent>
               
               <TabsContent value="model">
-  <Card>
-    <CardHeader>
-      <CardTitle>Mô hình BSI</CardTitle>
-      <CardDescription>
-        Phân tích hiệu suất và độ chính xác của mô hình dự đoán
-      </CardDescription>
-    </CardHeader>
-    <CardContent>
-      <ModelEvaluationTab />
-    </CardContent>
-  </Card>
-</TabsContent>
-
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Mô hình BSI</CardTitle>
+                    <CardDescription>
+                      Phân tích hiệu suất và độ chính xác của mô hình dự đoán
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="h-96 flex items-center justify-center">
+                      <p className="text-gray-500">Thông tin về mô hình sẽ được hiển thị tại đây</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
               
               <TabsContent value="predictions">
                 <Card>

@@ -105,7 +105,15 @@ const Navbar = () => {
                 </div>
               </div>
               
-              
+              {/* Mobile - Model Evaluation */}
+              <Link 
+                to="/model-evaluation" 
+                className="text-gray-700 hover:text-research-primary transition-colors flex items-center px-2 py-1 rounded-md hover:bg-gray-50"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <TableCellsSplit className="mr-2 h-5 w-5" />
+                <span>Mô hình</span>
+              </Link>
             </nav>
           </div>
         </div>
