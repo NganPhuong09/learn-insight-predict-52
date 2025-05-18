@@ -1,6 +1,5 @@
 
 import React, { useState } from "react";
-import Navbar from "@/components/Navbar";
 import { Table, TableBody, TableCaption, TableCell, TableFooter, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
