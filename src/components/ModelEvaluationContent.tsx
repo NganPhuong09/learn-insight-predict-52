@@ -172,8 +172,8 @@ const getBestModel = () => {
                       <TableHead colSpan={3} className="text-center">Soft Dimensions</TableHead>
                     </TableRow>
                     <TableRow>
+                      <TableHead></TableHead>
                       <TableHead>Data</TableHead>
-                      <TableHead>Processing</TableHead>
                       <TableHead className="text-center">SVM</TableHead>
                       <TableHead className="text-center">CNN</TableHead>
                       <TableHead className="text-center">Completeness</TableHead>
