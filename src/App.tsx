@@ -29,7 +29,7 @@ const App = () => {
             <Route path="/data-overview" element={<DataOverview />} />
             <Route path="/data-quality" element={<DataQuality />} />
             <Route path="/data-cleaning" element={<DataQuality />} />  {/* Redirect old path to new page */}
-            <Route path="/bsi-overview" element={<BSIOverview />} />
+            <Route path="/bsi-overview" element={<BSIOverview />} />  {/* Giữ lại trang BSI Overview */}
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
