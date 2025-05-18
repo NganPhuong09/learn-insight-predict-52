@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, BarChart2, Home, Database, ChevronDown } from 'lucide-react';
+import { Menu, X, BarChart2, Home, Database, ChevronDown, TableCellsSplit } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -39,16 +39,10 @@ const Navbar = () => {
                 <Link to="/data-quality" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Chất lượng dữ liệu</Link>
               </div>
             </div>
-            <div className="relative group">
-              <button className="text-gray-700 hover:text-research-primary transition-colors flex items-center">
-                <BarChart2 className="mr-1 h-4 w-4" />
-                <span>Mô hình</span>
-                <ChevronDown className="ml-1 h-3 w-3" />
-              </button>
-              <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden transform scale-0 group-hover:scale-100 origin-top transition-transform duration-150 ease-in-out z-10">
-                <Link to="/dashboard" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Đánh giá mô hình</Link>
-              </div>
-            </div>
+            <Link to="/model-evaluation" className="text-gray-700 hover:text-research-primary transition-colors flex items-center">
+              <TableCellsSplit className="mr-1 h-4 w-4" />
+              <span>Mô hình</span>
+            </Link>
           </nav>
           
           {/* Mobile Menu Button */}
@@ -111,22 +105,15 @@ const Navbar = () => {
                 </div>
               </div>
               
-              {/* Mobile Dropdown - Model */}
-              <div className="space-y-2">
-                <div className="text-gray-900 font-medium flex items-center px-2 py-1">
-                  <BarChart2 className="mr-2 h-5 w-5" />
-                  <span>Mô hình</span>
-                </div>
-                <div className="pl-9 space-y-1">
-                  <Link 
-                    to="/dashboard" 
-                    className="block text-gray-700 hover:text-research-primary transition-colors px-2 py-1 rounded-md hover:bg-gray-50"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Đánh giá mô hình
-                  </Link>
-                </div>
-              </div>
+              {/* Mobile - Model Evaluation */}
+              <Link 
+                to="/model-evaluation" 
+                className="text-gray-700 hover:text-research-primary transition-colors flex items-center px-2 py-1 rounded-md hover:bg-gray-50"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <TableCellsSplit className="mr-2 h-5 w-5" />
+                <span>Mô hình</span>
+              </Link>
             </nav>
           </div>
         </div>

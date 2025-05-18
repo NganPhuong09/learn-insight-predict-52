@@ -9,19 +9,21 @@ import Dashboard from "./pages/Dashboard";
 import DataOverview from "./pages/DataOverview";
 import DataQuality from "./pages/DataQuality";
 import BSIOverview from "./pages/BSIOverview";
+import ModelEvaluation from "./pages/ModelEvaluation";
 import NotFound from "./pages/NotFound";
-import React from "react"; // Ensure React is imported
+import React from "react"; // Add explicit React import
 
-// Create a new QueryClient instance
-const queryClient = new QueryClient();
-
+// Create a new QueryClient instance inside the component
 const App = () => {
+  // Create QueryClient inside component to ensure React is in scope
+  const queryClient = new QueryClient();
+  
   return (
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/dashboard" element={<Dashboard />} />
@@ -29,11 +31,12 @@ const App = () => {
             <Route path="/data-quality" element={<DataQuality />} />
             <Route path="/data-cleaning" element={<DataQuality />} />  {/* Redirect old path to new page */}
             <Route path="/bsi-overview" element={<BSIOverview />} />  {/* Giữ lại trang BSI Overview */}
+            <Route path="/model-evaluation" element={<ModelEvaluation />} /> {/* New Model Evaluation route */}
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </TooltipProvider>
-      </BrowserRouter>
+        </BrowserRouter>
+      </TooltipProvider>
     </QueryClientProvider>
   );
 };
