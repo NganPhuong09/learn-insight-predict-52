@@ -51,7 +51,7 @@ const TabsContent = React.forwardRef<
 ))
 TabsContent.displayName = TabsPrimitive.Content.displayName
 
-// Add a new FilterContainer component to make it easier to organize filters
+// Updated FilterContainer with improved styling and positioning
 const FilterContainer = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -59,7 +59,7 @@ const FilterContainer = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "flex flex-wrap items-center gap-4 mb-4 p-2 bg-background rounded-md border",
+      "flex flex-wrap items-center gap-4 mt-2 p-3 bg-background/60 rounded-md border",
       className
     )}
     {...props}
