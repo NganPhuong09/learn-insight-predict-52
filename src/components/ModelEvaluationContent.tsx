@@ -119,6 +119,13 @@ const ModelEvaluation = () => {
     return `${bestItem.method} (${bestItem.processing})`;
   };
 
+  // Get the best performing model overall (SVM or CNN)
+const getBestModel = () => {
+  const avgSVM = modelResults.reduce((sum, r) => sum + r.svm, 0) / modelResults.length;
+  const avgCNN = modelResults.reduce((sum, r) => sum + r.cnn, 0) / modelResults.length;
+  return avgSVM > avgCNN ? "SVM" : "CNN";
+};
+  
   // States for training schedule
   const [scheduleType, setScheduleType] = useState("weekly");
   const [autoUpdate, setAutoUpdate] = useState(true);
@@ -206,7 +213,8 @@ const ModelEvaluation = () => {
                   <TableFooter>
                     <TableRow>
                       <TableCell colSpan={10} className="text-right">
-                        Pipeline tốt nhất: <span className="font-bold text-amber-600">{getBestPipeline()}</span>
+                        <div>Phương pháp xử lý tốt nhất: <span className="font-bold text-amber-600">{getBestPipeline()}</span></div>
+                        <div>Mô hình học máy tốt nhất: <span className="font-bold text-amber-600">{getBestModel()}</span></div>
                       </TableCell>
                     </TableRow>
                   </TableFooter>
