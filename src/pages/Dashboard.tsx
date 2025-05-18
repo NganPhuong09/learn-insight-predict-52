@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import ModelEvaluation from '@/pages/ModelEvaluation';
+import ModelEvaluationContent from '@/components/ModelEvaluationContent';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AreaChart, BarChart2, PieChart, LineChart, Users, BookOpen, Calendar } from "lucide-react";
@@ -2027,7 +2027,7 @@ const Dashboard = () => {
       </CardDescription>
     </CardHeader>
     <CardContent>
-      <ModelEvaluation /> {/* Chèn nội dung trang ModelEvaluation tại đây */}
+      <ModelEvaluationContent /> {/* 👈 sử dụng component */}
     </CardContent>
   </Card>
 </TabsContent>
