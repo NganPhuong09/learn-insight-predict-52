@@ -35,7 +35,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 
 // Dữ liệu mẫu cho biểu đồ
 const courseList = [
-  { id: "all", name: "Tất cả khóa học" },
+  { id: "all", name: "Chọn khóa học" },
   { id: "ml", name: "Machine Learning Cơ bản" },
   { id: "py", name: "Lập trình Python" },
   { id: "ds", name: "Data Science và Phân tích" },
