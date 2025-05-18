@@ -1400,12 +1400,13 @@ const Dashboard = () => {
             </div>
             
             <Tabs defaultValue="overview" className="space-y-6" value={activeTab} onValueChange={setActiveTab}>
-              <TabsList className="grid w-full md:w-auto grid-cols-2 md:grid-cols-4 gap-2">
-                <TabsTrigger value="overview">Tổng quan</TabsTrigger>
-                <TabsTrigger value="courses" className="flex items-center justify-between gap-2">
-                  Khóa học</TabsTrigger>
-                <TabsTrigger value="model">Mô hình</TabsTrigger>
+              <TabsList className="grid w-full grid-cols-3 gap-2 text-center">
+                  <TabsTrigger value="overview">Tổng quan</TabsTrigger>
+                  <TabsTrigger value="courses">Khóa học</TabsTrigger>
+                  <TabsTrigger value="model">Mô hình</TabsTrigger>
               </TabsList>
+            </Tabs>
+
 
               {/* 👇 Di chuyển dropdown chọn khóa học + tuần xuống đây */}
   {activeTab === "courses" && (
