@@ -59,7 +59,7 @@ const FilterContainer = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "flex flex-wrap items-center gap-4 mt-2 p-3 bg-background/60 rounded-md border",
+      "flex flex-wrap items-center gap-4 mt-3 p-3 bg-background rounded-md border shadow-sm",
       className
     )}
     {...props}
