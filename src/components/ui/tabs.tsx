@@ -51,7 +51,7 @@ const TabsContent = React.forwardRef<
 ))
 TabsContent.displayName = TabsPrimitive.Content.displayName
 
-// Updated FilterContainer with improved styling and positioning
+// FilterContainer component with improved styling
 const FilterContainer = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
