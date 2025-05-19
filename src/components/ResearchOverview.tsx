@@ -125,13 +125,6 @@ const ResearchOverview = () => {
               </div>
       
             </CardContent>
-            <CardFooter>
-              <Button asChild className="bg-research-primary hover:bg-research-primary/90">
-                <Link to="/dashboard">
-                  Khám phá chi tiết <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </CardFooter>
           </Card>
         </div>
       </div>
