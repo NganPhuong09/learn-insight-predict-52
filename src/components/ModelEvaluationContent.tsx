@@ -7,6 +7,7 @@ import { Calendar, RefreshCw } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
+import { Link } from "react-router-dom";
 
 // Define types for our model data
 type ModelResult = {
@@ -157,7 +158,7 @@ const getBestModel = () => {
                 <p className="text-gray-700 leading-relaxed">
                   Bảng dưới đây hiển thị kết quả đánh giá mô hình, với sự kết hợp giữa các phương pháp chuẩn bị dữ liệu
                   (PCA, AHP, CRITIC) và các mô hình học máy (SVM, CNN). Đồng thời hiển thị các chỉ số đánh giá chất lượng
-                  dữ liệu theo các tiêu chí Hard Dimensions và Soft Dimensions.
+                  dữ liệu theo các tiêu chí <Link to="/data-quality" className="text-research-primary hover:underline">Hard Dimensions và Soft Dimensions</Link>.
                 </p>
               </div>
               
