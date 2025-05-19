@@ -1,20 +1,40 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
-import { Database, FileCheck, Clock, Check, Shield, Link } from "lucide-react";
+import { Database, FileCheck, Clock, Check, Shield, Link, ArrowLeft } from "lucide-react";
 import { 
   Accordion, 
   AccordionContent, 
   AccordionItem, 
   AccordionTrigger 
 } from "@/components/ui/accordion";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const DataQuality = () => {
+  const navigate = useNavigate();
+
+  const handleGoBack = () => {
+    // Navigate back to model evaluation tab
+    navigate("/model-evaluation");
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow container mx-auto px-4 py-6">
+        {/* Back button added at the top */}
+        <div className="mb-4">
+          <Button 
+            variant="outline" 
+            size="sm" 
+            onClick={handleGoBack}
+            className="flex items-center gap-2"
+          >
+            <ArrowLeft className="h-4 w-4" /> 
+            Trở lại trang đánh giá mô hình
+          </Button>
+        </div>
+
         <div className="p-6 space-y-6 bg-white rounded-2xl shadow-md">
           <h2 className="text-3xl font-bold text-gray-800">Chất lượng dữ liệu MOOCCubeX</h2>
 
@@ -172,7 +192,7 @@ const DataQuality = () => {
                 </AccordionContent>
               </AccordionItem>
               
-              {/* Soft Dimensions - NEW SECTION */}
+              {/* Soft Dimensions */}
               <AccordionItem value="soft-dimensions">
                 <AccordionTrigger className="text-lg font-semibold">
                   Soft Dimensions
@@ -236,10 +256,10 @@ const DataQuality = () => {
                   <span>Tổng quan dữ liệu</span>
                 </RouterLink>
               </Button>
-              <Button asChild>
-                <RouterLink to="/dashboard" className="flex items-center gap-1.5">
-                  <Clock className="w-4 h-4" />
-                  <span>Dashboard phân tích</span>
+              <Button asChild onClick={handleGoBack}>
+                <RouterLink to="/model-evaluation" className="flex items-center gap-1.5">
+                  <ArrowLeft className="w-4 h-4" />
+                  <span>Về trang mô hình</span>
                 </RouterLink>
               </Button>
             </div>
