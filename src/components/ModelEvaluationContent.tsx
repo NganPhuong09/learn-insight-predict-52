@@ -158,7 +158,7 @@ const getBestModel = () => {
                 <p className="text-gray-700 leading-relaxed">
                   Bảng dưới đây hiển thị kết quả đánh giá mô hình, với sự kết hợp giữa các phương pháp chuẩn bị dữ liệu
                   (PCA, AHP, CRITIC) và các mô hình học máy (SVM, CNN). Đồng thời hiển thị các chỉ số đánh giá chất lượng
-                  dữ liệu theo các tiêu chí <Link to="/data-quality" className="text-research-primary hover:underline">Hard Dimensions và Soft Dimensions</Link>.
+                  dữ liệu theo các tiêu chí <Link to="/data-quality" className="text-research-primary hover:underline font-medium">Hard Dimensions và Soft Dimensions</Link>.
                 </p>
               </div>
               
@@ -173,8 +173,8 @@ const getBestModel = () => {
                       <TableHead colSpan={3} className="text-center">Soft Dimensions</TableHead>
                     </TableRow>
                     <TableRow>
-                      <TableHead></TableHead>
                       <TableHead>Data</TableHead>
+                      <TableHead>Processing</TableHead>
                       <TableHead className="text-center">SVM</TableHead>
                       <TableHead className="text-center">CNN</TableHead>
                       <TableHead className="text-center">Completeness</TableHead>
