@@ -153,7 +153,7 @@ const ModelEvaluation = () => {
                 <p className="text-gray-700 leading-relaxed">
                   Bảng dưới đây hiển thị kết quả đánh giá mô hình, với sự kết hợp giữa các phương pháp chuẩn bị dữ liệu
                   (PCA, AHP, CRITIC) và các mô hình học máy (SVM, CNN). Đồng thời hiển thị các chỉ số đánh giá chất lượng
-                  dữ liệu theo các tiêu chí <Link to="/data-quality" className="text-research-primary hover:underline">Hard Dimensions và Soft Dimensions</Link>.
+                  dữ liệu theo các tiêu chí Hard Dimensions và Soft Dimensions.
                 </p>
               </div>
               
