@@ -77,23 +77,6 @@ const Navbar = () => {
                 <span>Dashboard</span>
               </Link>
               
-              {/* Mobile Dropdown - Data */}
-              <div className="space-y-2">
-                <div className="text-gray-900 font-medium flex items-center px-2 py-1">
-                  <Database className="mr-2 h-5 w-5" />
-                  <span>Dữ liệu</span>
-                </div>
-                <div className="pl-9 space-y-1">
-                  <Link 
-                    to="/data-quality" 
-                    className="block text-gray-700 hover:text-research-primary transition-colors px-2 py-1 rounded-md hover:bg-gray-50"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Chất lượng dữ liệu
-                  </Link>
-                </div>
-              </div>
-              
             
             </nav>
           </div>
