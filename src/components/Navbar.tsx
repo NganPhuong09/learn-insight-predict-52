@@ -85,13 +85,6 @@ const Navbar = () => {
                 </div>
                 <div className="pl-9 space-y-1">
                   <Link 
-                    to="/data-overview" 
-                    className="block text-gray-700 hover:text-research-primary transition-colors px-2 py-1 rounded-md hover:bg-gray-50"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Tổng quan dữ liệu
-                  </Link>
-                  <Link 
                     to="/data-quality" 
                     className="block text-gray-700 hover:text-research-primary transition-colors px-2 py-1 rounded-md hover:bg-gray-50"
                     onClick={() => setIsMenuOpen(false)}
