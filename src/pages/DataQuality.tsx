@@ -15,7 +15,7 @@ const DataQuality = () => {
 
   const handleGoBack = () => {
     // Navigate back to dashboard with model tab
-    navigate("/dashboard?tab=model");
+    navigate(-1);
   };
 
   return (
