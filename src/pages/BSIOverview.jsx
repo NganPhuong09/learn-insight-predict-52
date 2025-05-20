@@ -165,25 +165,33 @@ const BSIOverview = () => {
               <MessageCircle className="w-5 h-5 text-pink-500" />
               CSI – Comment Sentiment Index
             </h3>
-            <p className="text-gray-700 mb-2">Đánh giá cảm xúc trong bình luận của sinh viên.</p>
-            <div className="bg-white p-4 rounded-lg border text-center shadow-sm mb-3">
-              <p className="text-lg font-semibold">
+          
+            <p className="text-gray-700 text-sm mb-3">
+              Đánh giá cảm xúc trong bình luận của sinh viên.
+            </p>
+          
+            {/* Công thức */}
+            <div className="bg-white p-4 rounded-lg border text-center shadow-sm mb-4">
+              <p className="text-base font-semibold">
                 CSI = sentiment_score × length_score
               </p>
             </div>
-            <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
+          
+            {/* Giải thích */}
+            <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
               <li><strong>Sentiment Score:</strong> -1 (tiêu cực), 0 (trung tính), 1 (tích cực)</li>
               <li><strong>Length Bonus:</strong> Dài hơn → trọng số lớn hơn</li>
             </ul>
-        
-            <div className="mt-3">
-              <h4 className="font-semibold text-gray-800 mb-1">Mức điểm theo độ dài bình luận:</h4>
-                <div className="space-y-1 text-gray-700 ml-4">
-                  <div className="pl-4">Ngắn (&lt;10 từ): 0.0</div>
-                  <div className="pl-4">Trung bình (10–29 từ): 0.2</div>
-                  <div className="pl-4">Dài (30–50 từ): 0.4</div>
-                  <div className="pl-4">Vô dài (≥50 từ): 0.6</div>
-                </div>
+          
+            {/* Mức điểm theo độ dài */}
+            <div className="mt-4">
+              <h4 className="font-semibold text-sm text-gray-800 mb-2">Mức điểm theo độ dài bình luận:</h4>
+              <ul className="list-none text-sm text-gray-700 ml-4 space-y-1">
+                <li>- Ngắn (&lt;10 từ): 0.0</li>
+                <li>- Trung bình (10–29 từ): 0.2</li>
+                <li>- Dài (30–50 từ): 0.4</li>
+                <li>- Rất dài (≥50 từ): 0.6</li>
+              </ul>
             </div>
           </div>
         </div>
