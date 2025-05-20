@@ -1330,17 +1330,13 @@ const Dashboard = () => {
   const [selectedCourse, setSelectedCourse] = useState("all");
   const [selectedWeek, setSelectedWeek] = useState("all");
   const [activeTab, setActiveTab] = useState("overview");
-  
+  const [overview, setOverview] = useState<{ total_students: number; total_courses: number } | null>(null);
   // Giả lập tải dữ liệu
   useEffect(() => {
-    window.scrollTo(0, 0);
-    
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-    
-    return () => clearTimeout(timer);
-  }, []);
+  fetch("/Dashboard_data.json")
+    .then((res) => res.json())
+    .then((data) => setOverview(data));
+}, []);
 
   // Lấy dữ liệu dựa trên khóa học và tuần đã chọn
   const getLearningBehaviorData = () => {
@@ -1450,7 +1446,11 @@ const Dashboard = () => {
                       <CardTitle className="text-sm font-medium text-gray-500">Tổng học viên</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <div className="text-3xl font-bold">2,845</div>
+                      <div className="text-3xl font-bold">
+                        {overview ? overview.total_students.toLocaleString() : "Đang tải..."}
+                      </div>
+
+
                       <p className="text-xs text-green-600 flex items-center mt-1">
                         <span className="i-lucide-trending-up mr-1"></span>
                         +12.5% so với kỳ trước
@@ -1463,10 +1463,12 @@ const Dashboard = () => {
                       <CardTitle className="text-sm font-medium text-gray-500">Khóa học</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <div className="text-3xl font-bold">128</div>
+                      <div className="text-3xl font-bold">
+                        {overview ? overview.total_courses.toLocaleString() : "Đang tải..."}
+                      </div>
                       <p className="text-xs text-green-600 flex items-center mt-1">
                         <span className="i-lucide-trending-up mr-1"></span>
-                        +5.2% so với kỳ trước
+                        +0% so với kỳ trước
                       </p>
                     </CardContent>
                   </Card>
