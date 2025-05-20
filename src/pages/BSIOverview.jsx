@@ -122,11 +122,11 @@ const BSIOverview = () => {
               <p className="text-lg font-semibold">
                 VEI = α₁ × PTR + α₂ × SBTR + α₃ × WR  + α₄ × average_speed
               </p>
-              <div className="text-sm text-gray-600 italic mt-1 space-y-1">
-                <p>Trong đó: α₁ đến α₄ là trọng số của các thành phần trong chỉ số VEI.</p>
-                <p>Tổng trọng số bằng 1.</p>
-              </div>
-
+              <p className="text-sm text-gray-600 italic mt-1">
+                Trong đó: α₁ đến α₄ là trọng số của các thành phần trong chỉ số VEI.
+                <br />
+                Tổng trọng số bằng 1.
+              </p>
             </div>
             <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
               <li><strong>PTR:</strong> Tỷ lệ dừng</li>
@@ -147,10 +147,11 @@ const BSIOverview = () => {
               <p className="text-lg font-semibold">
                 EEI = α₁ × score_ratio + α₂ × correct_first_try + α₃ × avg_attempts + α₄ × engagement_score + α₅ × consistency_score + α₆ × accuracy_std
               </p>
-            <div className="text-sm text-gray-600 italic mt-1">
-              <p>Trong đó: α₁ đến α₆ là trọng số của từng yếu tố đánh giá hiệu quả học tập.</p>
-              <p>Tổng trọng số bằng 1.</p>
-            </div>
+              <p className="text-sm text-gray-600 italic mt-1">
+                Trong đó: α₁ đến α₆ là trọng số của từng yếu tố đánh giá hiệu quả học tập.
+                <br />
+                Tổng trọng số bằng 1.
+              </p>
 
             </div>
             <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
