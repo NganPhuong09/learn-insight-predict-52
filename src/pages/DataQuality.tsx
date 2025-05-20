@@ -14,15 +14,15 @@ const DataQuality = () => {
   const navigate = useNavigate();
 
   const handleGoBack = () => {
-    // Navigate back to model evaluation tab
-    navigate("/model-evaluation");
+    // Navigate back to dashboard with model tab
+    navigate("/dashboard");
   };
 
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow container mx-auto px-4 py-6">
-        {/* Back button to navigate to model evaluation */}
+        {/* Back button to navigate to dashboard */}
         <div className="mb-4">
           <Button 
             variant="outline" 
@@ -31,7 +31,7 @@ const DataQuality = () => {
             className="flex items-center gap-2"
           >
             <ArrowLeft className="h-4 w-4" /> 
-            Trở lại trang đánh giá mô hình
+            Trở về trang Dashboard
           </Button>
         </div>
 
@@ -257,9 +257,9 @@ const DataQuality = () => {
                 </RouterLink>
               </Button>
               <Button asChild onClick={handleGoBack}>
-                <RouterLink to="/model-evaluation" className="flex items-center gap-1.5">
+                <RouterLink to="/dashboard" className="flex items-center gap-1.5">
                   <ArrowLeft className="w-4 h-4" />
-                  <span>Về trang mô hình</span>
+                  <span>Về trang Dashboard</span>
                 </RouterLink>
               </Button>
             </div>
