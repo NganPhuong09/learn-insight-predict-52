@@ -103,7 +103,7 @@ const BSIFormula = () => {
                   </div>
                 </div>
                 
-                <div className="mt-4 text-sm text-gray-600">
+               <div className="mt-4 text-sm text-gray-600">
                 <p className="font-medium">Tài liệu tham khảo:</p>
               
                 {/* New references added */}
@@ -134,8 +134,13 @@ const BSIFormula = () => {
                     🔗 https://doi.org/10.5220/0009338900260033
                   </a>
                 </div>
-            
+              
+                <ul className="list-disc list-inside space-y-1 mt-4 pl-2">
+                  <li>Kizilcec et al. (2013) – Deconstructing Disengagement in MOOCs.</li>
+                  <li>Liu et al. (2020) – Investigating the Relationship between Learners' Cognitive Participation and Learning Outcome.</li>
+                </ul>
               </div>
+
 
             
             <div className="text-center">
