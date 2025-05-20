@@ -36,9 +36,9 @@ const ModelOverview = () => {
 
           <Tabs defaultValue="weight-models" className="w-full">
             <TabsList className="grid w-full grid-cols-3">
-              <TabsTrigger value="weight-models">1. Mô hình tìm trọng số</TabsTrigger>
-              <TabsTrigger value="prediction-models">2. Mô hình dự đoán</TabsTrigger>
-              <TabsTrigger value="emotion-models">3. Mô hình gán nhãn cảm xúc</TabsTrigger>
+              <TabsTrigger value="weight-models"> Mô hình tìm trọng số</TabsTrigger>
+              <TabsTrigger value="prediction-models"> Mô hình dự đoán</TabsTrigger>
+              <TabsTrigger value="emotion-models"> Mô hình gán nhãn cảm xúc</TabsTrigger>
             </TabsList>
 
             {/* Tab 1: Mô hình tìm trọng số */}
