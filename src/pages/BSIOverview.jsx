@@ -8,7 +8,7 @@ const BSIOverview = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow container mx-auto px-4 py-6">
-        <div className="p-6 space-y-6 bg-white rounded-2xl shadow-md">
+         <div className="p-6 space-y-10 bg-white rounded-2xl shadow-md">
           <h2 className="text-3xl font-bold text-gray-800 mb-2">
             Thang đo mức độ hài lòng (Behavioral Satisfaction Index - BSI)
           </h2>
