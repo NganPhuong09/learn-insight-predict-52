@@ -103,42 +103,39 @@ const BSIFormula = () => {
                   </div>
                 </div>
                 
-               <div className="mt-4 text-sm text-gray-600">
-                <p className="font-medium">Tài liệu tham khảo:</p>
+                {/* Tài liệu tham khảo */}
+                <div>
+                  <h3 className="font-semibold text-lg mb-4">Tài liệu tham khảo</h3>
+                
+                  <div className="bg-gray-50 p-4 rounded-lg mt-2">
+                    <p className="font-medium">
+                      Kizilcec, R. F., Piech, C., & Schneider, E. (2013). Deconstructing Disengagement in MOOCs. In LAK '13: Proceedings of the Third International Conference on Learning Analytics and Knowledge.
+                    </p>
+                    <a
+                      href="https://dl.acm.org/doi/10.1145/2460296.2460330"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:underline flex items-center gap-1 mt-1"
+                    >
+                      🔗 https://dl.acm.org/doi/10.1145/2460296.2460330
+                    </a>
+                  </div>
+                
+                  <div className="bg-gray-50 p-4 rounded-lg mt-2">
+                    <p className="font-medium">
+                      Liu, Z., Zhang, W., Sun, J., & Cheng, H. (2020). Investigating the Relationship between Learners' Cognitive Participation and Learning Outcome. In CSEDU 2020: Proceedings of the 12th International Conference on Computer Supported Education.
+                    </p>
+                    <a
+                      href="https://doi.org/10.5220/0009338900260033"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:underline flex items-center gap-1 mt-1"
+                    >
+                      🔗 https://doi.org/10.5220/0009338900260033
+                    </a>
+                  </div>
               
-                {/* New references added */}
-                <div className="bg-gray-50 p-4 rounded-lg mt-2">
-                  <p className="font-medium">
-                    Kizilcec, R. F., Piech, C., & Schneider, E. (2013). Deconstructing Disengagement in MOOCs. In LAK '13: Proceedings of the Third International Conference on Learning Analytics and Knowledge.
-                  </p>
-                  <a
-                    href="https://dl.acm.org/doi/10.1145/2460296.2460330"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline flex items-center gap-1 mt-1"
-                  >
-                    🔗 https://dl.acm.org/doi/10.1145/2460296.2460330
-                  </a>
-                </div>
-              
-                <div className="bg-gray-50 p-4 rounded-lg mt-2">
-                  <p className="font-medium">
-                    Liu, Z., Zhang, W., Sun, J., & Cheng, H. (2020). Investigating the Relationship between Learners' Cognitive Participation and Learning Outcome. In CSEDU 2020: Proceedings of the 12th International Conference on Computer Supported Education.
-                  </p>
-                  <a
-                    href="https://doi.org/10.5220/0009338900260033"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline flex items-center gap-1 mt-1"
-                  >
-                    🔗 https://doi.org/10.5220/0009338900260033
-                  </a>
-                </div>
-              
-                <ul className="list-disc list-inside space-y-1 mt-4 pl-2">
-                  <li>Kizilcec et al. (2013) – Deconstructing Disengagement in MOOCs.</li>
-                  <li>Liu et al. (2020) – Investigating the Relationship between Learners' Cognitive Participation and Learning Outcome.</li>
-                </ul>
+                
               </div>
             </CardContent>
           </Card>
