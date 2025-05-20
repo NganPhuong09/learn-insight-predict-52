@@ -1,14 +1,30 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
-import { BookOpen, Layers, Users, Video, FileText, BrainCircuit, BarChart2, Database } from "lucide-react";
+import { BookOpen, Layers, Users, Video, FileText, BrainCircuit, BarChart2, Database, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const DataOverview = () => {
+  const navigate = useNavigate();
+  
+  const handleBackClick = () => {
+    // Navigate back to the homepage
+    navigate('/#research-overview');
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow container mx-auto px-4 py-6">
+        <Button 
+          variant="outline" 
+          onClick={handleBackClick}
+          className="mb-4 flex items-center gap-2"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          Quay lại tổng quan nghiên cứu
+        </Button>
+        
         <div className="p-6 space-y-6 bg-white rounded-2xl shadow-md">
           <h2 className="text-3xl font-bold text-gray-800">Giới thiệu bộ dữ liệu MOOCCubeX</h2>
 
@@ -48,7 +64,6 @@ const DataOverview = () => {
               </ul>
             </div>
           </div>
-
 
           {/* Cấu trúc dữ liệu */}
           <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
