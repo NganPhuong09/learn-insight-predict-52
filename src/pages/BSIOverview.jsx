@@ -120,18 +120,18 @@ const BSIOverview = () => {
             <p className="text-gray-700 mb-2">Đo mức độ tương tác của người học với video.</p>
             <div className="bg-white p-4 rounded-lg border text-center shadow-sm mb-3">
               <p className="text-lg font-semibold">
-                VEI = α₁ × PTR + α₂ × SBTR + α₃ × (1 – SFTR) + α₄ × WR + α₅ × CR
+                VEI = α₁ × PTR + α₂ × SBTR + α₃ × WR  + α₄ × average_speed
               </p>
               <p className="text-sm text-gray-600 italic mt-1">
-                Trong đó: α₁ đến α₅ là trọng số của các thành phần trong chỉ số VEI.
+                Trong đó: α₁ đến α₄ là trọng số của các thành phần trong chỉ số VEI.
+                Tổng trọng số bằng 1.
               </p>
             </div>
             <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
-              <li>PTR: Pause time ratio</li>
-              <li>SBTR: Rewind time ratio</li>
-              <li>SFTR: Fast forward time ratio</li>
-              <li>WR: Watch ratio</li>
-              <li>CR: Completion ratio</li>
+              <li><strong>PTR: Tỷ lệ dừng</strong></li>
+              <li><strong>SBTR: Tỷ lệ tua lại</strong></li>
+              <li><strong>WR: Tỷ lệ thời gian video ở tốc độ thực tế</strong></li>
+              <li><strong>average_speed: Tốc độ xem trung bình</strong></li>
             </ul>
           </div>
         
@@ -144,18 +144,18 @@ const BSIOverview = () => {
             <p className="text-gray-700 mb-2">Đo mức độ tương tác với bài tập.</p>
             <div className="bg-white p-4 rounded-lg border text-center shadow-sm mb-3">
               <p className="text-lg font-semibold">
-                EEI = α₁ × score_ratio + α₂ × correct_first_try + α₃ × correct_ratio + α₄ × engagement_score + α₅ × consistency_score
+                EEI = α₁ × score_ratio + α₂ × correct_first_try + α₃ × avg_attempts + α₄ × engagement_score + α₅ × consistency_score + α₆ × accuracy_std
               </p>
               <p className="text-sm text-gray-600 italic mt-1">
-                Trong đó: α₁ đến α₅ là trọng số của từng yếu tố đánh giá hiệu quả học tập.
+                Trong đó: α₁ đến α₆ là trọng số của từng yếu tố đánh giá hiệu quả học tập. Tổng trọng số bằng 1
               </p>
             </div>
             <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
-              <li><strong>Score Ratio:</strong> Điểm số đạt được / điểm tối đa</li>
+              <li><strong>Score Ratio:</strong> Tỷ lệ điểm đạt được trên tổng số</li>
               <li><strong>Correct First Try:</strong> Làm đúng ngay lần đầu</li>
-              <li><strong>Correct Ratio:</strong> Tổng số bài đúng / tổng số bài đã làm</li>
-              <li><strong>Engagement Score:</strong> Số bài có điểm / tổng số bài</li>
-              <li><strong>Consistency Score:</strong> Số bài đúng liên tiếp / số bài đã làm</li>
+              <li><strong>Correct Ratio:</strong> Tỷ lệ làm đúng</li>
+              <li><strong>Engagement Score:</strong> Tỷ lệ bài đã làm</li>
+              <li><strong>Consistency Score:</strong> Tỷ lệ bài làm đúng liên tiếp</li>
             </ul>
           </div>
         
@@ -179,10 +179,10 @@ const BSIOverview = () => {
             <div className="mt-3">
               <h4 className="font-semibold text-gray-800 mb-1">Mức điểm theo độ dài bình luận:</h4>
               <ul className="list-disc list-inside text-gray-700 ml-4">
-                <li>Rất ngắn (&lt;10 từ): 0.0</li>
-                <li>Ngắn (10–29 từ): 0.2</li>
-                <li>Trung bình (30–59 từ): 0.4</li>
-                <li>Dài (≥60 từ): 0.6</li>
+                <li>Ngắn (&lt;10 từ): 0.0</li>
+                <li>Trung bình (10–29 từ): 0.2</li>
+                <li>Dài (30–50 từ): 0.4</li>
+                <li>Vô dài(≥50 từ): 0.6</li>
               </ul>
             </div>
           </div>
