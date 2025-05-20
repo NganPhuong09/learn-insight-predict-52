@@ -32,7 +32,6 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-          <div>
             <h3 className="font-semibold text-lg mb-4">Tài liệu tham khảo</h3>
             <ul className="space-y-2">
               <li>
