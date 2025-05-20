@@ -38,10 +38,10 @@ const Footer = () => {
                   href="https://dl.acm.org/doi/10.1145/2460296.2460330"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors flex items-center text-sm"
+                  className="text-blue-400 hover:text-white transition-colors flex items-center text-sm"
                 >
                   <BookOpen className="h-4 w-4 mr-2" />
-                  <span>Kizilcec et al. (2013)</span>
+                  <span className="underline-offset-2 hover:underline">Kizilcec et al. (2013) – Deconstructing Disengagement</span>
                 </a>
               </li>
               <li>
@@ -49,10 +49,10 @@ const Footer = () => {
                   href="https://doi.org/10.5220/0009338900260033"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors flex items-center text-sm"
+                  className="text-blue-400 hover:text-white transition-colors flex items-center text-sm"
                 >
                   <BookOpen className="h-4 w-4 mr-2" />
-                  <span>Liu et al. (2020)</span>
+                  <span className="underline-offset-2 hover:underline">Liu et al. (2020) – Cognitive Participation & Learning</span>
                 </a>
               </li>
             </ul>
