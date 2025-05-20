@@ -32,16 +32,27 @@ const Footer = () => {
             </ul>
           </div>
           <div>
+          <div>
             <h3 className="font-semibold text-lg mb-4">Tài liệu tham khảo</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors flex items-center text-sm">
+                <a
+                  href="https://dl.acm.org/doi/10.1145/2460296.2460330"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center text-sm"
+                >
                   <BookOpen className="h-4 w-4 mr-2" />
                   <span>Kizilcec et al. (2013)</span>
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors flex items-center text-sm">
+                <a
+                  href="https://doi.org/10.5220/0009338900260033"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center text-sm"
+                >
                   <BookOpen className="h-4 w-4 mr-2" />
                   <span>Liu et al. (2020)</span>
                 </a>
