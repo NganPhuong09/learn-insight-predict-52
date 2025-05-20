@@ -1,13 +1,33 @@
 
 import React from "react";
 import Navbar from "@/components/Navbar";
-import { Gauge, Video, ClipboardCheck, MessageCircle } from "lucide-react";
+import { Gauge, Video, ClipboardCheck, MessageCircle, ArrowLeft } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const BSIOverview = () => {
+  const navigate = useNavigate();
+
+  const handleGoBack = () => {
+    // Quay lại trang trước đó
+    navigate(-1);
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow container mx-auto px-4 py-6">
+        <div className="mb-4">
+          <Button 
+            variant="outline" 
+            onClick={handleGoBack} 
+            className="flex items-center gap-2"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            Quay lại
+          </Button>
+        </div>
+        
         <div className="bg-white p-6 rounded-2xl shadow-md space-y-8">
           <h2 className="text-3xl font-bold text-gray-800 mb-2">
             Thang đo mức độ hài lòng (Behavioral Satisfaction Index - BSI)
