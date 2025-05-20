@@ -140,7 +140,8 @@ const BSIFormula = () => {
                   <li>Liu et al. (2020) – Investigating the Relationship between Learners' Cognitive Participation and Learning Outcome.</li>
                 </ul>
               </div>
-
+            </CardContent>
+          </Card>
 
             
             <div className="text-center">
