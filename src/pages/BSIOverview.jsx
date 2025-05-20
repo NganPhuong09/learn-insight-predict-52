@@ -1,33 +1,13 @@
-
 import React from "react";
 import Navbar from "@/components/Navbar";
-import { Gauge, Video, ClipboardCheck, MessageCircle, ArrowLeft } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import Footer from "@/components/Footer";
+import { Gauge, Video, ClipboardCheck, MessageCircle, BookOpen } from "lucide-react";
 
 const BSIOverview = () => {
-  const navigate = useNavigate();
-
-  const handleGoBack = () => {
-    // Quay lại trang trước đó
-    navigate(-1);
-  };
-
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow container mx-auto px-4 py-6">
-        <div className="mb-4">
-          <Button 
-            variant="outline" 
-            onClick={handleGoBack} 
-            className="flex items-center gap-2"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Quay lại
-          </Button>
-        </div>
-        
         <div className="bg-white p-6 rounded-2xl shadow-md space-y-8">
           <h2 className="text-3xl font-bold text-gray-800 mb-2">
             Thang đo mức độ hài lòng (Behavioral Satisfaction Index - BSI)
@@ -37,6 +17,50 @@ const BSIOverview = () => {
           <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 text-gray-700 leading-relaxed">
             BSI là chỉ số dự đoán mức độ hài lòng của sinh viên đối với từng khóa học cụ thể, dựa trên hành vi học tập ban đầu như: xem video, làm bài tập và để lại bình luận.
             <br />
+          </div>
+
+          {/* Cơ sở lý luận mới bổ sung */}
+          <div className="border border-gray-200 rounded-xl bg-blue-50 p-5">
+            <h3 className="text-xl font-semibold flex items-center gap-2 text-gray-800 mb-3">
+              <BookOpen className="w-5 h-5 text-blue-500" />
+              Cơ sở lý luận
+            </h3>
+            
+            <div className="space-y-4">
+              <div className="bg-white p-4 rounded-lg border border-gray-100 shadow-sm">
+                <h4 className="font-semibold text-blue-600 mb-2">Xem video & làm bài tập</h4>
+                <p className="text-gray-700 mb-3">
+                  Theo Kizilcec et al. (2013), hai hành vi cốt lõi này là nền tảng của hành vi học MOOC. 
+                  Dựa vào chúng, người học có thể được phân loại thành các nhóm hành vi điển hình như: 
+                  completing, auditing, disengaging và sampling – phản ánh mức độ cam kết với khóa học.
+                </p>
+                <blockquote className="pl-4 border-l-4 border-blue-200 italic text-gray-600">
+                  "Interactions with video lectures and assessments [are] the primary features of most MOOCs."
+                  <footer className="text-sm text-gray-500 mt-1">— Kizilcec et al., 2013</footer>
+                </blockquote>
+              </div>
+              
+              <div className="bg-white p-4 rounded-lg border border-gray-100 shadow-sm">
+                <h4 className="font-semibold text-blue-600 mb-2">Bình luận (Comment / Forum Participation)</h4>
+                <p className="text-gray-700 mb-3">
+                  Bình luận mang tính xây dựng thể hiện mức độ tham gia xã hội và phản ánh tư duy bậc cao của người học. 
+                  Nghiên cứu của Liu et al. (2020) cho thấy bình luận tích cực có liên hệ mạnh với kết quả học tập cao 
+                  và sự hài lòng trong môi trường học trực tuyến.
+                </p>
+                <blockquote className="pl-4 border-l-4 border-blue-200 italic text-gray-600">
+                  "Constructive behavior has a greater impact on the learning outcome…"
+                  <footer className="text-sm text-gray-500 mt-1">— Liu et al., 2020</footer>
+                </blockquote>
+              </div>
+            </div>
+            
+            <div className="mt-4 text-gray-700">
+              <p className="font-medium mb-1">Tài liệu tham khảo:</p>
+              <ul className="list-disc list-inside space-y-1 pl-2">
+                <li>Kizilcec et al. (2013) – <em>Deconstructing Disengagement in MOOCs</em>.</li>
+                <li>Liu et al. (2020) – <em>Investigating the Relationship between Learners' Cognitive Participation and Learning Outcome</em>.</li>
+              </ul>
+            </div>
           </div>
 
           {/* Phân loại theo điểm */}
@@ -164,6 +188,7 @@ const BSIOverview = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };
