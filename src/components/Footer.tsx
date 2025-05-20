@@ -1,13 +1,12 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BarChart2, Mail, Globe, Github } from 'lucide-react';
+import { BarChart2, Mail, Globe, Github, BookOpen } from 'lucide-react';
 
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-10">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center mb-4">
               <BarChart2 className="h-6 w-6 text-research-accent mr-2" />
@@ -26,6 +25,26 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/dashboard" className="text-gray-400 hover:text-white transition-colors text-sm">Dashboard</Link>
+              </li>
+              <li>
+                <Link to="/bsi-overview" className="text-gray-400 hover:text-white transition-colors text-sm">BSI Overview</Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold text-lg mb-4">Tài liệu tham khảo</h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors flex items-center text-sm">
+                  <BookOpen className="h-4 w-4 mr-2" />
+                  <span>Kizilcec et al. (2013)</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors flex items-center text-sm">
+                  <BookOpen className="h-4 w-4 mr-2" />
+                  <span>Liu et al. (2020)</span>
+                </a>
               </li>
             </ul>
           </div>
