@@ -2019,13 +2019,13 @@ const Dashboard = () => {
               </TabsContent>
               
               <TabsContent value="model">
-  <Card>
-    <CardContent>
-      <ModelEvaluationContent /> {/* 👈 sử dụng component */}
-    </CardContent>
-  </Card>
-</TabsContent>
-              
+              <Card>
+                <CardContent>
+                  <ModelEvaluationContent /> {/* 👈 sử dụng component */}
+                </CardContent>
+              </Card>
+            </TabsContent>
+                          
               <TabsContent value="predictions">
                 <Card>
                   <CardHeader>
