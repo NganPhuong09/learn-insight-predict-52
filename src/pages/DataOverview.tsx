@@ -6,10 +6,11 @@ import { Link, useNavigate } from "react-router-dom";
 
 const DataOverview = () => {
   const navigate = useNavigate();
-  
+
+
   const handleBackClick = () => {
     // Navigate back to the homepage
-    navigate('/#research-overview');
+    navigate(-1);
   };
 
   return (
@@ -22,7 +23,7 @@ const DataOverview = () => {
           className="mb-4 flex items-center gap-2"
         >
           <ArrowLeft className="h-4 w-4" />
-          Quay lại tổng quan nghiên cứu
+          Quay lại 
         </Button>
         
         <div className="p-6 space-y-6 bg-white rounded-2xl shadow-md">
