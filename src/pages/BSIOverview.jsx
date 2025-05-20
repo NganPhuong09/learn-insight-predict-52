@@ -149,7 +149,7 @@ const BSIOverview = () => {
               </p>
               <p className="text-sm text-gray-600 italic mt-1">
                 Trong đó: α₁ đến α₆ là trọng số của từng yếu tố đánh giá hiệu quả học tập.
-                <br />
+                <br>
                 Tổng trọng số bằng 1.
               </p>
 
