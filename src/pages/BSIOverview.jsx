@@ -128,10 +128,10 @@ const BSIOverview = () => {
               </p>
             </div>
             <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
-              <li><strong>PTR: Tỷ lệ dừng</strong></li>
-              <li><strong>SBTR: Tỷ lệ tua lại</strong></li>
-              <li><strong>WR: Tỷ lệ thời gian video ở tốc độ thực tế</strong></li>
-              <li><strong>average_speed: Tốc độ xem trung bình</strong></li>
+              <li><strong>PTR:</strong> Tỷ lệ dừng</li>
+              <li><strong>SBTR:</strong> Tỷ lệ tua lại</li>
+              <li><strong>WR: </strong>Tỷ lệ thời gian video ở tốc độ thực tế</li>
+              <li><strong>average_speed: </strong>Tốc độ xem trung bình</li>
             </ul>
           </div>
         
@@ -178,12 +178,12 @@ const BSIOverview = () => {
         
             <div className="mt-3">
               <h4 className="font-semibold text-gray-800 mb-1">Mức điểm theo độ dài bình luận:</h4>
-              <ul className="list-disc list-inside text-gray-700 ml-4">
-                <li>Ngắn (&lt;10 từ): 0.0</li>
-                <li>Trung bình (10–29 từ): 0.2</li>
-                <li>Dài (30–50 từ): 0.4</li>
-                <li>Vô dài(≥50 từ): 0.6</li>
-              </ul>
+                <div className="space-y-1 text-gray-700 ml-4">
+                  <div className="pl-4">Ngắn (&lt;10 từ): 0.0</div>
+                  <div className="pl-4">Trung bình (10–29 từ): 0.2</div>
+                  <div className="pl-4">Dài (30–50 từ): 0.4</div>
+                  <div className="pl-4">Vô dài (≥50 từ): 0.6</div>
+                </div>
             </div>
           </div>
         </div>
