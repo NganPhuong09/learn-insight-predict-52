@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -1323,7 +1322,7 @@ const courseDetails = {
 
 // Màu sắc cho biểu đồ
 const COLORS = ['#8884d8', '#83a6ed', '#8dd1e1', '#82ca9d', '#a4de6c', '#d0ed57', '#ffc658'];
-const GENDER_COLORS = ['#8884d8', '#FF8042'];
+const GENDER_COLORS = ['#8884d8', '#FF8042', '#82ca9d'];
 
 const Dashboard = () => {
   const [loading, setLoading] = useState(true);
@@ -1331,12 +1330,32 @@ const Dashboard = () => {
   const [selectedWeek, setSelectedWeek] = useState("all");
   const [activeTab, setActiveTab] = useState("overview");
   const [overview, setOverview] = useState<{ total_students: number; total_courses: number } | null>(null);
+  const [genderDataRemote, setGenderDataRemote] = useState([]);
+  const [ageDataRemote, setAgeDataRemote] = useState([]);
+
   // Giả lập tải dữ liệu
   useEffect(() => {
   fetch("/Dashboard_data.json")
     .then((res) => res.json())
     .then((data) => setOverview(data));
-}, []);
+  }, []);
+
+  useEffect(() => {
+    fetch("/gender_age_data.json")
+      .then((res) => res.json())
+      .then((data) => {
+        const genderMap = { 0: "Nam", 1: "Nữ", 2: "Khác" };
+        const genderProcessed = data.gender
+          .filter((item) => item.name !== null)
+          .map((item) => ({
+            name: genderMap[item.name] || "Không rõ",
+            value: item.value,
+          }));
+        setGenderDataRemote(genderProcessed);
+        setAgeDataRemote(data.age);
+        setLoading(false); 
+      });
+  }, []);
 
   // Lấy dữ liệu dựa trên khóa học và tuần đã chọn
   const getLearningBehaviorData = () => {
@@ -1627,7 +1646,7 @@ const Dashboard = () => {
                               >
                                 <RechartPieChart>
                                   <Pie
-                                    data={genderData}
+                                    data={genderDataRemote}
                                     cx="50%"
                                     cy="50%"
                                     labelLine={false}
@@ -1636,7 +1655,7 @@ const Dashboard = () => {
                                     dataKey="value"
                                     label={({name, percent}) => `${name}: ${(percent * 100).toFixed(0)}%`}
                                   >
-                                    {genderData.map((entry, index) => (
+                                    {genderDataRemote.map((entry, index) => (
                                       <Cell key={`cell-${index}`} fill={GENDER_COLORS[index % GENDER_COLORS.length]} />
                                     ))}
                                   </Pie>
@@ -1672,7 +1691,7 @@ const Dashboard = () => {
                               </div>
                             ) : (
                               <ResponsiveContainer width="100%" height="100%">
-                                <BarChart data={ageDistributionData}>
+                                <BarChart data={ageDataRemote}>
                                   <CartesianGrid strokeDasharray="3 3" />
                                   <XAxis dataKey="age" />
                                   <YAxis />
