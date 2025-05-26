@@ -148,8 +148,7 @@ const BSIOverview = () => {
                 EEI = α₁ × score_ratio + α₂ × correct_first_try + α₃ × avg_attempts + α₄ × engagement_score + α₅ × consistency_score + α₆ × accuracy_std
               </p>
               <p className="text-sm text-gray-600 italic mt-1">
-                Trong đó: α₁ đến α₆ là trọng số của từng yếu tố đánh giá hiệu quả học tập.
-                <br>
+                Trong đó: α₁ đến α₆ là trọng số của từng yếu tố đánh giá hiệu quả học tập.<br />
                 Tổng trọng số bằng 1.
               </p>
 
