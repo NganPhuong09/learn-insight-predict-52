@@ -35,14 +35,14 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 // Dữ liệu mẫu cho biểu đồ
-const courseList = [
-  { id: "all", name: "Chọn khóa học" },
-  { id: "ml", name: "Machine Learning Cơ bản" },
-  { id: "py", name: "Lập trình Python" },
-  { id: "ds", name: "Data Science và Phân tích" },
-  { id: "dl", name: "Deep Learning" },
-  { id: "nlp", name: "Xử lý ngôn ngữ tự nhiên" },
-];
+// const courseList = [
+//   { id: "all", name: "Chọn khóa học" },
+//   { id: "ml", name: "Machine Learning Cơ bản" },
+//   { id: "py", name: "Lập trình Python" },
+//   { id: "ds", name: "Data Science và Phân tích" },
+//   { id: "dl", name: "Deep Learning" },
+//   { id: "nlp", name: "Xử lý ngôn ngữ tự nhiên" },
+// ];
 
 const weekList = [
   { id: "all", name: "Tất cả các tuần" },
@@ -70,22 +70,22 @@ const ageDistributionData = [
   { age: '31+', count: 90 }
 ];
 
-const topSchoolsData = [
-  { name: 'Đại học Quốc gia Hà Nội', students: 450 },
-  { name: 'Đại học Bách khoa Hà Nội', students: 420 },
-  { name: 'Đại học Quốc gia TP.HCM', students: 380 },
-  { name: 'Đại học FPT', students: 320 },
-  { name: 'Đại học Ngoại thương', students: 290 },
-];
+// const topSchoolsData = [
+//   { name: 'Đại học Quốc gia Hà Nội', students: 450 },
+//   { name: 'Đại học Bách khoa Hà Nội', students: 420 },
+//   { name: 'Đại học Quốc gia TP.HCM', students: 380 },
+//   { name: 'Đại học FPT', students: 320 },
+//   { name: 'Đại học Ngoại thương', students: 290 },
+// ];
 
-const fieldOfStudyData = [
-  { field: 'Công nghệ thông tin', count: 580 },
-  { field: 'Kinh tế', count: 450 },
-  { field: 'Kỹ thuật', count: 380 },
-  { field: 'Khoa học dữ liệu', count: 280 },
-  { field: 'Truyền thông', count: 220 },
-  { field: 'Khác', count: 180 }
-];
+// const fieldOfStudyData = [
+//   { field: 'Công nghệ thông tin', count: 580 },
+//   { field: 'Kinh tế', count: 450 },
+//   { field: 'Kỹ thuật', count: 380 },
+//   { field: 'Khoa học dữ liệu', count: 280 },
+//   { field: 'Truyền thông', count: 220 },
+//   { field: 'Khác', count: 180 }
+// ];
 
 // Dữ liệu về hành vi học tập theo tuần
 const learningBehaviorData = {
@@ -1330,7 +1330,27 @@ const Dashboard = () => {
   const [selectedCourse, setSelectedCourse] = useState("all");
   const [selectedWeek, setSelectedWeek] = useState("all");
   const [activeTab, setActiveTab] = useState("overview");
-  
+  // const [courseList, setCourseList] = useState<{ id: string; name: string }[]>([
+  //   { id: "all", name: "Chọn khóa học" }
+  // ]);
+
+  // useEffect(() => {
+  //   // Tải courseList từ file JSONL trong thư mục public/data
+  //   fetch('/data/courseList.jsonl')
+  //     .then(res => res.text())
+  //     .then(text => {
+  //       const lines = text.split('\n').filter(line => line.trim() !== '');
+  //       const data = lines.map(line => JSON.parse(line));
+  //       // Đảm bảo "Chọn khóa học" luôn ở đầu
+  //       setCourseList([{ id: "all", name: "Chọn khóa học" }, ...data.filter(c => c.id !== "all")]);
+  //     })
+  //     .catch((error) => { // Added error handling
+  //       console.error("Error fetching courseList.jsonl:", error);
+  //       // Nếu lỗi, giữ nguyên mặc định hoặc set to a more specific error state
+  //       setCourseList([{ id: "all", name: "Chọn khóa học" }]);
+  //     });
+  // }, []);
+
   // Giả lập tải dữ liệu
   useEffect(() => {
     window.scrollTo(0, 0);
