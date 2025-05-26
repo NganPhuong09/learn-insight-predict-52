@@ -1336,7 +1336,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     // Tải courseList từ file JSONL trong thư mục public/data
-    fetch('/data/courseList.jsonl')
+    fetch('/data/translated_courseList.jsonl')
       .then(res => res.text())
       .then(text => {
         const lines = text.split('\n').filter(line => line.trim() !== '');
