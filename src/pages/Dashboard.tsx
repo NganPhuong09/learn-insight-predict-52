@@ -1330,26 +1330,26 @@ const Dashboard = () => {
   const [selectedCourse, setSelectedCourse] = useState("all");
   const [selectedWeek, setSelectedWeek] = useState("all");
   const [activeTab, setActiveTab] = useState("overview");
-  // const [courseList, setCourseList] = useState<{ id: string; name: string }[]>([
-  //   { id: "all", name: "Chọn khóa học" }
-  // ]);
+  const [courseList, setCourseList] = useState<{ id: string; name: string }[]>([
+    { id: "all", name: "Chọn khóa học" }
+  ]);
 
-  // useEffect(() => {
-  //   // Tải courseList từ file JSONL trong thư mục public/data
-  //   fetch('/data/courseList.jsonl')
-  //     .then(res => res.text())
-  //     .then(text => {
-  //       const lines = text.split('\n').filter(line => line.trim() !== '');
-  //       const data = lines.map(line => JSON.parse(line));
-  //       // Đảm bảo "Chọn khóa học" luôn ở đầu
-  //       setCourseList([{ id: "all", name: "Chọn khóa học" }, ...data.filter(c => c.id !== "all")]);
-  //     })
-  //     .catch((error) => { // Added error handling
-  //       console.error("Error fetching courseList.jsonl:", error);
-  //       // Nếu lỗi, giữ nguyên mặc định hoặc set to a more specific error state
-  //       setCourseList([{ id: "all", name: "Chọn khóa học" }]);
-  //     });
-  // }, []);
+  useEffect(() => {
+    // Tải courseList từ file JSONL trong thư mục public/data
+    fetch('/data/courseList.jsonl')
+      .then(res => res.text())
+      .then(text => {
+        const lines = text.split('\n').filter(line => line.trim() !== '');
+        const data = lines.map(line => JSON.parse(line));
+        // Đảm bảo "Chọn khóa học" luôn ở đầu
+        setCourseList([{ id: "all", name: "Chọn khóa học" }, ...data.filter(c => c.id !== "all")]);
+      })
+      .catch((error) => { // Added error handling
+        console.error("Error fetching courseList.jsonl:", error);
+        // Nếu lỗi, giữ nguyên mặc định hoặc set to a more specific error state
+        setCourseList([{ id: "all", name: "Chọn khóa học" }]);
+      });
+  }, []);
 
   // Giả lập tải dữ liệu
   useEffect(() => {
