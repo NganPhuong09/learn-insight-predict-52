@@ -1667,7 +1667,7 @@ const Dashboard = () => {
                         </CardContent>
                       </Card>
 
-                      {/* Phân bố độ tuổi (Bar chart) */}
+                      {/* Phân bố độ tuổi (Bar chart)
                       <Card>
                         <CardHeader>
                           <CardTitle className="flex items-center gap-2">
@@ -1702,7 +1702,7 @@ const Dashboard = () => {
                             )}
                           </div>
                         </CardContent>
-                      </Card>
+                      </Card> */}
                     </div>
 
                     {/* Hành vi học tập - Đã thay đổi thành biểu đồ cột theo tuần */}
