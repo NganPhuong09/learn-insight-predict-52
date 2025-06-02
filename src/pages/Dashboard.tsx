@@ -1505,7 +1505,7 @@ const Dashboard = () => {
         </SelectContent>
       </Select>
 
-      {selectedCourse !== "all" && (
+      {/* {selectedCourse !== "all" && (
         <Select value={selectedWeek} onValueChange={setSelectedWeek}>
           <SelectTrigger className="w-[150px] h-8 text-xs">
             <SelectValue placeholder="Chọn tuần" />
@@ -1518,7 +1518,7 @@ const Dashboard = () => {
             ))}
           </SelectContent>
         </Select>
-      )}
+      )} */}
     </div>
   )}
               
