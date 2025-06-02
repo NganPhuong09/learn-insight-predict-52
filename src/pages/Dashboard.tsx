@@ -1238,88 +1238,88 @@ const scoreOverTimeData = {
 };
 
 // Dữ liệu chi tiết khóa học
-const courseDetails = {
-  ml: {
-    title: "Machine Learning Cơ bản",
-    students: 850,
-    videos: 42,
-    exercises: 68,
-    duration: "8 tuần",
-    satisfactionLevel: "Hài lòng",
-    satisfactionScore: 0.78,
-    resources: [
-      { type: "Video bài giảng", count: 42 },
-      { type: "Bài tập quiz", count: 28 },
-      { type: "Bài tập coding", count: 15 },
-      { type: "Tài liệu đọc", count: 22 },
-      { type: "Thảo luận", count: 8 }
-    ]
-  },
-  py: {
-    title: "Lập trình Python",
-    students: 720,
-    videos: 38,
-    exercises: 55,
-    duration: "6 tuần",
-    satisfactionLevel: "Rất hài lòng",
-    satisfactionScore: 0.86,
-    resources: [
-      { type: "Video bài giảng", count: 38 },
-      { type: "Bài tập quiz", count: 25 },
-      { type: "Bài tập coding", count: 20 },
-      { type: "Tài liệu đọc", count: 15 },
-      { type: "Thảo luận", count: 6 }
-    ]
-  },
-  ds: {
-    title: "Data Science và Phân tích",
-    students: 680,
-    videos: 45,
-    exercises: 62,
-    duration: "10 tuần",
-    satisfactionLevel: "Hài lòng",
-    satisfactionScore: 0.75,
-    resources: [
-      { type: "Video bài giảng", count: 45 },
-      { type: "Bài tập quiz", count: 30 },
-      { type: "Bài tập coding", count: 18 },
-      { type: "Tài liệu đọc", count: 25 },
-      { type: "Thảo luận", count: 10 }
-    ]
-  },
-  dl: {
-    title: "Deep Learning",
-    students: 520,
-    videos: 40,
-    exercises: 58,
-    duration: "8 tuần",
-    satisfactionLevel: "Hài lòng",
-    satisfactionScore: 0.72,
-    resources: [
-      { type: "Video bài giảng", count: 40 },
-      { type: "Bài tập quiz", count: 26 },
-      { type: "Bài tập coding", count: 22 },
-      { type: "Tài liệu đọc", count: 18 },
-      { type: "Thảo luận", count: 7 }
-    ]
-  },
-  nlp: {
-    title: "Xử lý ngôn ngữ tự nhiên",
-    students: 410,
-    videos: 36,
-    exercises: 50,
-    duration: "8 tuần",
-    satisfactionLevel: "Hài lòng",
-    satisfactionScore: 0.76,
-    resources: [
-      { type: "Video bài giảng", count: 36 },
-      { type: "Bài tập quiz", count: 22 },
-      { type: "Bài tập coding", count: 18 },
-      { type: "Tài liệu đọc", count: 20 },
-      { type: "Thảo luận", count: 6 }
-    ]
-  }
-};
+// const courseDetails = {
+//   ml: {
+//     title: "Machine Learning Cơ bản",
+//     students: 850,
+//     videos: 42,
+//     exercises: 68,
+//     duration: "8 tuần",
+//     satisfactionLevel: "Hài lòng",
+//     satisfactionScore: 0.78,
+//     resources: [
+//       { type: "Video bài giảng", count: 42 },
+//       { type: "Bài tập quiz", count: 28 },
+//       { type: "Bài tập coding", count: 15 },
+//       { type: "Tài liệu đọc", count: 22 },
+//       { type: "Thảo luận", count: 8 }
+//     ]
+//   },
+//   py: {
+//     title: "Lập trình Python",
+//     students: 720,
+//     videos: 38,
+//     exercises: 55,
+//     duration: "6 tuần",
+//     satisfactionLevel: "Rất hài lòng",
+//     satisfactionScore: 0.86,
+//     resources: [
+//       { type: "Video bài giảng", count: 38 },
+//       { type: "Bài tập quiz", count: 25 },
+//       { type: "Bài tập coding", count: 20 },
+//       { type: "Tài liệu đọc", count: 15 },
+//       { type: "Thảo luận", count: 6 }
+//     ]
+//   },
+//   ds: {
+//     title: "Data Science và Phân tích",
+//     students: 680,
+//     videos: 45,
+//     exercises: 62,
+//     duration: "10 tuần",
+//     satisfactionLevel: "Hài lòng",
+//     satisfactionScore: 0.75,
+//     resources: [
+//       { type: "Video bài giảng", count: 45 },
+//       { type: "Bài tập quiz", count: 30 },
+//       { type: "Bài tập coding", count: 18 },
+//       { type: "Tài liệu đọc", count: 25 },
+//       { type: "Thảo luận", count: 10 }
+//     ]
+//   },
+//   dl: {
+//     title: "Deep Learning",
+//     students: 520,
+//     videos: 40,
+//     exercises: 58,
+//     duration: "8 tuần",
+//     satisfactionLevel: "Hài lòng",
+//     satisfactionScore: 0.72,
+//     resources: [
+//       { type: "Video bài giảng", count: 40 },
+//       { type: "Bài tập quiz", count: 26 },
+//       { type: "Bài tập coding", count: 22 },
+//       { type: "Tài liệu đọc", count: 18 },
+//       { type: "Thảo luận", count: 7 }
+//     ]
+//   },
+//   nlp: {
+//     title: "Xử lý ngôn ngữ tự nhiên",
+//     students: 410,
+//     videos: 36,
+//     exercises: 50,
+//     duration: "8 tuần",
+//     satisfactionLevel: "Hài lòng",
+//     satisfactionScore: 0.76,
+//     resources: [
+//       { type: "Video bài giảng", count: 36 },
+//       { type: "Bài tập quiz", count: 22 },
+//       { type: "Bài tập coding", count: 18 },
+//       { type: "Tài liệu đọc", count: 20 },
+//       { type: "Thảo luận", count: 6 }
+//     ]
+//   }
+// };
 
 // Màu sắc cho biểu đồ
 const COLORS = ['#8884d8', '#83a6ed', '#8dd1e1', '#82ca9d', '#a4de6c', '#d0ed57', '#ffc658'];
@@ -1327,6 +1327,28 @@ const GENDER_COLORS = ['#8884d8', '#FF8042'];
 
 const INITIAL_ITEMS_TO_DISPLAY = 50; // Show 50 items initially
 const ITEMS_TO_LOAD_MORE = 100;      // Load 100 more items on click
+
+// Define the structure for a single course detail
+interface CourseResource {
+  type: string;
+  count: number;
+}
+
+interface CourseDetail {
+  title: string;
+  students: number;
+  videos: number;
+  exercises: number;
+  duration: string;
+  satisfactionLevel: string;
+  satisfactionScore: number;
+  resources: CourseResource[];
+}
+
+// Define the structure for the entire course details object fetched from JSON
+interface FetchedCourseDetails {
+  [key: string]: CourseDetail;
+}
 
 const Dashboard = () => {
   const [loading, setLoading] = useState(true);
@@ -1341,6 +1363,8 @@ const Dashboard = () => {
   // State to track how many items are visible (for the "Load More" logic)
   const [visibleCourseCount, setVisibleCourseCount] = useState(INITIAL_ITEMS_TO_DISPLAY);
 
+  const [fetchedCourseDetails, setFetchedCourseDetails] = useState<FetchedCourseDetails>({});
+
   // Handler to load more courses into the displayed list
   const handleLoadMoreCourses = () => {
     setVisibleCourseCount(prevCount => {
@@ -1354,90 +1378,135 @@ const Dashboard = () => {
   //   { id: "all", name: "Chọn khóa học" }
   // ]);
 
-  useEffect(() => {
-    // Tải courseList từ file JSONL trong thư mục public/data
-    fetch('/data/translated_courseList.jsonl')
-      .then(res => res.text())
-      .then(text => {
-        const lines = text.split('\n').filter(line => line.trim() !== '');
-        const parsedData = lines.map(line => JSON.parse(line));
+  // useEffect(() => {
+  //   // Tải courseList từ file JSONL trong thư mục public/data
+  //   fetch('/data/translated_courseList.jsonl')
+  //     .then(res => res.text())
+  //     .then(text => {
+  //       const lines = text.split('\n').filter(line => line.trim() !== '');
+  //       const parsedData = lines.map(line => JSON.parse(line));
         
-        // Ensure "Chọn khóa học" is always the first option and filter out any other "all" id from data
-        const coursesFromData = parsedData.filter(c => c.id !== "all");
-        const completeCourseList = [{ id: "all", name: "Chọn khóa học" }, ...coursesFromData];
+  //       // Ensure "Chọn khóa học" is always the first option and filter out any other "all" id from data
+  //       const coursesFromData = parsedData.filter(c => c.id !== "all");
+  //       const completeCourseList = [{ id: "all", name: "Chọn khóa học" }, ...coursesFromData];
         
-        setAllCourses(completeCourseList);
-        // Set the initially displayed courses based on INITIAL_ITEMS_TO_DISPLAY
-        setDisplayedCourses(completeCourseList.slice(0, INITIAL_ITEMS_TO_DISPLAY));
-        // Reset visible count to initial, in case this effect runs again
-        setVisibleCourseCount(INITIAL_ITEMS_TO_DISPLAY);
-      })
-      .catch((error) => {
-        console.error("Error fetching courseList.jsonl:", error);
-        // If error, set a default list
-        const defaultList = [{ id: "all", name: "Chọn khóa học" }];
-        setAllCourses(defaultList);
-        setDisplayedCourses(defaultList);
-        setVisibleCourseCount(defaultList.length);
-      });
-  }, []); // Empty dependency array ensures this runs once on mount
+  //       setAllCourses(completeCourseList);
+  //       // Set the initially displayed courses based on INITIAL_ITEMS_TO_DISPLAY
+  //       setDisplayedCourses(completeCourseList.slice(0, INITIAL_ITEMS_TO_DISPLAY));
+  //       // Reset visible count to initial, in case this effect runs again
+  //       setVisibleCourseCount(INITIAL_ITEMS_TO_DISPLAY);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching courseList.jsonl:", error);
+  //       // If error, set a default list
+  //       const defaultList = [{ id: "all", name: "Chọn khóa học" }];
+  //       setAllCourses(defaultList);
+  //       setDisplayedCourses(defaultList);
+  //       setVisibleCourseCount(defaultList.length);
+  //     });
+  // }, []); // Empty dependency array ensures this runs once on mount
 
   // Giả lập tải dữ liệu
   useEffect(() => {
     window.scrollTo(0, 0);
     
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000);
+    // const timer = setTimeout(() => {
+    //   setLoading(false);
+    // }, 1000);
     
-    return () => clearTimeout(timer);
+    // return () => clearTimeout(timer);
+
+    setLoading(true); // Set loading to true at the beginning of data fetching process
+
+    fetch('/data/transformed_course_details.json') // Fetch the main course details JSON
+      .then(res => res.json())
+      .then((data: FetchedCourseDetails) => {
+        setFetchedCourseDetails(data); // Store all course details
+
+        // Generate courseList for the dropdown from the fetched data
+        const coursesFromData = Object.keys(data).map(key => ({
+          id: key,
+          name: data[key].title
+        }));
+
+        const completeCourseList = [{ id: "all", name: "Chọn khóa học" }, ...coursesFromData];
+        
+        setAllCourses(completeCourseList);
+        setDisplayedCourses(completeCourseList.slice(0, INITIAL_ITEMS_TO_DISPLAY));
+        setVisibleCourseCount(INITIAL_ITEMS_TO_DISPLAY);
+        
+        setLoading(false); // Set loading to false after all data is processed
+      })
+      .catch((error) => {
+        console.error("Error fetching transformed_course_details.json:", error);
+        const defaultList = [{ id: "all", name: "Chọn khóa học" }];
+        setAllCourses(defaultList);
+        setDisplayedCourses(defaultList);
+        setVisibleCourseCount(defaultList.length);
+        setFetchedCourseDetails({}); // Set to empty object on error
+        setLoading(false); // Also set loading to false on error
+      });
   }, []);
 
   // Lấy dữ liệu dựa trên khóa học và tuần đã chọn
   const getLearningBehaviorData = () => {
     if (selectedCourse === "all") return [];
-    if (selectedWeek === "all") return learningBehaviorData[selectedCourse].all;
-    return learningBehaviorData[selectedCourse][selectedWeek] || [];
+    // if (selectedWeek === "all") return learningBehaviorData[selectedCourse].all;
+    // return learningBehaviorData[selectedCourse][selectedWeek] || [];
+    return learningBehaviorData["ml"]["week1"] || [];
   };
   
   const getAssignmentData = () => {
     if (selectedCourse === "all") return [];
-    if (selectedWeek === "all") return assignmentData[selectedCourse].all;
-    return assignmentData[selectedCourse][selectedWeek] || [];
+    // if (selectedWeek === "all") return assignmentData[selectedCourse].all;
+    // return assignmentData[selectedCourse][selectedWeek] || [];
+    return assignmentData["ml"]["week1"] || [];
   };
   
   const getCommentActivityData = () => {
     if (selectedCourse === "all") return [];
-    if (selectedWeek === "all") return commentActivityData[selectedCourse].all;
-    return commentActivityData[selectedCourse][selectedWeek] || [];
+    // if (selectedWeek === "all") return commentActivityData[selectedCourse].all;
+    // return commentActivityData[selectedCourse][selectedWeek] || [];
+    return commentActivityData["ml"]["week1"] || [];
   };
   
   const getVideoDurationData = () => {
     if (selectedCourse === "all") return [];
-    if (selectedWeek === "all") return videoDurationData[selectedCourse].all;
-    return videoDurationData[selectedCourse][selectedWeek] || [];
+    // if (selectedWeek === "all") return videoDurationData[selectedCourse].all;
+    // return videoDurationData[selectedCourse][selectedWeek] || [];
+    return videoDurationData["ml"]["week1"] || [];
   };
   
   const getVideoEngagementData = () => {
     if (selectedCourse === "all") return [];
-    if (selectedWeek === "all") return videoEngagementData[selectedCourse].all;
-    return videoEngagementData[selectedCourse][selectedWeek] || [];
+    // if (selectedWeek === "all") return videoEngagementData[selectedCourse].all;
+    // return videoEngagementData[selectedCourse][selectedWeek] || [];
+    return videoEngagementData["ml"]["week1"] || [];
   };
   
   const getExerciseCompletionData = () => {
     if (selectedCourse === "all") return [];
-    if (selectedWeek === "all") return exerciseCompletionData[selectedCourse].all;
-    return exerciseCompletionData[selectedCourse][selectedWeek] || [];
+    // if (selectedWeek === "all") return exerciseCompletionData[selectedCourse].all;
+    // return exerciseCompletionData[selectedCourse][selectedWeek] || [];
+    return exerciseCompletionData["ml"]["week1"] || [];
   };
   
   const getScoreOverTimeData = () => {
     if (selectedCourse === "all") return [];
-    if (selectedWeek === "all") return scoreOverTimeData[selectedCourse].all;
-    return scoreOverTimeData[selectedCourse][selectedWeek] || [];
+    // if (selectedWeek === "all") return scoreOverTimeData[selectedCourse].all;
+    // return scoreOverTimeData[selectedCourse][selectedWeek] || [];
+    return scoreOverTimeData["ml"]["week1"] || [];
   };
   
-  const getCourseDetail = () => {
-    return courseDetails[selectedCourse];
+  // const getCourseDetail = () => {
+  //   return courseDetails[selectedCourse];
+  // };
+
+  const getCourseDetail = (): CourseDetail | null => {
+    if (loading || selectedCourse === "all" || !fetchedCourseDetails[selectedCourse]) {
+      return null;
+    }
+    return fetchedCourseDetails[selectedCourse];
   };
 
   return (
@@ -1478,10 +1547,14 @@ const Dashboard = () => {
   {activeTab === "courses" && (
     <div className="flex flex-wrap items-center gap-4 mt-4 px-2">
       <Select value={selectedCourse} onValueChange={setSelectedCourse}>
-        <SelectTrigger className="w-[180px] h-8 text-xs">
+        <SelectTrigger className="w-[250px] h-8 text-xs">
           <SelectValue placeholder="Chọn khóa học" />
         </SelectTrigger>
         <SelectContent className="max-h-72 overflow-y-auto">
+          {loading ? (
+                        <SelectItem value="loading" disabled>Đang tải danh sách...</SelectItem>
+                      ) : (
+                        <>
           {/* MODIFIED: Map over displayedCourses instead of courseList */}
           {displayedCourses.map((course) => (
             <SelectItem key={course.id} value={course.id}>
@@ -1502,8 +1575,10 @@ const Dashboard = () => {
               Tải thêm ({allCourses.length - visibleCourseCount} nữa)
             </div>
           )}
-        </SelectContent>
-      </Select>
+        </>
+        )}
+      </SelectContent>
+    </Select>
 
       {/* {selectedCourse !== "all" && (
         <Select value={selectedWeek} onValueChange={setSelectedWeek}>
@@ -1622,14 +1697,14 @@ const Dashboard = () => {
               </TabsContent>
               
               <TabsContent value="courses" className="space-y-6">
-                {selectedCourse !== "all" && getCourseDetail() && (
+                {/* {selectedCourse !== "all" && getCourseDetail() && (
                   <Card>
                     <CardHeader>
                       <CardTitle>{getCourseDetail().title}</CardTitle>
                       <CardDescription>Thông tin chi tiết về khóa học</CardDescription>
                     </CardHeader>
                     <CardContent>
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-6">
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
                         <div className="bg-gray-50 p-4 rounded-lg text-center">
                           <div className="text-2xl font-bold">{getCourseDetail().students}</div>
                           <div className="text-sm text-gray-500">Học viên</div>
@@ -1641,16 +1716,16 @@ const Dashboard = () => {
                         <div className="bg-gray-50 p-4 rounded-lg text-center">
                           <div className="text-2xl font-bold">{getCourseDetail().exercises}</div>
                           <div className="text-sm text-gray-500">Bài tập</div>
-                        </div>
-                        <div className="bg-gray-50 p-4 rounded-lg text-center">
+                        </div> */}
+                        {/* <div className="bg-gray-50 p-4 rounded-lg text-center">
                           <div className="text-2xl font-bold">{getCourseDetail().duration}</div>
                           <div className="text-sm text-gray-500">Thời lượng</div>
                         </div>
                         <div className="bg-gray-50 p-4 rounded-lg text-center">
                           <div className="text-2xl font-bold">{getCourseDetail().satisfactionScore.toFixed(2)}</div>
                           <div className="text-sm text-gray-500">Điểm BSI</div>
-                        </div>
-                      </div>
+                        </div> */}
+                      {/* </div>
                       
                       <div className="mb-4">
                         <h3 className="text-lg font-semibold mb-2">Tài nguyên khóa học</h3>
@@ -1673,14 +1748,85 @@ const Dashboard = () => {
                       </div>
                     </CardContent>
                   </Card>
-                )}
+                )} */}
+
+                {activeTab === "courses" && selectedCourse !== "all" && (() => {
+                  if (loading) {
+                    return <Skeleton className="h-60 w-full" />;
+                  }
+                  const detail = getCourseDetail();
+                  if (!detail) {
+                    return (
+                      <Card>
+                        <CardHeader>
+                          <CardTitle>Chi tiết khóa học</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                          <p>Vui lòng chọn một khóa học để xem chi tiết hoặc dữ liệu không có sẵn.</p>
+                        </CardContent>
+                      </Card>
+                    );
+                  }
+                  return (
+                    <Card>
+                      <CardHeader>
+                        <CardTitle>{detail.title}</CardTitle>
+                        <CardDescription>Thông tin chi tiết về khóa học</CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+                          <div className="bg-gray-50 p-4 rounded-lg text-center">
+                            <div className="text-2xl font-bold">{detail.students}</div>
+                            <div className="text-sm text-gray-500">Học viên</div>
+                          </div>
+                          <div className="bg-gray-50 p-4 rounded-lg text-center">
+                            <div className="text-2xl font-bold">{detail.videos}</div>
+                            <div className="text-sm text-gray-500">Videos</div>
+                          </div>
+                          <div className="bg-gray-50 p-4 rounded-lg text-center">
+                            <div className="text-2xl font-bold">{detail.exercises}</div>
+                            <div className="text-sm text-gray-500">Bài tập</div>
+                          </div>
+                           {/* <div className="bg-gray-50 p-4 rounded-lg text-center">
+                            <div className="text-2xl font-bold">{detail.duration}</div>
+                            <div className="text-sm text-gray-500">Thời lượng</div>
+                          </div>
+                          <div className="bg-gray-50 p-4 rounded-lg text-center">
+                            <div className="text-2xl font-bold">{(detail.satisfactionScore * 100).toFixed(1)}%</div>
+                            <div className="text-sm text-gray-500">Mức độ hài lòng</div>
+                          </div> */}
+                        </div>
+                        
+                        <div className="mb-4">
+                          <h3 className="text-lg font-semibold mb-2">Tài nguyên khóa học</h3>
+                          <Table>
+                            <TableHeader>
+                              <TableRow>
+                                <TableHead>Loại tài nguyên</TableHead>
+                                <TableHead className="text-right">Số lượng</TableHead>
+                              </TableRow>
+                            </TableHeader>
+                            <TableBody>
+                              {detail.resources.map((resource, index) => (
+                                <TableRow key={index}>
+                                  <TableCell>{resource.type}</TableCell>
+                                  <TableCell className="text-right">{resource.count}</TableCell>
+                                </TableRow>
+                              ))}
+                            </TableBody>
+                          </Table>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  );
+                })()}
                 
                 {selectedCourse !== "all" && (
                   <>
                     {/* Thông tin học viên & nền tảng học tập */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                       {/* Phân bố giới tính (Pie chart) */}
-                      <Card>
+                      {/* <Card>
                         <CardHeader>
                           <CardTitle className="flex items-center gap-2">
                             <PieChart className="h-5 w-5 text-research-primary" />
@@ -1725,7 +1871,7 @@ const Dashboard = () => {
                             )}
                           </div>
                         </CardContent>
-                      </Card>
+                      </Card> */}
 
                       {/* Phân bố độ tuổi (Bar chart)
                       <Card>
