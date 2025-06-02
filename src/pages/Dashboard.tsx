@@ -399,13 +399,13 @@ const commentActivityData = {
 };
 
 // Dữ liệu cho phần khóa học
-const courseEnrollmentData = [
-  { name: 'Machine Learning Cơ bản', students: 850 },
-  { name: 'Lập trình Python', students: 720 },
-  { name: 'Data Science và Phân tích', students: 680 },
-  { name: 'Deep Learning', students: 520 },
-  { name: 'Xử lý ngôn ngữ tự nhiên', students: 410 }
-];
+// const courseEnrollmentData = [
+//   { name: 'Machine Learning Cơ bản', students: 850 },
+//   { name: 'Lập trình Python', students: 720 },
+//   { name: 'Data Science và Phân tích', students: 680 },
+//   { name: 'Deep Learning', students: 520 },
+//   { name: 'Xử lý ngôn ngữ tự nhiên', students: 410 }
+// ];
 
 const videoDurationData = {
   ml: {
@@ -1325,14 +1325,34 @@ const courseDetails = {
 const COLORS = ['#8884d8', '#83a6ed', '#8dd1e1', '#82ca9d', '#a4de6c', '#d0ed57', '#ffc658'];
 const GENDER_COLORS = ['#8884d8', '#FF8042'];
 
+const INITIAL_ITEMS_TO_DISPLAY = 50; // Show 50 items initially
+const ITEMS_TO_LOAD_MORE = 100;      // Load 100 more items on click
+
 const Dashboard = () => {
   const [loading, setLoading] = useState(true);
   const [selectedCourse, setSelectedCourse] = useState("all");
   const [selectedWeek, setSelectedWeek] = useState("all");
   const [activeTab, setActiveTab] = useState("overview");
-  const [courseList, setCourseList] = useState<{ id: string; name: string }[]>([
-    { id: "all", name: "Chọn khóa học" }
-  ]);
+
+  // State for managing the full list of courses
+  const [allCourses, setAllCourses] = useState<{ id: string; name: string }[]>([]);
+  // State for the courses currently rendered in the dropdown
+  const [displayedCourses, setDisplayedCourses] = useState<{ id: string; name: string }[]>([]);
+  // State to track how many items are visible (for the "Load More" logic)
+  const [visibleCourseCount, setVisibleCourseCount] = useState(INITIAL_ITEMS_TO_DISPLAY);
+
+  // Handler to load more courses into the displayed list
+  const handleLoadMoreCourses = () => {
+    setVisibleCourseCount(prevCount => {
+      const newCount = Math.min(prevCount + ITEMS_TO_LOAD_MORE, allCourses.length);
+      setDisplayedCourses(allCourses.slice(0, newCount));
+      return newCount;
+    });
+  };
+
+  // const [courseList, setCourseList] = useState<{ id: string; name: string }[]>([
+  //   { id: "all", name: "Chọn khóa học" }
+  // ]);
 
   useEffect(() => {
     // Tải courseList từ file JSONL trong thư mục public/data
@@ -1340,16 +1360,27 @@ const Dashboard = () => {
       .then(res => res.text())
       .then(text => {
         const lines = text.split('\n').filter(line => line.trim() !== '');
-        const data = lines.map(line => JSON.parse(line));
-        // Đảm bảo "Chọn khóa học" luôn ở đầu
-        setCourseList([{ id: "all", name: "Chọn khóa học" }, ...data.filter(c => c.id !== "all")]);
+        const parsedData = lines.map(line => JSON.parse(line));
+        
+        // Ensure "Chọn khóa học" is always the first option and filter out any other "all" id from data
+        const coursesFromData = parsedData.filter(c => c.id !== "all");
+        const completeCourseList = [{ id: "all", name: "Chọn khóa học" }, ...coursesFromData];
+        
+        setAllCourses(completeCourseList);
+        // Set the initially displayed courses based on INITIAL_ITEMS_TO_DISPLAY
+        setDisplayedCourses(completeCourseList.slice(0, INITIAL_ITEMS_TO_DISPLAY));
+        // Reset visible count to initial, in case this effect runs again
+        setVisibleCourseCount(INITIAL_ITEMS_TO_DISPLAY);
       })
-      .catch((error) => { // Added error handling
+      .catch((error) => {
         console.error("Error fetching courseList.jsonl:", error);
-        // Nếu lỗi, giữ nguyên mặc định hoặc set to a more specific error state
-        setCourseList([{ id: "all", name: "Chọn khóa học" }]);
+        // If error, set a default list
+        const defaultList = [{ id: "all", name: "Chọn khóa học" }];
+        setAllCourses(defaultList);
+        setDisplayedCourses(defaultList);
+        setVisibleCourseCount(defaultList.length);
       });
-  }, []);
+  }, []); // Empty dependency array ensures this runs once on mount
 
   // Giả lập tải dữ liệu
   useEffect(() => {
@@ -1429,8 +1460,8 @@ const Dashboard = () => {
 
 
 
-              {/* 👇 Di chuyển dropdown chọn khóa học + tuần xuống đây */}
-  {activeTab === "courses" && (
+  {/* 👇 Di chuyển dropdown chọn khóa học + tuần xuống đây */}
+  {/* {activeTab === "courses" && (
     <div className="flex flex-wrap items-center gap-4 mt-4 px-2">
       <Select value={selectedCourse} onValueChange={setSelectedCourse}>
         <SelectTrigger className="w-[180px] h-8 text-xs">
@@ -1442,6 +1473,35 @@ const Dashboard = () => {
               {course.name}
             </SelectItem>
           ))}
+        </SelectContent>
+      </Select> */}
+  {activeTab === "courses" && (
+    <div className="flex flex-wrap items-center gap-4 mt-4 px-2">
+      <Select value={selectedCourse} onValueChange={setSelectedCourse}>
+        <SelectTrigger className="w-[180px] h-8 text-xs">
+          <SelectValue placeholder="Chọn khóa học" />
+        </SelectTrigger>
+        <SelectContent className="max-h-72 overflow-y-auto">
+          {/* MODIFIED: Map over displayedCourses instead of courseList */}
+          {displayedCourses.map((course) => (
+            <SelectItem key={course.id} value={course.id}>
+              {course.name}
+            </SelectItem>
+          ))}
+          {/* NEW: "Load More" button/div */}
+          {allCourses.length > 0 && visibleCourseCount < allCourses.length && (
+            <div
+              onClick={(e) => {
+                // Prevent the select dropdown from closing when "Load More" is clicked
+                e.stopPropagation(); 
+                handleLoadMoreCourses();
+              }}
+              // Basic styling for the "Load More" item - adjust as needed
+              className="text-center py-2 px-3 text-xs text-blue-600 cursor-pointer hover:bg-gray-100"
+            >
+              Tải thêm ({allCourses.length - visibleCourseCount} nữa)
+            </div>
+          )}
         </SelectContent>
       </Select>
 
@@ -2039,12 +2099,12 @@ const Dashboard = () => {
               </TabsContent>
               
               <TabsContent value="model">
-  <Card>
-    <CardContent>
-      <ModelEvaluationContent /> {/* 👈 sử dụng component */}
-    </CardContent>
-  </Card>
-</TabsContent>
+                <Card>
+                  <CardContent>
+                    <ModelEvaluationContent />
+                  </CardContent>
+                </Card>
+              </TabsContent>
               
               <TabsContent value="predictions">
                 <Card>
