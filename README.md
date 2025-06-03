@@ -1,73 +1,70 @@
-# Welcome to your Lovable project
+# EduSatisPred: Dự đoán mức độ hài lòng trong học trực tuyến
 
-## Project info
+## Giới thiệu
 
-**URL**: https://lovable.dev/projects/457b7e19-1163-401c-aaf3-834c5b5cc39f
+**EduSatisPred** là một dự án nghiên cứu tập trung vào việc dự đoán mức độ hài lòng của học viên trong môi trường học trực tuyến. Dự án này sử dụng các kỹ thuật học máy tiên tiến để phân tích hành vi học tập ban đầu của học viên (như xem video, làm bài tập và bình luận) nhằm cung cấp một chỉ số sớm về mức độ hài lòng (Behavioral Satisfaction Index - BSI). Mục tiêu chính là cải thiện chất lượng giảng dạy, giảm tỷ lệ bỏ học, tối ưu hóa tài nguyên và nâng cao uy tín của nền tảng học trực tuyến bằng cách cho phép các tổ chức giáo dục kịp thời phát hiện vấn đề và can thiệp sớm.
 
-## How can I edit this code?
+## Tổng quan nghiên cứu
 
-There are several ways of editing your application.
+Nghiên cứu này bao gồm các khía cạnh chính sau:
 
-**Use Lovable**
+* **Tính cấp thiết:** Dự đoán sớm mức độ hài lòng của học viên giúp cải thiện chất lượng giảng dạy, giảm tỷ lệ bỏ học, tối ưu hóa tài nguyên và nâng cao uy tín của nền tảng. Việc dự đoán được thực hiện ngay trong quá trình học, thay vì chờ đến khi khóa học kết thúc, cho phép các tổ chức giáo dục kịp thời phát hiện vấn đề và can thiệp sớm để nâng cao trải nghiệm học tập và hiệu quả đào tạo.
+* **Bộ dữ liệu:** Sử dụng dữ liệu quy mô lớn từ MOOCCubeX, được phát triển bởi Nhóm Kỹ thuật Tri thức – Đại học Thanh Hoa, với sự hỗ trợ từ nền tảng MOOC lớn nhất Trung Quốc – XuetangX. Bộ dữ liệu này phục vụ nghiên cứu học tập thích ứng trong môi trường học trực tuyến quy mô lớn (MOOC). Bạn có thể truy cập dataset tại [GitHub - MOOCCubeX](https://github.com/THU-KEG/MOOCCubeX).
+* **Mô hình dự đoán:** Áp dụng các kỹ thuật học máy tiên tiến để dự đoán mức độ hài lòng theo 5 mức từ dữ liệu hành vi. Đề tài này tập trung vào mức độ tương tác cá nhân của từng học viên (bình luận, làm bài, xem video) để dự đoán mức độ hài lòng bằng các mô hình học máy hiện đại, từ đó mở ra hướng tiếp cận cá nhân hóa và nâng cao hiệu quả phân tích trong giáo dục trực tuyến.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/457b7e19-1163-401c-aaf3-834c5b5cc39f) and start prompting.
+## Thang đo mức độ hài lòng (Behavioral Satisfaction Index - BSI)
 
-Changes made via Lovable will be committed automatically to this repo.
+BSI là chỉ số dự đoán mức độ hài lòng của sinh viên đối với từng khóa học cụ thể, dựa trên hành vi học tập ban đầu như: xem video, làm bài tập và để lại bình luận.
 
-**Use your preferred IDE**
+## Công nghệ sử dụng
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Dự án này được xây dựng với các công nghệ sau:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+* Vite
+* TypeScript
+* React
+* shadcn-ui
+* Tailwind CSS
 
-Follow these steps:
+## Cài đặt và Chạy dự án
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Để thiết lập dự án trên môi trường cục bộ, hãy làm theo các bước sau:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+1. **Clone repository:**
 
-# Step 3: Install the necessary dependencies.
-npm i
+    ```bash
+    git clone <YOUR_GIT_URL>
+    ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+2. **Di chuyển vào thư mục dự án:**
 
-**Edit a file directly in GitHub**
+    ```bash
+    cd <YOUR_PROJECT_NAME>
+    ```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+3. **Cài đặt các dependency cần thiết:**
 
-**Use GitHub Codespaces**
+    ```bash
+    npm i
+    ```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+4. **Khởi động môi trường phát triển với tính năng auto-reloading và instant preview:**
 
-## What technologies are used for this project?
+    ```bash
+    npm run dev
+    ```
 
-This project is built with:
+## Triển khai
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Bạn có thể triển khai dự án này bằng cách:
 
-## How can I deploy this project?
+* Truy cập [Lovable Project](https://www.google.com/search?q=https://lovable.dev/projects/457b7e19-1163-401c-aaf3-834c5b5cc39f) và nhấp vào "Share" -\> "Publish".
+* Để kết nối một domain tùy chỉnh, hãy truy cập Project \> Settings \> Domains và nhấp vào "Connect Domain". Đọc thêm tại: [Setting up a custom domain](https://www.google.com/search?q=https://docs.lovable.dev/tips-tricks/custom-domain%23step-by-step-guide).
 
-Simply open [Lovable](https://lovable.dev/projects/457b7e19-1163-401c-aaf3-834c5b5cc39f) and click on Share -> Publish.
+## Liên hệ
 
-## Can I connect a custom domain to my Lovable project?
+Nếu có bất kỳ câu hỏi nào, vui lòng liên hệ: nhom4cs313@gmail.com.
 
-Yes, you can!
+-----
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+© 2024 EduSatisPred. Đồ án nghiên cứu khoa học.
