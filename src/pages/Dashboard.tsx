@@ -2247,7 +2247,7 @@ const Dashboard = () => {
               <TabsContent value="model">
                 <Card>
                   <CardContent>
-                    <ModelEvaluationContent />
+                    <ModelEvaluationContent /> {/* 👈 sử dụng component */}
                   </CardContent>
                 </Card>
               </TabsContent>
