@@ -199,19 +199,19 @@ const satisfactionLevels = [
   return (
     <div className="bg-gradient-to-br from-research-light via-white to-research-light py-16 md:py-24">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 opacity-0 animate-fade-in">
+        <div className="grid grid-cols-1 gap-12 items-center">
+          <div className="space-y-6 max-w-5xl mx-auto opacity-0 animate-fade-in">
             <div className="inline-flex items-center px-3 py-1 rounded-full border border-research-primary/30 bg-research-light text-sm text-research-primary font-medium">
               <span className="mr-1">✨</span> Nghiên cứu giáo dục trực tuyến
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight leading-tight">
-              Dự đoán sớm <span className="text-research-primary">độ hài lòng</span> của học viên đối với 1 khóa học cụ thể
+              Dự đoán sớm <span className="text-research-primary">độ hài lòng</span> của học viên đối với một khóa học cụ thể
             </h1>
             <p className="text-lg text-gray-600 md:pr-10">
               Sử dụng học máy và khai phá dữ liệu từ hành vi học tập để dự đoán
               mức độ hài lòng, nâng cao trải nghiệm và chất lượng khóa học trực tuyến.
             </p>
-            <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 pt-2">
+            <div className="flex items-center justify-center flex-col  sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 pt-2">
               <Button asChild size="lg" className="bg-research-primary hover:bg-research-primary/90">
                 <Link to="/dashboard">
                   Xem Dashboard
@@ -224,7 +224,7 @@ const satisfactionLevels = [
             </div>
           </div>
           
-          <div className="opacity-0 animate-fade-in animate-delay-200 lg:flex justify-center">
+          {/* <div className="opacity-0 animate-fade-in animate-delay-200 lg:flex justify-center">
             <div className="relative w-full max-w-4xl">
               <div className="absolute inset-0 bg-research-primary/5 rounded-2xl transform rotate-3"></div>
               <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden">
@@ -266,12 +266,12 @@ const satisfactionLevels = [
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       
       {/* Dialog cho phép hiển thị chi tiết khi người dùng click vào mức độ hài lòng */}
-      <Dialog open={!!selectedLevel} onOpenChange={() => setSelectedLevel(null)}>
+      {/* <Dialog open={!!selectedLevel} onOpenChange={() => setSelectedLevel(null)}>
         <DialogContent className="max-w-4xl">
           <DialogHeader>
             <DialogTitle className={`text-2xl font-bold ${satisfactionStyles[selectedLevel]?.textColor || ''}`}>
@@ -283,9 +283,9 @@ const satisfactionLevels = [
           </DialogHeader>
           
           {selectedLevel && (
-            <div className="space-y-6">
+            <div className="space-y-6"> */}
               {/* Tiêu chí đánh giá */}
-              <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+              {/* <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
                 <h3 className="font-semibold mb-2">Tiêu chí đánh giá:</h3>
                 <ul className="space-y-1">
                   {criteriaByLevel[selectedLevel]?.criteria.map((criterion, idx) => (
@@ -294,10 +294,10 @@ const satisfactionLevels = [
                     </li>
                   ))}
                 </ul>
-              </div>
+              </div> */}
               
               {/* Danh sách các khóa học thuộc mức độ này */}
-              <div>
+              {/* <div>
                 <h3 className="text-lg font-semibold mb-3">Các khóa học thuộc mức độ này</h3>
                 <div className="rounded-md border">
                   <Table>
@@ -344,10 +344,10 @@ const satisfactionLevels = [
                     </TableBody>
                   </Table>
                 </div>
-              </div>
+              </div> */}
               
               {/* Phân tích vấn đề của khóa học */}
-              <div className={`p-4 rounded-lg ${satisfactionStyles[selectedLevel]?.bg} ${satisfactionStyles[selectedLevel]?.border}`}>
+              {/* <div className={`p-4 rounded-lg ${satisfactionStyles[selectedLevel]?.bg} ${satisfactionStyles[selectedLevel]?.border}`}>
                 <h3 className="font-semibold mb-2">Đặc điểm của khóa học ở mức độ này:</h3>
                 <ul className="space-y-1 text-sm">
                   {selectedLevel === "Rất hài lòng" && (
@@ -390,7 +390,7 @@ const satisfactionLevels = [
             </div>
           )}
         </DialogContent>
-      </Dialog>
+      </Dialog> */}
     </div>
   );
 };
