@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ModelEvaluationContent from '@/components/ModelEvaluationContent';
+import CourseAnalyticsDashboard from '@/components/CourseAnalyticsDashboard';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AreaChart, BarChart2, PieChart, LineChart, Users, BookOpen, Calendar } from "lucide-react";
@@ -1353,7 +1354,6 @@ interface FetchedCourseDetails {
 const Dashboard = () => {
   const [loading, setLoading] = useState(true);
   const [selectedCourse, setSelectedCourse] = useState("all");
-  const [selectedWeek, setSelectedWeek] = useState("all");
   const [activeTab, setActiveTab] = useState("overview");
 
   // State for managing the full list of courses
@@ -1599,17 +1599,17 @@ const Dashboard = () => {
               
               <TabsContent value="overview" className="space-y-6">
                 {/* Stats Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                   <Card>
                     <CardHeader className="pb-2">
                       <CardTitle className="text-sm font-medium text-gray-500">Tổng học viên</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <div className="text-3xl font-bold">2,845</div>
-                      <p className="text-xs text-green-600 flex items-center mt-1">
+                      <div className="text-3xl font-bold">694,392</div>
+                      {/* <p className="text-xs text-green-600 flex items-center mt-1">
                         <span className="i-lucide-trending-up mr-1"></span>
                         +12.5% so với kỳ trước
-                      </p>
+                      </p> */}
                     </CardContent>
                   </Card>
                   
@@ -1618,15 +1618,15 @@ const Dashboard = () => {
                       <CardTitle className="text-sm font-medium text-gray-500">Khóa học</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <div className="text-3xl font-bold">128</div>
-                      <p className="text-xs text-green-600 flex items-center mt-1">
+                      <div className="text-3xl font-bold">2,138</div>
+                      {/* <p className="text-xs text-green-600 flex items-center mt-1">
                         <span className="i-lucide-trending-up mr-1"></span>
                         +5.2% so với kỳ trước
-                      </p>
+                      </p> */}
                     </CardContent>
                   </Card>
                   
-                  <Card>
+                  {/* <Card>
                     <CardHeader className="pb-2">
                       <CardTitle className="text-sm font-medium text-gray-500">Tỉ lệ hài lòng</CardTitle>
                     </CardHeader>
@@ -1637,18 +1637,18 @@ const Dashboard = () => {
                         +3.7% so với kỳ trước
                       </p>
                     </CardContent>
-                  </Card>
+                  </Card> */}
                   
                   <Card>
                     <CardHeader className="pb-2">
                       <CardTitle className="text-sm font-medium text-gray-500">Độ chính xác mô hình</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <div className="text-3xl font-bold">92.3%</div>
-                      <p className="text-xs text-green-600 flex items-center mt-1">
+                      <div className="text-3xl font-bold">95.3%</div>
+                      {/* <p className="text-xs text-green-600 flex items-center mt-1">
                         <span className="i-lucide-trending-up mr-1"></span>
                         +1.4% so với kỳ trước
-                      </p>
+                      </p> */}
                     </CardContent>
                   </Card>
                 </div>
@@ -1824,7 +1824,7 @@ const Dashboard = () => {
                 {selectedCourse !== "all" && (
                   <>
                     {/* Thông tin học viên & nền tảng học tập */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                       {/* Phân bố giới tính (Pie chart) */}
                       {/* <Card>
                         <CardHeader>
@@ -1909,10 +1909,10 @@ const Dashboard = () => {
                           </div>
                         </CardContent>
                       </Card> */}
-                    </div>
+                    {/* </div> */}
 
                     {/* Hành vi học tập - Đã thay đổi thành biểu đồ cột theo tuần */}
-                    <Card>
+                    {/* <Card>
                       <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                           <LineChart className="h-5 w-5 text-research-primary" />
@@ -1954,12 +1954,12 @@ const Dashboard = () => {
                           )}
                         </div>
                       </CardContent>
-                    </Card>
+                    </Card> */}
 
                     {/* Hành vi làm bài tập và Tương tác xã hội */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-6"> */}
                       {/* Hành vi làm bài tập - Đã thay đổi thành biểu đồ cột theo tuần */}
-                      <Card>
+                      {/* <Card>
                         <CardHeader>
                           <CardTitle className="flex items-center gap-2">
                             <BarChart2 className="h-5 w-5 text-research-primary" />
@@ -2009,10 +2009,10 @@ const Dashboard = () => {
                             )}
                           </div>
                         </CardContent>
-                      </Card>
+                      </Card> */}
 
                       {/* Tương tác xã hội - Đã thay đổi thành biểu đồ cột theo tuần */}
-                      <Card>
+                      {/* <Card>
                         <CardHeader>
                           <CardTitle className="flex items-center gap-2">
                             <LineChart className="h-5 w-5 text-research-primary" />
@@ -2054,11 +2054,10 @@ const Dashboard = () => {
                           </div>
                         </CardContent>
                       </Card>
-                    </div>
+                    </div> */}
 
                     {/* Phân tích video */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                      {/* Histogram độ dài video */}
+                    {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                       <Card>
                         <CardHeader>
                           <CardTitle className="flex items-center gap-2">
@@ -2093,10 +2092,10 @@ const Dashboard = () => {
                             )}
                           </div>
                         </CardContent>
-                      </Card>
+                      </Card> */}
 
                       {/* Scatter plot video engagement */}
-                      <Card>
+                      {/* <Card>
                         <CardHeader>
                           <CardTitle className="flex items-center gap-2">
                             <LineChart className="h-5 w-5 text-research-primary" />
@@ -2143,12 +2142,12 @@ const Dashboard = () => {
                           </div>
                         </CardContent>
                       </Card>
-                    </div>
+                    </div> */}
                     
                     {/* Bài tập theo khóa học - Stacked bar & Line plot */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-6"> */}
                       {/* Stacked bar chart hoàn thành bài tập */}
-                      <Card>
+                      {/* <Card>
                         <CardHeader>
                           <CardTitle className="flex items-center gap-2">
                             <BarChart2 className="h-5 w-5 text-research-primary" />
@@ -2191,10 +2190,10 @@ const Dashboard = () => {
                             )}
                           </div>
                         </CardContent>
-                      </Card>
+                      </Card> */}
 
                       {/* Line plot điểm số theo thời gian */}
-                      <Card>
+                      {/* <Card>
                         <CardHeader>
                           <CardTitle className="flex items-center gap-2">
                             <LineChart className="h-5 w-5 text-research-primary" />
@@ -2239,7 +2238,8 @@ const Dashboard = () => {
                           </div>
                         </CardContent>
                       </Card>
-                    </div>
+                    </div> */}
+                    <CourseAnalyticsDashboard selectedCourseId={selectedCourse} />
                   </>
                 )}
               </TabsContent>
