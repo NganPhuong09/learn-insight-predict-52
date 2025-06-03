@@ -1,0 +1,51 @@
+[
+  {
+    "Model":"Softmax Regression",
+    "Accuracy":0.9441117764,
+    "Precision":0.5739555188,
+    "Recall":0.4454284035,
+    "F1 Score":0.4761865368
+  },
+  {
+    "Model":"SVM",
+    "Accuracy":0.9331337325,
+    "Precision":0.3688223246,
+    "Recall":0.3744694732,
+    "F1 Score":0.3714147018
+  },
+  {
+    "Model":"Decision Tree",
+    "Accuracy":0.9560878244,
+    "Precision":0.7806996598,
+    "Recall":0.6481707443,
+    "F1 Score":0.6811010062
+  },
+  {
+    "Model":"Random Forest",
+    "Accuracy":0.9605788423,
+    "Precision":0.7819481622,
+    "Recall":0.6507495408,
+    "F1 Score":0.6829971028
+  },
+  {
+    "Model":"LightGBM",
+    "Accuracy":0.9540918164,
+    "Precision":0.5794590682,
+    "Recall":0.447576519,
+    "F1 Score":0.4801810089
+  },
+  {
+    "Model":"CatBoost",
+    "Accuracy":0.9600798403,
+    "Precision":0.5817560218,
+    "Recall":0.4510149144,
+    "F1 Score":0.4830198956
+  },
+  {
+    "Model":"XGBoost",
+    "Accuracy":0.9575848303,
+    "Precision":0.3807455168,
+    "Recall":0.3829367423,
+    "F1 Score":0.3818289231
+  }
+]
