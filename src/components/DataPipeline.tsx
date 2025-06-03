@@ -155,8 +155,50 @@ const DataPipeline = () => {
                 </li>
               </ul>
             </div>
+
+            {/* Data Schema */}
+            <div className="opacity-0 animate-fade-in animate-delay-400 bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Cấu trúc dữ liệu</h3>
+              <div className="overflow-auto max-h-64 text-sm">
+                <code className="whitespace-pre text-xs text-gray-800 font-mono">
+                  {`root
+                  |-- user_id: long (nullable = true)
+                  |-- video_id: long (nullable = true)
+                  |-- course_id: integer (nullable = true)
+                  |-- comment_id: long (nullable = true)
+                  |-- name: string (nullable = true)
+                  |-- gender: long (nullable = true)
+                  |-- school: string (nullable = true)
+                  |-- year_of_birth: long (nullable = true)
+                  |-- enroll_time: string (nullable = true)
+                  |-- field: array (nullable = true)
+                  |    |-- element: string (containsNull = true)
+                  |-- course_name: string (nullable = true)
+                  |-- comment_text: string (nullable = true)
+                  |-- comment_create_time: timestamp (nullable = true)
+                  |-- video_duration: double (nullable = true)
+                  |-- rewind_time: double (nullable = true)
+                  |-- fast_forward_time: double (nullable = true)
+                  |-- first_local_start_time: string (nullable = true)
+                  |-- actual_watch_time: double (nullable = true)
+                  |-- weighted_watch_time: double (nullable = true)
+                  |-- average_speed: double (nullable = true)
+                  |-- problem_id: long (nullable = true)
+                  |-- is_correct: integer (nullable = true)
+                  |-- attempts: integer (nullable = true)
+                  |-- score: double (nullable = true)
+                  |-- ex_submit_time: timestamp_ntz (nullable = true)
+                  |-- problem_score: double (nullable = true)
+                  |-- ex_type: long (nullable = true)
+                  |-- ex_typetext: string (nullable = true)
+                  |-- exercise_id: integer (nullable = true)
+                  |-- total_pause_time: double (nullable = true)`}
+                </code>
+              </div>
+            </div>
+
             {/* Output - Phân loại mức độ hài lòng */}
-            <div className="opacity-0 animate-fade-in animate-delay-600 bg-white rounded-lg shadow-md p-6">
+            <div className="opacity-0 animate-fade-in animate-delay-600 bg-white rounded-lg shadow-md p-6 xl:col-span-2">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Output - Phân loại mức độ hài lòng</h3>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
@@ -180,47 +222,6 @@ const DataPipeline = () => {
                   <span><span className="font-medium">Rất không hài lòng:</span> Người dùng rất không hài lòng, có thể do nhiều vấn đề lớn gây ảnh hưởng đến trải nghiệm.</span>
                 </li>
               </ul>
-            </div>
-
-            {/* Data Schema */}
-            <div className="opacity-0 animate-fade-in animate-delay-400 bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Cấu trúc dữ liệu</h3>
-              <div className="overflow-auto max-h-64 text-sm">
-                <code className="whitespace-pre text-xs text-gray-800 font-mono">
-{`root
- |-- user_id: long (nullable = true)
- |-- video_id: long (nullable = true)
- |-- course_id: integer (nullable = true)
- |-- comment_id: long (nullable = true)
- |-- name: string (nullable = true)
- |-- gender: long (nullable = true)
- |-- school: string (nullable = true)
- |-- year_of_birth: long (nullable = true)
- |-- enroll_time: string (nullable = true)
- |-- field: array (nullable = true)
- |    |-- element: string (containsNull = true)
- |-- course_name: string (nullable = true)
- |-- comment_text: string (nullable = true)
- |-- comment_create_time: timestamp (nullable = true)
- |-- video_duration: double (nullable = true)
- |-- rewind_time: double (nullable = true)
- |-- fast_forward_time: double (nullable = true)
- |-- first_local_start_time: string (nullable = true)
- |-- actual_watch_time: double (nullable = true)
- |-- weighted_watch_time: double (nullable = true)
- |-- average_speed: double (nullable = true)
- |-- problem_id: long (nullable = true)
- |-- is_correct: integer (nullable = true)
- |-- attempts: integer (nullable = true)
- |-- score: double (nullable = true)
- |-- ex_submit_time: timestamp_ntz (nullable = true)
- |-- problem_score: double (nullable = true)
- |-- ex_type: long (nullable = true)
- |-- ex_typetext: string (nullable = true)
- |-- exercise_id: integer (nullable = true)
- |-- total_pause_time: double (nullable = true)`}
-                </code>
-              </div>
             </div>
           </div>
         </div>
