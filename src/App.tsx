@@ -12,6 +12,7 @@ import BSIOverview from "./pages/BSIOverview";
 import NotFound from "./pages/NotFound";
 import ModelEvaluation from "./pages/ModelEvaluation";
 import React from "react"; // Add explicit React import
+import ModelOverview from "./pages/ModelOverview";
 
 // Create a new QueryClient instance inside the component
 const App = () => {
@@ -32,6 +33,7 @@ const App = () => {
             <Route path="/data-cleaning" element={<DataQuality />} />  {/* Redirect old path to new page */}
             <Route path="/bsi-overview" element={<BSIOverview />} />  {/* Giữ lại trang BSI Overview */}
             <Route path="/model-evaluation" element={<ModelEvaluation />} /> {/* New Model Evaluation route */}
+            <Route path="/model-overview" element={<ModelOverview />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
