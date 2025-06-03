@@ -137,12 +137,12 @@ const DataOverview = () => {
               Bạn có thể xem trực quan hóa chi tiết về dữ liệu học viên và khóa học trong dashboard.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Button asChild variant="outline">
+              {/* <Button asChild variant="outline">
                 <Link to="/dashboard?tab=students" className="flex items-center gap-1.5">
                   <Users className="w-4 h-4" />
                   <span>Dữ liệu học viên</span>
                 </Link>
-              </Button>
+              </Button> */}
               <Button asChild>
                 <Link to="/dashboard?tab=courses" className="flex items-center gap-1.5">
                   <BarChart2 className="w-4 h-4" />
