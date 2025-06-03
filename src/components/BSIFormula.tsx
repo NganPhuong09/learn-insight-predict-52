@@ -1,8 +1,9 @@
 
 import React from 'react';
-import { Gauge, Video, ClipboardCheck, MessageCircle } from "lucide-react";
+import { Gauge, Video, ClipboardCheck, MessageCircle, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
 const BSIFormula = () => {
   return (
@@ -13,19 +14,19 @@ const BSIFormula = () => {
             Thang đo mức độ hài lòng (Behavioral Satisfaction Index)
           </h2>
           
-          <div className="bg-gray-50 p-6 rounded-xl border border-gray-200 shadow-sm mb-8">
-            <p className="text-gray-700 mb-4 text-center">
+          <div className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border border-gray-200 shadow-sm mb-8">
+            <p className="text-gray-700 mb-6 text-center">
               BSI là chỉ số dự đoán mức độ hài lòng của sinh viên đối với từng khóa học cụ thể, 
               dựa trên hành vi học tập ban đầu.
             </p>
             
-            <div className="mb-6">
+            <div className="mb-8">
               <h3 className="text-xl font-semibold flex items-center gap-2 text-gray-800 mb-3">
                 <Gauge className="w-5 h-5 text-research-primary" />
                 Công thức tổng quát
               </h3>
-              <div className="bg-white p-4 rounded-lg border border-gray-100 text-center">
-                <p className="text-lg font-medium mb-2">
+              <div className="bg-white p-6 rounded-lg border border-gray-100 text-center shadow-sm">
+                <p className="text-xl font-medium mb-3">
                   BSI = w₁ × VEI + w₂ × EEI + w₃ × CSI
                 </p>
                 <p className="text-sm text-gray-600 italic">
@@ -34,8 +35,8 @@ const BSIFormula = () => {
               </div>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-              <div className="bg-white p-4 rounded-lg border border-gray-100">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="bg-white p-5 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                 <h4 className="font-semibold flex items-center gap-2 text-gray-800 mb-2">
                   <Video className="w-4 h-4 text-purple-500" />
                   VEI
@@ -45,7 +46,7 @@ const BSIFormula = () => {
                 </p>
               </div>
               
-              <div className="bg-white p-4 rounded-lg border border-gray-100">
+              <div className="bg-white p-5 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                 <h4 className="font-semibold flex items-center gap-2 text-gray-800 mb-2">
                   <ClipboardCheck className="w-4 h-4 text-teal-500" />
                   EEI
@@ -55,7 +56,7 @@ const BSIFormula = () => {
                 </p>
               </div>
               
-              <div className="bg-white p-4 rounded-lg border border-gray-100">
+              <div className="bg-white p-5 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                 <h4 className="font-semibold flex items-center gap-2 text-gray-800 mb-2">
                   <MessageCircle className="w-4 h-4 text-pink-500" />
                   CSI
@@ -65,6 +66,80 @@ const BSIFormula = () => {
                 </p>
               </div>
             </div>
+
+            {/* Phần tham khảo mới */}
+            <Card className="mb-8 bg-gray-50 border-dashed">
+              <CardContent className="pt-6">
+                <h3 className="text-lg font-semibold flex items-center gap-2 text-gray-800 mb-4">
+                  <BookOpen className="w-5 h-5 text-research-primary" />
+                  Cơ sở lý luận cho chỉ số BSI
+                </h3>
+                
+                <div className="space-y-4">
+                  <div className="bg-white p-4 rounded-lg border border-gray-100">
+                    <h4 className="font-medium text-research-primary mb-2">Xem video & làm bài tập</h4>
+                    <p className="text-sm text-gray-700 mb-2">
+                      Theo Kizilcec et al. (2013), hai hành vi cốt lõi này là nền tảng của hành vi học MOOC. 
+                      Dựa vào chúng, người học có thể được phân loại thành các nhóm hành vi điển hình như: 
+                      completing, auditing, disengaging và sampling – phản ánh mức độ cam kết với khóa học.
+                    </p>
+                    <blockquote className="pl-3 border-l-2 border-research-primary italic text-sm text-gray-600">
+                      "Interactions with video lectures and assessments [are] the primary features of most MOOCs."
+                      <footer className="text-xs text-gray-500 mt-1">— Kizilcec et al., 2013</footer>
+                    </blockquote>
+                  </div>
+                  
+                  <div className="bg-white p-4 rounded-lg border border-gray-100">
+                    <h4 className="font-medium text-research-primary mb-2">Bình luận (Comment / Forum Participation)</h4>
+                    <p className="text-sm text-gray-700 mb-2">
+                      Bình luận mang tính xây dựng thể hiện mức độ tham gia xã hội và phản ánh tư duy bậc cao của người học. 
+                      Nghiên cứu của Liu et al. (2020) cho thấy bình luận tích cực có liên hệ mạnh với kết quả học tập cao 
+                      và sự hài lòng trong môi trường học trực tuyến.
+                    </p>
+                    <blockquote className="pl-3 border-l-2 border-research-primary italic text-sm text-gray-600">
+                      "Constructive behavior has a greater impact on the learning outcome…"
+                      <footer className="text-xs text-gray-500 mt-1">— Liu et al., 2020</footer>
+                    </blockquote>
+                  </div>
+                </div>
+                
+                {/* Tài liệu tham khảo */}
+                <div>
+                  <h3 className="font-semibold text-lg mb-4">Tài liệu tham khảo</h3>
+                
+                  <div className="bg-gray-50 p-4 rounded-lg mt-2">
+                    <p className="font-medium">
+                      Kizilcec, R. F., Piech, C., & Schneider, E. (2013). Deconstructing Disengagement in MOOCs. In LAK '13: Proceedings of the Third International Conference on Learning Analytics and Knowledge.
+                    </p>
+                    <a
+                      href="https://dl.acm.org/doi/10.1145/2460296.2460330"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:underline flex items-center gap-1 mt-1"
+                    >
+                      🔗 https://dl.acm.org/doi/10.1145/2460296.2460330
+                    </a>
+                  </div>
+                
+                  <div className="bg-gray-50 p-4 rounded-lg mt-2">
+                    <p className="font-medium">
+                      Liu, Z., Zhang, W., Sun, J., & Cheng, H. (2020). Investigating the Relationship between Learners' Cognitive Participation and Learning Outcome. In CSEDU 2020: Proceedings of the 12th International Conference on Computer Supported Education.
+                    </p>
+                    <a
+                      href="https://doi.org/10.5220/0009338900260033"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:underline flex items-center gap-1 mt-1"
+                    >
+                      🔗 https://doi.org/10.5220/0009338900260033
+                    </a>
+                  </div>
+              
+                
+              </div>
+            </CardContent>
+          </Card>
+
             
             <div className="text-center">
               <Button asChild>

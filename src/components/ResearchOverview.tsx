@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { TrendingUp, Database, BarChart, BookOpen, ArrowRight } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -34,7 +33,7 @@ const ResearchOverview = () => {
   ];
 
   return (
-    <div className="bg-white py-16">
+    <div id="research-overview" className="bg-white py-16">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12 opacity-0 animate-fade-in">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Tổng quan nghiên cứu</h2>
@@ -125,13 +124,6 @@ const ResearchOverview = () => {
               </div>
       
             </CardContent>
-            <CardFooter>
-              <Button asChild className="bg-research-primary hover:bg-research-primary/90">
-                <Link to="/dashboard">
-                  Khám phá chi tiết <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </CardFooter>
           </Card>
         </div>
       </div>

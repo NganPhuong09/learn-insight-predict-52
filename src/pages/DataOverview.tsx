@@ -1,14 +1,31 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
-import { BookOpen, Layers, Users, Video, FileText, BrainCircuit, BarChart2, Database } from "lucide-react";
+import { BookOpen, Layers, Users, Video, FileText, BrainCircuit, BarChart2, Database, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const DataOverview = () => {
+  const navigate = useNavigate();
+
+
+  const handleBackClick = () => {
+    // Navigate back to the homepage
+    navigate(-1);
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow container mx-auto px-4 py-6">
+        <Button 
+          variant="outline" 
+          onClick={handleBackClick}
+          className="mb-4 flex items-center gap-2"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          Quay lại 
+        </Button>
+        
         <div className="p-6 space-y-6 bg-white rounded-2xl shadow-md">
           <h2 className="text-3xl font-bold text-gray-800">Giới thiệu bộ dữ liệu MOOCCubeX</h2>
 
@@ -48,7 +65,6 @@ const DataOverview = () => {
               </ul>
             </div>
           </div>
-
 
           {/* Cấu trúc dữ liệu */}
           <div className="bg-gray-50 p-4 rounded-lg border border-gray-200">
@@ -130,26 +146,6 @@ const DataOverview = () => {
             alt="Framework của bộ dữ liệu MOOCCubeX" 
             className="rounded-xl shadow-md w-full max-w-3xl mx-auto"
           />
-          </div>
-          {/* Xem dashboard */}
-          <div className="pt-4 flex flex-col sm:flex-row sm:justify-between gap-4 border-t border-gray-200">
-            <p className="text-gray-600">
-              Bạn có thể xem trực quan hóa chi tiết về dữ liệu học viên và khóa học trong dashboard.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Button asChild variant="outline">
-                <Link to="/dashboard?tab=students" className="flex items-center gap-1.5">
-                  <Users className="w-4 h-4" />
-                  <span>Dữ liệu học viên</span>
-                </Link>
-              </Button>
-              <Button asChild>
-                <Link to="/dashboard?tab=courses" className="flex items-center gap-1.5">
-                  <BarChart2 className="w-4 h-4" />
-                  <span>Xem dashboard</span>
-                </Link>
-              </Button>
-            </div>
           </div>
         </div>
       </main>
